@@ -1,6 +1,9 @@
 ---
 title: Welcome to INFO 523
 subtitle: Data Mining and Discovery
+author: "{{< var slides.author >}}"
+institute: "{{< var slides.institute >}}"
+footer: "{{< var slides.footer >}}"
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -19,7 +22,7 @@ auto-stretch: false
 ::: {.column width="50%"}
 ### Instructor
 
-Dr. Greg Chism
+{{< var course.instructor >}}
 
 Office: Harvill 420,
 

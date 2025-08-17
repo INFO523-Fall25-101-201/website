@@ -9,7 +9,7 @@ Apply and evaluate different classification models to predict high-risk credit i
 
 **Prerequisites:** Ensure you have Python, Jupyter Notebook, and the required libraries (**`pandas`**, **`numpy`**, **`scikit-learn`**, **`matplotlib`**, **`seaborn`**, **`mord`**) installed. The dataset **`spam.csv`** should be available in the **`data`** directory.
 
-Find the template GitHub repo [**HERE**](https://github.com/INFO523-S24/ex-06).
+Find the template GitHub repo [**HERE**]({{< var links.github_org >}}/ex-06).
 
 ## Dataset:
 

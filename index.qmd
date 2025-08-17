@@ -1,6 +1,6 @@
 ---
-title: "INFO 523: Data Mining & Discovery"
-subtitle: "Dr. Greg Chism"
+title: "{{< var course.full_name >}}"
+subtitle: "{{< var instructor.name >}}"
 execute:
   freeze: false
 editor_options: 

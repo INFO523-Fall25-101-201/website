@@ -4,7 +4,7 @@ title: "Homework 4"
 
 For any exercise where you're writing code, insert a code chunk and make sure to label the chunk. Use a short and informative label. For any exercise where you're creating a plot, make sure to label all axes, legends, etc. and give it an informative title. For any exercise where you're including a description and/or interpretation, use full sentences. Make a commit at least after finishing each exercise, or better yet, more frequently. Push your work regularly to GitHub, and make sure all checks pass.
 
-For this Homework, find the types of classification, their pros and cons, and implementation [here](https://datamineaz.org/tables/model-cheatsheet.html).
+For this Homework, find the types of classification, their pros and cons, and implementation [here]({{< var website.url >}}/tables/model-cheatsheet.html).
 
 # Regression Methods
 
@@ -145,8 +145,8 @@ When selecting two other regression methods beyond OLS, consider the nature of y
 
 -   Evaluate the model using appropriate performance metrics and interpret the coefficients.
 
-**Deliverables:** - A Jupyter Notebook (with Quarto configuration) containing all code and visualizations. - A written report summarizing your findings from the EDA, the decisions you made during preprocessing, and the rationale behind your choices.
+**Deliverables:** - A Quarto Notebook containing all code and visualizations. - A written report summarizing your findings from the EDA, the decisions you made during preprocessing, and the rationale behind your choices.
 
-**Submission Guidelines:** - Push your Jupyter Notebook to your GitHub repository. - Ensure your commit messages are descriptive.
+**Submission Guidelines:** - Push your Quarto Notebook to your GitHub repository. - Ensure your commit messages are descriptive.
 
 **Grading Rubric:** Your work will be evaluated based on the completeness and correctness of the code, quality and clarity of visualizations and summary report, proper use of comments and documentation, and adherence to submission guidelines.
