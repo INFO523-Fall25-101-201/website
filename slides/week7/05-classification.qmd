@@ -1146,7 +1146,7 @@ ord_log_reg = m.LogisticAT(alpha = 1)
 ord_log_reg.fit(X_train_pca, y_train)
 
 ordinal_predictions = ord_log_reg.predict(X_test_pca)
-print("Ordinal Logistic Regression Accuracy:", accuracy_score(y_test, ordinal_predictions).round(3))
+print("Ordinal Logistic Regression Accuracy:", round(accuracy_score(y_test, ordinal_predictions), 3))
 ```
 
 ## Confusion matrix
