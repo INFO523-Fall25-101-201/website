@@ -423,7 +423,7 @@ Two variables can also not be associated (**independent**)
 ::: incremental
 1.  A man on the news got mercury poisoning from eating swordfish, so the average mercury concentration in swordfish must be dangerously high.
 
-2.  I met two students who took more than 7 years to graduate from UArizona, so it must take longer to graduate at UArizona than at many other colleges.
+2.  I met two students who took more than 7 years to graduate from {{< var university.short_name >}}, so it must take longer to graduate at {{< var university.short_name >}} than at many other colleges.
 
 3.  My friend's dad had a heart attack and died after they gave him a new heart disease drug, so the drug must not work.
 :::

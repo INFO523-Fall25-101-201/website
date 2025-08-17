@@ -1,6 +1,6 @@
 ---
 title: Welcome to {{< var course.number >}}
-subtitle: {{< var course.name >}}
+subtitle: "{{< var course.name >}}"
 author: "{{< var slides.author >}}"
 institute: "{{< var slides.institute >}}"
 footer: "{{< var slides.footer >}}"
@@ -88,7 +88,7 @@ Office: {{< var instructor.office >}},
 ## Course website
 
 ::: {.large style="text-align: center;"}
-[datamineaz.org](https://datamineaz.org/)
+[{{< var website.url >}}](https://{{< var website.url >}}/)
 :::
 
 ::: {.hand style="text-align: center;"}
@@ -97,7 +97,7 @@ aka "the one link to rule them all"
 
 ::: {style="text-align: center;"}
 ```{=html}
-<iframe width="1000" height="400" src="https://datamineaz.org" frameborder="1" style="background:white;"></iframe>
+<iframe width="1000" height="400" src="https://{{< var website.url >}}" frameborder="1" style="background:white;"></iframe>
 ```
 :::
 
@@ -125,7 +125,7 @@ aka "the one link to rule them all"
 
 It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
 
--   If you have a name that differs from those that appear in your official UArizona records, please let me know!
+-   If you have a name that differs from those that appear in your official {{< var university.short_name >}} records, please let me know!
 
 -   Please let me know your preferred pronouns.
 
@@ -283,7 +283,7 @@ Three "free passes" for the semester
 
 ## Academic integrity
 
-> To uphold the [UArizona iSchool Community Standard](https://ischool.arizona.edu/sites/ischool.arizona.edu/files/iSchool%20Policy%20on%20Academic%20Integrity%20in%20Computing%202023%20-%20approved%20by%20faculty%20vote%20April%202023.pdf#:~:text=UArizona%20iSchool%20Instructors%20are%20expected%20to%20help%20students,prohibited%20in%20some%20courses%20are%20allowed%20in%20others.):
+> To uphold the [{{< var university.short_name >}} iSchool Community Standard](https://ischool.arizona.edu/sites/ischool.arizona.edu/files/iSchool%20Policy%20on%20Academic%20Integrity%20in%20Computing%202023%20-%20approved%20by%20faculty%20vote%20April%202023.pdf#:~:text={{< var university.short_name >}}%20iSchool%20Instructors%20are%20expected%20to%20help%20students,prohibited%20in%20some%20courses%20are%20allowed%20in%20others.):
 
 > -   I will not lie, cheat, or steal in my academic endeavors;
 > -   I will conduct myself honorably in all my endeavors; and
@@ -342,7 +342,7 @@ I want to make sure that you learn everything you were hoping to learn from this
 ## GitHub {.smaller}
 
 ::: {.large style="text-align: center;"}
-<https://github.com/INFO523-S24>
+<{{< var links.github_org >}}>
 :::
 
 -   All of your work and your membership (enrollment) in the organization is private
@@ -397,7 +397,7 @@ Demo on Wednesday for asking good questions with proper code formatting.
 
 1.  Create a GitHub account if you don't have one
 
-2.  Read the [syllabus](https://datamineaz.org/course-syllabus)
+2.  Read the [syllabus](https://{{< var website.url >}}/course-syllabus)
 
 3.  Make sure you can use JupyterLab
 
@@ -476,7 +476,7 @@ Sit back and enjoy!
 ## Git setup
 
 ```{=html}
-<iframe width="1000" height="400" src="https://datamineaz.org/computing/computing-git.html" frameborder="1" style="background:white;"></iframe>
+<iframe width="1000" height="400" src="https://{{< var website.url >}}/computing/computing-git.html" frameborder="1" style="background:white;"></iframe>
 ```
 # Let's setup! {style="text-align: center;"}
 

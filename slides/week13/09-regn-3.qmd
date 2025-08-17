@@ -1199,6 +1199,6 @@ Pretty advanced, so we will skip this one.
 ## In-class exercise 
 
 ::: task
-Go to [ex-09](https://datamineaz.org/exercises/ex-09.html) and perform the tasks
+Go to [ex-09](https://{{< var website.url >}}/exercises/ex-09.html) and perform the tasks
 :::
 

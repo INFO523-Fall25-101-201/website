@@ -4,9 +4,9 @@ title: "Teaching team"
 
 ## Instructor
 
-![](images/team/greg.png){style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel" width="200"}
+![]({{< var instructor.image >}}){style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. {{< var instructor.name >}}" width="200"}
 
-[**{{< var instructor.name >}}**]({{< var instructor.website >}}) (he/him) is an {{< var instructor.title >}} at the {{< var university.school >}} at The {{< var university.name >}}. Greg is a data scientist, educator, and behavioral ecologist. He is passionate about telling stories through data. He accomplishes this by leveraging his interdisciplinary background to provide an innovative approach to answering complex questions.
+[**{{< var instructor.name >}}**]({{< var instructor.website >}}) (he/him) is an {{< var instructor.title >}} at the {{< var university.school >}} at The {{< var university.name >}}. {{< var instructor.introduction >}}
 
 | Office hours    | Location            |
 |-----------------|---------------------|

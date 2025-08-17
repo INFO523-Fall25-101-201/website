@@ -970,5 +970,5 @@ The semester is over!!! 😭
 ## In-class Exercise
 
 ::: task
-Go to [ex-13](https://datamineaz.org/exercises/ex-13.html) and perform the tasks
+Go to [ex-13](https://{{< var website.url >}}/exercises/ex-13.html) and perform the tasks
 :::
