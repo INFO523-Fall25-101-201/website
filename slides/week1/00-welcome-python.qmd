@@ -1,6 +1,6 @@
 ---
-title: Welcome to INFO 523
-subtitle: Data Mining and Discovery
+title: Welcome to {{< var course.number >}}
+subtitle: {{< var course.name >}}
 author: "{{< var slides.author >}}"
 institute: "{{< var slides.institute >}}"
 footer: "{{< var slides.footer >}}"
@@ -22,28 +22,28 @@ auto-stretch: false
 ::: {.column width="50%"}
 ### Instructor
 
-{{< var course.instructor >}}
+{{< var instructor.name >}}
 
-Office: Harvill 420,
+Office: {{< var instructor.office >}},
 
-[gchism\@arizona.edu](mailto:gchism@arizona.edu)
+[{{< var instructor.email >}}](mailto:{{< var instructor.email >}})
 :::
 
 ::: {.column width="50%"}
 ### Teaching assistant
 
-Laura Dozal
+{{< var ta.name >}}
 
-[lwerthmann\@arizona.edu](mailto:lwerthmann@arizona.edu)
+[{{< var ta.email >}}](mailto:{{< var ta.email >}})
 :::
 :::
 
 ## Timetable
 
 -   Lectures (weekly)
-    -   Wednesdays, 1:00 - 3:30 pm - Chemistry, RM 205
+    -   {{< var class.day >}}, {{< var class.time >}} - {{< var class.location >}}
 -   Meeting dates
-    -   01/10/2023 - 05/05/2023
+    -   {{< var semester.start_date >}} - {{< var semester.end_date >}}
 
 ## Themes: what, why, and how {.smaller}
 
