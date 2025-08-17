@@ -1,0 +1,77 @@
+# Course Information Variables
+# These variables can be referenced throughout the site using {{< var variable_name >}}
+# See: https://quarto.org/docs/authoring/variables.html
+
+# Course Details
+course:
+  number: "INFO 523"
+  name: "Data Mining and Discovery"
+  full_name: "INFO 523: Data Mining & Discovery"
+  section: "001"
+  catalog_number: "979-2241-1"
+
+# Semester Information
+semester:
+  term: "Spring 2024"
+  year: "2024"
+  start_date: "01/10/2024"
+  end_date: "05/05/2024"
+
+# Instructor Information
+instructor:
+  name: "Dr. Greg Chism"
+  title: "Assistant Professor of Practice"
+  email: "gchism@arizona.edu"
+  office: "Harvill 420"
+  office_hours:
+    day: "Mondays"
+    time: "2-3pm"
+    location: "Harvill 420"
+  website: "https://gregtchism.com"
+  image: "images/team/greg.png"
+
+# Teaching Assistant Information
+ta:
+  name: "Laura Dozal"
+  email: "lwerthmann@arizona.edu"
+
+# University Information
+university:
+  name: "University of Arizona"
+  short_name: "UArizona"
+  school: "School of Information"
+
+# Class Meeting Information
+class:
+  day: "Wednesdays"
+  time: "1:00 - 3:30 pm"
+  location: "Chemistry, RM 205"
+  room: "Chemistry 205"
+
+# Website and Communication
+website:
+  url: "https://datamineaz.org"
+  title: "INFO 523"
+  description: "Homepage for INFO 523 - Data Mining and Discovery at The University of Arizona, Spring 2024."
+  
+# External Links
+links:
+  github_org: "https://github.com/INFO523-S24"
+  github_repo: "https://github.com/INFO523-S24/INFO523-S24"
+  slack: "https://datamineaz-spring2024.slack.com"
+  d2l_id: "1396832"
+  zoom: "https://arizona.zoom.us/my/gregchism"
+  colab: "https://colab.research.google.com/"
+  jupyter: "https://jupyter.org/try"
+
+# Footer Information
+footer:
+  copyright: "© Copyright 2023-2024, Greg Chism"
+  link_text: "[🔗 datamineaz.org](https://datamineaz.org/)"
+  
+# Slide Template Variables
+slides:
+  institute: "University of Arizona <br> INFO 523 - Spring 2024"
+  author: "Dr. Greg Chism"
+  footer: "[🔗 datamineaz.org](https://datamineaz.org/)"
+  logo: "../logo.png"
