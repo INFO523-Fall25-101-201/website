@@ -232,4 +232,4 @@ plt.show()
 
 ## **Submission:**
 
--   Submit your Jupyter Notebook via the course's learning management system, including your code, visualizations, and a brief discussion of your findings regarding the impact of cage-free practices on egg production.
+-   Submit your Jupyter Notebook via the course's learning management system, including your code, visualizations, and a brief discussion of your findings regarding the AQI time series analysis and forecasting.
