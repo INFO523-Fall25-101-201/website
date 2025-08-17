@@ -7,11 +7,11 @@ project:
 
 website:
   page-navigation: true
-  title: "{{< var course.number >}}"
-  description: "{{< var website.description >}}"
+  title: "INFO 523"
+  description: "Homepage for INFO 523 - Data Mining and Discovery at The University of Arizona, Spring 2024."
   favicon: /images/logo.png
 
-  repo-url: {{< var links.github_repo >}}
+  repo-url: https://github.com/INFO523-S24/INFO523-S24
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -23,21 +23,21 @@ website:
     align: center
     tools:
       - icon: github
-        href: {{< var links.github_org >}}
+        href: https://github.com/INFO523-S24
         text: "GitHub organization"
       - icon: code-square
-        href: {{< var links.jupyter >}}
+        href: https://jupyter.org/try
         text: "Jupyter Lab"
       - icon: person-fill
-        href: https://d2l.arizona.edu/d2l/home/{{< var links.d2l_id >}}
+        href: https://d2l.arizona.edu/d2l/home/1396832
         text: "D2L"
         menu:
           - text: Announcements
-            href: {{< var links.slack >}}
+            href: https://datamineaz-spring2024.slack.com
           - text: Zoom meetings
-            href: {{< var links.zoom >}}
+            href: https://arizona.zoom.us/my/gregchism
           - text: Gradebook
-            href: https://d2l.arizona.edu/d2l/home/{{< var links.d2l_id >}}
+            href: https://d2l.arizona.edu/d2l/home/1396832
 
     style: docked
     search: true
@@ -100,7 +100,7 @@ website:
             
   page-footer:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
-    left: "{{< var footer.copyright >}}"
+    left: "© Copyright 2023-2024, Greg Chism"
     background: "#AB0520" # AZ Red
 
 format:
