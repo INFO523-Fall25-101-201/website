@@ -286,8 +286,8 @@ y_pred = linear_reg.predict(X_test_poly)
 # Calculate and print the MSE and R-squared
 mse_initial = mean_squared_error(y_test, y_pred)
 r2_initial = r2_score(y_test, y_pred)
-print(f'Mean Squared Error: {mse_initial.round(2)}')
-print(f'R-squared: {r2_initial.round(2)}')
+print(f'Mean Squared Error: {round(mse_initial, 2)}')
+print(f'R-squared: {round(r2_initial, 2)}')
 ```
 
 ## Polynomial fit
@@ -358,7 +358,7 @@ for degree in degrees:
 
 # Display the MSE and R-squared for each degree
 for degree, mse, r2 in zip(degrees, mse_scores, r2_scores):
-    print(f'Degree: {degree}, MSE: {mse.round(3)}, R-squared: {r2.round(4)}')
+    print(f'Degree: {degree}, MSE: {round(mse, 3)}, R-squared: {round(r2, 4)}')
 
 ```
 
@@ -383,7 +383,7 @@ y_pred_best = best_model.predict(X_test_poly_best)
 # Calculate new MSE and R-squared
 mse_best = mean_squared_error(y_test, y_pred_best)
 r2_best = r2_score(y_test, y_pred_best)
-print(f'Best Degree: {best_degree}, MSE: {mse_best.round(3)}, R-squared: {r2_best.round(4)}')
+print(f'Best Degree: {best_degree}, MSE: {round(mse_best, 3)}, R-squared: {round(r2_best, 4)}')
 ```
 
 ## Polynomial fits
@@ -926,8 +926,8 @@ y_pred_best = best_basis_model.predict(X_test)
 # Calculate R-squared and Mean Squared Error (MSE) with the best model
 r2_best = r2_score(y_test, y_pred_best)
 mse_best = mean_squared_error(y_test, y_pred_best)
-print(f'Mean Squared Error: {mse_best.round(3)}')
-print(f'R-squared: {r2_best.round(4)}')
+print(f'Mean Squared Error: {round(mse_best, 3)}')
+print(f'R-squared: {round(r2_best, 4)}')
 
 ```
 
@@ -939,8 +939,8 @@ mse_initial = mean_squared_error(y_test, y_pred)
 r2_initial = r2_score(y_test, y_pred)
 
 # Print comparison
-print(f'Initial MSE: {mse_initial.round(3)}, Best Parameters MSE: {mse_best.round(3)}')
-print(f'Initial R-squared: {r2_initial.round(4)}, Best Parameters R-squared: {r2_best.round(5)}')
+print(f'Initial MSE: {round(mse_initial, 3)}, Best Parameters MSE: {round(mse_best, 3)}')
+print(f'Initial R-squared: {round(r2_initial, 4)}, Best Parameters R-squared: {round(r2_best, 5)}')
 ```
 
 ## Residuals

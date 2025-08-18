@@ -1308,8 +1308,8 @@ x = esi_hfi_red['pf_score_square']
 y = esi_hfi_red['esi_log']
 corr_coefficient, p_value = pearsonr(x, y)
 
-print("Pearson correlation coefficient:", corr_coefficient.round(3))
-print("P-value:", p_value.round(5))
+print("Pearson correlation coefficient:", round(corr_coefficient, 3))
+print("P-value:", round(p_value, 5))
 ```
 
 ## Trend line

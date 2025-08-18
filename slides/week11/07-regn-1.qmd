@@ -926,7 +926,7 @@ for result in subset_results:
         best_model_1 = result
         
 print("Best Model Predictors:", best_model_1['predictors'])
-print("Best Model AIC:", best_aic.round(2))
+print("Best Model AIC:", round(best_aic, 2))
 ```
 
 ## BIC
@@ -941,7 +941,7 @@ for result in subset_results:
         best_model_2 = result
         
 print("Best Model Predictors:", best_model_2['predictors'])
-print("Best Model BIC:", best_bic.round(2))
+print("Best Model BIC:", round(best_bic, 2))
 ```
 
 ## $R^{2}_{adj}$
@@ -956,7 +956,7 @@ for result in subset_results:
         best_model_3 = result
         
 print("Best Model Predictors:", best_model_3['predictors'])
-print("Best Model Adjusted R-squared:", best_r_sq_adj.round(2))
+print("Best Model Adjusted R-squared:", round(best_r_sq_adj, 2))
 ```
 :::
 
@@ -1028,9 +1028,9 @@ model_sm = sm.OLS(y_train, X_train_selected_with_const).fit()
 # Output the results
 print("Forward Selection Results")
 print("Selected predictors:", selected_features)
-print("AIC:", model_sm.aic.round(3))
-print("BIC:", model_sm.bic.round(3))
-print("Adjusted R-squared:", model_sm.rsquared_adj.round(3))
+print("AIC:", round(model_sm.aic, 3))
+print("BIC:", round(model_sm.bic, 3))
+print("Adjusted R-squared:", round(model_sm.rsquared_adj, 3))
 ```
 
 ## Backward selection
@@ -1076,9 +1076,9 @@ model_sm = sm.OLS(y_train, X_train_selected_with_const).fit()
 # Output the results
 print("Backward Selection Results")
 print("Selected predictors:", selected_features)
-print("AIC:", model_sm.aic.round(3))
-print("BIC:", model_sm.bic.round(3))
-print("Adjusted R-squared:", model_sm.rsquared_adj.round(3))
+print("AIC:", round(model_sm.aic, 3))
+print("BIC:", round(model_sm.bic, 3))
+print("Adjusted R-squared:", round(model_sm.rsquared_adj, 3))
 ```
 :::
 

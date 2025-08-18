@@ -108,8 +108,8 @@ We need to test the relationship statistically:
 # Performing the Chi-Squared Test
 chi2, p, dof, expected = chi2_contingency(frequency_table)
 
-print(f"Chi-squared statistic: {chi2.round(2)}")
-print(f"P-value: {p.round(3)}")
+print(f"Chi-squared statistic: {round(chi2, 2)}")
+print(f"P-value: {round(p, 3)}")
 print(f"Degrees of freedom: {dof}")
 print(f"Expected frequencies:\n{expected.round(2)}")
 ```

@@ -510,7 +510,7 @@ def decisionplot(model, X, y, resolution=216):
 log_reg = LogisticRegression(multi_class = 'multinomial', solver = 'lbfgs', max_iter = 1000, random_state = 42)
 log_reg.fit(X_train_pca, y_train)
 predictions = log_reg.predict(X_test_pca)
-print("Logistic Regression Accuracy:", accuracy_score(y_test, predictions).round(3))
+print("Logistic Regression Accuracy:", round(accuracy_score(y_test, predictions), 3))
 ```
 
 ## Confusion matrix
@@ -599,7 +599,7 @@ plt.show()
 lda = LinearDiscriminantAnalysis()
 lda.fit(X_train_pca, y_train)
 predictions = lda.predict(X_test_pca)
-print("LDA Accuracy:", accuracy_score(y_test, predictions).round(3))
+print("LDA Accuracy:", round(accuracy_score(y_test, predictions), 3))
 ```
 
 ## Confusion matrix
@@ -618,7 +618,7 @@ plt.show()
 
 ```{python}
 #| code-fold: true
-acc = accuracy_score(y_test, predictions).round(3)
+acc = round(accuracy_score(y_test, predictions), 3)
 # Create a meshgrid for plotting
 x_min, x_max = X_test_pca[:, 0].min() - 1, X_test_pca[:, 0].max() + 1
 y_min, y_max = X_test_pca[:, 1].min() - 1, X_test_pca[:, 1].max() + 1
@@ -688,7 +688,7 @@ plt.show()
 knn = KNeighborsClassifier(n_neighbors = 5)
 knn.fit(X_train_pca, y_train)
 predictions = knn.predict(X_test_pca)
-print("KNN Accuracy:", accuracy_score(y_test, predictions).round(3))
+print("KNN Accuracy:", round(accuracy_score(y_test, predictions), 3))
 ```
 
 ## Confusion matrix
@@ -772,7 +772,7 @@ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
 gnb = GaussianNB()
 gnb.fit(X_train_pca, y_train)
 predictions = gnb.predict(X_test_pca)
-print("Naive Bayes Accuracy:", accuracy_score(y_test, predictions).round(3))
+print("Naive Bayes Accuracy:", round(accuracy_score(y_test, predictions), 3))
 ```
 
 ## Confusion matrix
@@ -834,7 +834,7 @@ plt.show()
 dtree = DecisionTreeClassifier()
 dtree.fit(X_train_pca, y_train)
 predictions = dtree.predict(X_test_pca)
-print("Decision Tree Accuracy:", accuracy_score(y_test, predictions).round(3))
+print("Decision Tree Accuracy:", round(accuracy_score(y_test, predictions), 3))
 ```
 
 ## Confusion matrix
@@ -907,7 +907,7 @@ plt.show()
 rf_classifier = RandomForestClassifier()
 rf_classifier.fit(X_train_pca, y_train)
 predictions = rf_classifier.predict(X_test_pca)
-print("Random Forest Accuracy:", accuracy_score(y_test, predictions).round(3))
+print("Random Forest Accuracy:", round(accuracy_score(y_test, predictions), 3))
 ```
 
 ## Confusion matrix
@@ -982,7 +982,7 @@ plt.show()
 xgb_model = xgb.XGBClassifier()
 xgb_model.fit(X_train_pca, y_train)
 predictions = xgb_model.predict(X_test_pca)
-print("XGBoost Accuracy:", accuracy_score(y_test, predictions).round(3))
+print("XGBoost Accuracy:", round(accuracy_score(y_test, predictions), 3))
 ```
 
 ## Confusion matrix
@@ -1059,7 +1059,7 @@ model.fit(X_train_pca, y_train, epochs = 100, batch_size = 10, verbose=0)
 
 nn_predictions = model.predict(X_test_pca)
 nn_predictions = np.round(nn_predictions).flatten()
-print("Neural Network Accuracy:", accuracy_score(y_test, nn_predictions).round(3))
+print("Neural Network Accuracy:", round(accuracy_score(y_test, nn_predictions), 3))
 ```
 
 ## Confusion matrix
@@ -1179,7 +1179,7 @@ plt.show()
 knn = KNeighborsClassifier(n_neighbors = 5)
 knn.fit(X_train_pca, y_train)
 predictions = knn.predict(X_test_pca)
-print("KNN Accuracy:", accuracy_score(y_test, predictions).round(3))
+print("KNN Accuracy:", round(accuracy_score(y_test, predictions), 3))
 ```
 
 ## Confusion matrix
@@ -1212,7 +1212,7 @@ plt.show()
 dtree = DecisionTreeClassifier()
 dtree.fit(X_train_pca, y_train)
 predictions = dtree.predict(X_test_pca)
-print("Decision Tree Accuracy:", accuracy_score(y_test, predictions).round(3))
+print("Decision Tree Accuracy:", round(accuracy_score(y_test, predictions), 3))
 ```
 
 ## Confusion matrix
