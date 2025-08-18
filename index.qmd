@@ -17,8 +17,13 @@ This page contains an outline of the topics, content, and assignments for the se
 library(googlesheets4)
 library(gt)
 library(tidyverse)
+library(yaml)
+
+# Read variables from _variables.yml
+vars <- read_yaml("_variables.yml")
+
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1QOKW_cODBJYroJMqXKDjQgJz_A705t3euAW8kqpFY_I/edit?usp=sharing")
+d <- read_sheet(vars$links$schedule_spreadsheet)
 ```
 
 ```{r}
