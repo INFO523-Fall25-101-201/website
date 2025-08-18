@@ -4,7 +4,7 @@ Course website for INFO 523 - Data Mining and Discovery at The University of Ari
 
 ## Dependencies
 
-This repository relies on Quarto for compilation. You also need to install R and its dependencies, as well as Python and its dependencies `pip install numpy pandas matplotlib seaborn scipy scikit-learn statsmodels scikit-learn-extra mord mlxtend xgboost tensorflow pygam patsy feature-engine skimpy yellowbrick scikit-optimize missingno`. 
+This repository relies on Quarto for compilation. You also need to install R and its dependencies, as well as Python and its dependencies `pip install numpy pandas matplotlib seaborn scipy scikit-learn statsmodels scikit-learn-extra mord mlxtend xgboost tensorflow pygam patsy feature-engine skimpy yellowbrick scikit-optimize missingno jupyter-cache`. 
 
 ## Colors
 
