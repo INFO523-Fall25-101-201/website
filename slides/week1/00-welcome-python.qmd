@@ -303,15 +303,15 @@ ask if you're not sure if something violates a policy!
 
 ## Office hours {.smaller}
 
--   Greg:
+-   {{< var instructor.name >}}:
 
-    -   Mondays 1 - 2 pm - Harvill 420
+    -   {{< var instructor.office_hours.day >}}, {{< var instructor.office_hours.time >}} - {{< var instructor.office_hours.location >}}
 
-        -   Except Mon, Jan 15 (MLK Holiday)
+        -   Except for university holidays
 
-        -   Any other exceptions will be announced in class / by email
+        -   Any exceptions will be announced in class / by email
 
-    -   By appointment - Zoom or Harvill 420
+    -   By appointment - Zoom or {{< var instructor.office >}}
 
 -   \+ lots more resources listed on the syllabus!
 
