@@ -19,7 +19,7 @@ This repository relies on Quarto for compilation. You also need to install R and
 
 ### Disclosure
 
-This website is derived from the course website for [INFO 523 - Data Mining and Discovery](https://vizdata.org/), taught by Dr. Greg Chism. The website has addressed a number of minor issues, streamlined the publishing process, etc.
+This website is derived from the course website for [INFO 523 - Data Mining and Discovery](https://datamineaz.org/), taught by Dr. Greg Chism. The website has addressed a number of minor issues, streamlined the publishing process, etc.
 
 Dr. Greg Chism's website is derived from the course website for [STA 313 - Advanced Data Visualization at Duke University](https://vizdata.org/), taught by Dr. Mine Çetinkaya-Rundel. The website has a new logo, color scheme, fonts, etc.
 
