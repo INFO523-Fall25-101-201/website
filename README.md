@@ -1,10 +1,10 @@
 # Data Mining and Discovery
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b3d28610-25b7-4d03-a3dd-bb87d7690b2c/deploy-status)](https://app.netlify.com/sites/datavizaz/deploys)
+Course website for INFO 523 - Data Mining and Discovery at The University of Arizona.
 
-Course website for INFO 523 F23- Data Mining and Discovery at The University of Arizona, taught by Dr. Greg Chism.
+## Dependencies
 
-The website is live at [datamineaz.org](http://datamineaz.org/).
+This repository relies on Quarto for compilation. You also need to install R and its dependencies, as well as Python and its dependencies `pip install numpy pandas matplotlib seaborn scipy scikit-learn statsmodels scikit-learn-extra mord mlxtend xgboost tensorflow pygam patsy feature-engine skimpy yellowbrick scikit-optimize`. 
 
 ## Colors
 
@@ -19,7 +19,9 @@ The website is live at [datamineaz.org](http://datamineaz.org/).
 
 ### Disclosure
 
-This website is derived from the course website for [STA 313 - Advanced Data Visualization at Duke University](https://vizdata.org/), taught by Dr. Mine Çetinkaya-Rundel. The website has a new logo, color scheme, fonts, etc.
+This website is derived from the course website for [INFO 523 - Data Mining and Discovery](https://vizdata.org/), taught by Dr. Greg Chism. The website has addressed a number of minor issues, streamlined the publishing process, etc.
+
+Dr. Greg Chism's website is derived from the course website for [STA 313 - Advanced Data Visualization at Duke University](https://vizdata.org/), taught by Dr. Mine Çetinkaya-Rundel. The website has a new logo, color scheme, fonts, etc.
 
 [![](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
