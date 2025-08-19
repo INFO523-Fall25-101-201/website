@@ -1,0 +1,123 @@
+# Course Information Variables
+# These variables can be referenced throughout the site using {{< var variable_name >}}
+# See: https://quarto.org/docs/authoring/variables.html
+
+# Course Details
+course:
+  number: "INFO 523"
+  name: "Data Mining and Discovery"
+  full_name: "INFO 523: Data Mining & Discovery"
+  section: "001"
+  catalog_number: "979-2241-1"
+
+# Semester Information
+semester:
+  term: "Spring 2024"
+  year: "2024"
+  start_date: "01/10/2024"
+  end_date: "05/05/2024"
+
+# Instructor Information
+instructor:
+  name: "Dr. Greg Chism"
+  title: "Assistant Professor of Practice"
+  email: "gchism@arizona.edu"
+  office: "Harvill 420"
+  office_hours:
+    day: "Mondays"
+    time: "2-3pm"
+    location: "Harvill 420"
+  website: "https://gregtchism.com"
+  image: "images/team/greg.png"
+  introduction: "Greg is a data scientist, educator, and behavioral ecologist. He is passionate about telling stories through data. He accomplishes this by leveraging his interdisciplinary background to provide an innovative approach to answering complex questions."
+
+# Teaching Assistant Information
+ta:
+  name: "Laura Dozal"
+  email: "lwerthmann@arizona.edu"
+
+# University Information
+university:
+  name: "University of Arizona"
+  short_name: "UArizona"
+  school: "School of Information"
+
+# Class Meeting Information
+class:
+  day: "Wednesdays"
+  time: "1:00 - 3:30 pm"
+  location: "Chemistry, RM 205"
+  room: "Chemistry 205"
+
+# Website and Communication
+website:
+  url: "https://datamineaz.org"
+  title: "INFO 523"
+  description: "Homepage for INFO 523 - Data Mining and Discovery at The University of Arizona, Spring 2024."
+  
+# External Links
+links:
+  github_org: "https://github.com/INFO523-S24"
+  github_repo: "https://github.com/INFO523-S24/INFO523-S24"
+  slack: "https://datamineaz-spring2024.slack.com"
+  d2l_id: "1396832"
+  zoom: "https://arizona.zoom.us/my/gregchism"
+  colab: "https://colab.research.google.com/"
+  jupyter: "https://jupyter.org/try"
+  schedule_spreadsheet: "https://docs.google.com/spreadsheets/d/1QOKW_cODBJYroJMqXKDjQgJz_A705t3euAW8kqpFY_I/edit?usp=sharing"
+
+# Footer Information
+footer:
+  copyright: "© Copyright 2023-2024, Greg Chism"
+  link_text: "[🔗 datamineaz.org](https://datamineaz.org/)"
+  
+# Slide Template Variables
+slides:
+  institute: "University of Arizona <br> INFO 523 - Spring 2024"
+  author: "Dr. Greg Chism"
+  footer: "[🔗 datamineaz.org](https://datamineaz.org/)"
+  logo: "../logo.png"
+
+# Common Instructions
+instructions:
+  standard: "For any exercise where you're writing code, insert a code chunk and make sure to label the chunk. Do not suppress the code or output."
+  submission_guidelines: "Push your Quarto Notebook to your GitHub repository. Ensure your commit messages are descriptive."
+  data_directory: "data"
+
+# Grading Information
+grading:
+  rubric: |
+    Your work will be evaluated based on the following criteria:
+    - Correctness and completeness of the code
+    - Quality and clarity of the visualizations and summary report
+    - Proper use of comments and documentation in the code
+    - Adherence to the submission guidelines
+  
+  points_distribution: "Each task is allocated a specific number of points. Points will be awarded based on the completeness and correctness of the work submitted."
+  
+  project_breakdown:
+    total: 100
+    proposal: 10
+    presentation: 30
+    writeup: 30
+    reproducibility: 10
+    peer_eval_within: 10
+    peer_eval_between: 10
+
+# Closing Phrase
+closing:
+  phrase: "Good luck, and may your insights be profound!"
+
+# Technical Requirements
+technical:
+  python_version: "3.12.0"
+  standard_libraries: "pandas, numpy, scikit-learn, matplotlib, seaborn, mord"
+
+# External Resources
+resources:
+  think_tank_url: "https://thinktank.arizona.edu/"
+  cirt_url: "https://cirt.arizona.edu/case-emergency/overview"
+  safety_video_url: "https://arizona.sabacloud.com/Saba/Web_spf/NA7P1PRD161/common/learningeventdetail/crtfy000000000003560"
+  syllabus_policies_url: "https://catalog.arizona.edu/syllabus-policies"
+  academic_calendar_url: "https://catalog.arizona.edu/2023-2024-academic-calendar"
+  basic_needs_url: "http://basicneeds.arizona.edu/index.html"

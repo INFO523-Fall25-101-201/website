@@ -107,4 +107,4 @@ How can Gaussian Mixture Models (GMM) be applied to identify and interpret disti
 
 ## **Submission:**
 
--   Submit your Jupyter Notebook via the course's learning management system, including your code, visualizations, and a brief discussion of your findings regarding the impact of cage-free practices on egg production.
+-   Submit your Jupyter Notebook via the course's learning management system, including your code, visualizations, and a brief discussion of your findings regarding the clustering analysis of Taylor Swift songs.

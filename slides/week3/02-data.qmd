@@ -1,6 +1,9 @@
 ---
 title: Introduction to Data
 subtitle: Lecture 2
+author: "{{< var slides.author >}}"
+institute: "{{< var slides.institute >}}"
+footer: "{{< var slides.footer >}}"
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -105,8 +108,8 @@ We need to test the relationship statistically:
 # Performing the Chi-Squared Test
 chi2, p, dof, expected = chi2_contingency(frequency_table)
 
-print(f"Chi-squared statistic: {chi2.round(2)}")
-print(f"P-value: {p.round(3)}")
+print(f"Chi-squared statistic: {round(chi2, 2)}")
+print(f"P-value: {round(p, 3)}")
 print(f"Degrees of freedom: {dof}")
 print(f"Expected frequencies:\n{expected.round(2)}")
 ```
@@ -420,7 +423,7 @@ Two variables can also not be associated (**independent**)
 ::: incremental
 1.  A man on the news got mercury poisoning from eating swordfish, so the average mercury concentration in swordfish must be dangerously high.
 
-2.  I met two students who took more than 7 years to graduate from UArizona, so it must take longer to graduate at UArizona than at many other colleges.
+2.  I met two students who took more than 7 years to graduate from {{< var university.short_name >}}, so it must take longer to graduate at {{< var university.short_name >}} than at many other colleges.
 
 3.  My friend's dad had a heart attack and died after they gave him a new heart disease drug, so the drug must not work.
 :::

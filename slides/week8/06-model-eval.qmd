@@ -1,6 +1,9 @@
 ---
 title: Classification II + Model Evaluation
 subtitle: Lecture 6
+author: "{{< var slides.author >}}"
+institute: "{{< var slides.institute >}}"
+footer: "{{< var slides.footer >}}"
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -179,7 +182,7 @@ ord_log_reg = m.LogisticAT(alpha = 1)
 ord_log_reg.fit(X_train_pca, y_train)
 
 ordinal_predictions = ord_log_reg.predict(X_test_pca)
-print("Ordinal Logistic Regression Accuracy:", accuracy_score(y_test, ordinal_predictions).round(3))
+print("Ordinal Logistic Regression Accuracy:", round(accuracy_score(y_test, ordinal_predictions), 3))
 
 decisionplot(ord_log_reg, pd.DataFrame(X_train_pca, columns = ['PC1', 'PC2']), y_train)
 plt.show()
@@ -920,5 +923,5 @@ print(f"Average F1-Score for Decision Tree: {dtree_f1_average:.2f}")
 ## In-class Exercise
 
 ::: task
-Go to [ex-06](https://datamineaz.org/exercises/ex-06.html) and perform the tasks
+Go to [ex-06](https://{{< var website.url >}}/exercises/ex-06.html) and perform the tasks
 :::

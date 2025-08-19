@@ -1,6 +1,9 @@
 ---
 title: Association
 subtitle: Lecture 13
+author: "{{< var slides.author >}}"
+institute: "{{< var slides.institute >}}"
+footer: "{{< var slides.footer >}}"
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -967,5 +970,5 @@ The semester is over!!! 😭
 ## In-class Exercise
 
 ::: task
-Go to [ex-13](https://datamineaz.org/exercises/ex-13.html) and perform the tasks
+Go to [ex-13](https://{{< var website.url >}}/exercises/ex-13.html) and perform the tasks
 :::

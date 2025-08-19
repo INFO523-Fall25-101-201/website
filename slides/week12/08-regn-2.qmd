@@ -1,6 +1,9 @@
 ---
 title: Regressions II
 subtitle: Lecture 8
+author: "{{< var slides.author >}}"
+institute: "{{< var slides.institute >}}"
+footer: "{{< var slides.footer >}}"
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -220,7 +223,7 @@ $RSS + \lambda \sum_{j=1}^{p} \beta_j^2$
 ```{python}
 VIFs = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
 for idx, vif in enumerate(VIFs):
-    print(f"VIF for column {X.columns[idx]}: {vif.round(3)}")
+    print(f"VIF for column {X.columns[idx]}: {round(vif, 3)}")
 ```
 
 ::: incremental
@@ -253,10 +256,10 @@ y_pred = ridge_reg.predict(X_test)
 
 # Calculate and print the MSE
 mse = mean_squared_error(y_test, y_pred)
-print(f'Mean Squared Error: {mse.round(2)}\n')
+print(f'Mean Squared Error: {round(mse, 2)}\n')
 
 # Since Ridge doesn't provide AIC, BIC directly, we focus on what's available
-print(f'R-squared: {r2.round(2)}')
+print(f'R-squared: {round(r2, 2)}')
 ```
 
 ## Residual plot
@@ -300,7 +303,7 @@ plt.show()
 alphas = np.logspace(-6, 6, 13)
 
 # Initialize RidgeCV
-ridge_cv = RidgeCV(alphas = alphas, store_cv_values = True)
+ridge_cv = RidgeCV(alphas = alphas, store_cv_results = True)
 
 # Fit the model
 ridge_cv.fit(X_train, y_train)
@@ -321,11 +324,11 @@ y_pred_best = best_ridge.predict(X_test)
 ```{python}
 # Calculate R-squared
 r2_best = r2_score(y_test, y_pred_best)
-print(f'R-squared with best alpha: {r2_best.round(4)}')
+print(f'R-squared with best alpha: {round(r2_best, 4)}')
 
 # Calculate Mean Squared Error (MSE)
 mse_best = mean_squared_error(y_test, y_pred_best)
-print(f'Mean Squared Error with best alpha: {mse_best.round(3)}')
+print(f'Mean Squared Error with best alpha: {round(mse_best, 3)}')
 ```
 
 ## Compare with previous model
@@ -336,8 +339,8 @@ mse_initial = mean_squared_error(y_test, y_pred)
 r2_initial = r2_score(y_test, y_pred)
 
 # Print comparison
-print(f'Initial MSE: {mse_initial.round(3)}, Best Alpha MSE: {mse_best.round(3)}')
-print(f'Initial R-squared: {r2_initial.round(4)}, Best Alpha R-squared: {r2_best.round(5)}')
+print(f'Initial MSE: {round(mse_initial, 3)}, Best Alpha MSE: {round(mse_best, 3)}')
+print(f'Initial R-squared: {round(r2_initial, 4)}, Best Alpha R-squared: {round(r2_best, 5)}')
 ```
 
 ## Residuals
@@ -421,11 +424,11 @@ y_pred = lasso_reg.predict(X_test)
 
 # Calculate and print the MSE
 mse = mean_squared_error(y_test, y_pred)
-print(f'Mean Squared Error: {mse.round(2)}')
+print(f'Mean Squared Error: {round(mse, 2)}')
 
 # Since Lasso doesn't provide AIC, BIC directly, we focus on what's available
 r2 = r2_score(y_test, y_pred)
-print(f'R-squared: {r2.round(2)}')
+print(f'R-squared: {round(r2, 2)}')
 ```
 
 ## Residual plot
@@ -472,11 +475,11 @@ y_pred_best = best_lasso.predict(X_test)
 ```{python}
 # Calculate R-squared with the best alpha
 r2_best = r2_score(y_test, y_pred_best)
-print(f'R-squared with optimal alpha: {r2_best.round(4)}')
+print(f'R-squared with optimal alpha: {round(r2_best, 4)}')
 
 # Calculate Mean Squared Error (MSE) with the best alpha
 mse_best = mean_squared_error(y_test, y_pred_best)
-print(f'Mean Squared Error with optimal alpha: {mse_best.round(3)}')
+print(f'Mean Squared Error with optimal alpha: {round(mse_best, 3)}')
 ```
 
 ## Compare with previous model
@@ -487,8 +490,8 @@ mse_initial = mean_squared_error(y_test, y_pred)
 r2_initial = r2_score(y_test, y_pred)
 
 # Print comparison
-print(f'Initial MSE: {mse_initial.round(3)}, Optimal Alpha MSE: {mse_best.round(3)}')
-print(f'Initial R-squared: {r2_initial.round(4)}, Optimal Alpha R-squared: {r2_best.round(4)}')
+print(f'Initial MSE: {round(mse_initial, 3)}, Optimal Alpha MSE: {round(mse_best, 3)}')
+print(f'Initial R-squared: {round(r2_initial, 4)}, Optimal Alpha R-squared: {round(r2_best, 4)}')
 ```
 
 ## Residuals
@@ -577,8 +580,8 @@ y_pred = elastic_net.predict(X_test)
 # Calculate and print the MSE and R-squared
 mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
-print(f'Mean Squared Error: {mse.round(2)}')
-print(f'R-squared: {r2.round(2)}')
+print(f'Mean Squared Error: {round(mse, 2)}')
+print(f'R-squared: {round(r2, 2)}')
 ```
 
 ## Residual plot
@@ -627,11 +630,11 @@ y_pred_best = best_elastic_net.predict(X_test)
 ```{python}
 # Calculate R-squared with the best parameters
 r2_best = r2_score(y_test, y_pred_best)
-print(f'R-squared with optimal parameters: {r2_best.round(4)}')
+print(f'R-squared with optimal parameters: {round(r2_best, 4)}')
 
 # Calculate Mean Squared Error (MSE) with the best parameters
 mse_best = mean_squared_error(y_test, y_pred_best)
-print(f'Mean Squared Error with optimal parameters: {mse_best.round(3)}')
+print(f'Mean Squared Error with optimal parameters: {round(mse_best, 3)}')
 ```
 
 ## Compare with previous model
@@ -640,8 +643,8 @@ print(f'Mean Squared Error with optimal parameters: {mse_best.round(3)}')
 # Print comparison of MSE and R-squared before and after tuning
 mse_initial = mean_squared_error(y_test, y_pred)
 r2_initial = r2_score(y_test, y_pred)
-print(f'Initial MSE: {mse_initial.round(3)}, Optimal Parameters MSE: {mse_best.round(3)}')
-print(f'Initial R-squared: {r2_initial.round(4)}, Optimal Parameters R-squared: {r2_best.round(4)}')
+print(f'Initial MSE: {round(mse_initial, 3)}, Optimal Parameters MSE: {round(mse_best, 3)}')
+print(f'Initial R-squared: {round(r2_initial, 4)}, Optimal Parameters R-squared: {round(r2_best, 4)}')
 ```
 
 ## Residuals
@@ -779,8 +782,8 @@ y_pred = pipeline.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
 
-print(f'Mean Squared Error: {mse.round(2)}')
-print(f'R-squared: {r2.round(4)}')
+print(f'Mean Squared Error: {round(mse, 2)}')
+print(f'R-squared: {round(r2, 4)}')
 ```
 
 ## Residual plot
@@ -830,8 +833,8 @@ y_pred_opt = pipeline.predict(X_test)
 mse_opt = mean_squared_error(y_test, y_pred_opt)
 r2_opt = r2_score(y_test, y_pred_opt)
 
-print(f'Optimized Mean Squared Error: {mse_opt.round(2)}')
-print(f'Optimized R-squared: {r2_opt.round(4)}')
+print(f'Optimized Mean Squared Error: {round(mse_opt, 2)}')
+print(f'Optimized R-squared: {round(r2_opt, 4)}')
 
 ```
 
@@ -839,8 +842,8 @@ print(f'Optimized R-squared: {r2_opt.round(4)}')
 
 ```{python}
 # Comparing initial and optimized model performances
-print(f'Initial vs. Optimized MSE: {mse.round(2)} vs. {mse_opt.round(2)}')
-print(f'Initial vs. Optimized R-squared: {r2.round(4)} vs. {r2_opt.round(4)}')
+print(f'Initial vs. Optimized MSE: {round(mse, 2)} vs. {round(mse_opt, 2)}')
+print(f'Initial vs. Optimized R-squared: {round(r2, 4)} vs. {round(r2_opt, 4)}')
 ```
 
 ## Residuals
@@ -923,8 +926,8 @@ y_pred = pls.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred.flatten())  # Flatten if y_pred is 2D
 
-print(f'Mean Squared Error: {mse.round(2)}')
-print(f'R-squared: {r2.round(4)}')
+print(f'Mean Squared Error: {round(mse, 2)}')
+print(f'R-squared: {round(r2, 4)}')
 ```
 
 ## Residual plot
@@ -970,16 +973,16 @@ y_pred_opt = pls.predict(X_test)
 mse_opt = mean_squared_error(y_test, y_pred_opt)
 r2_opt = r2_score(y_test, y_pred_opt.flatten())
 
-print(f'Optimized Mean Squared Error: {mse_opt.round(2)}')
-print(f'Optimized R-squared: {r2_opt.round(4)}')
+print(f'Optimized Mean Squared Error: {round(mse_opt, 2)}')
+print(f'Optimized R-squared: {round(r2_opt, 4)}')
 ```
 
 ## Compare with previous model
 
 ```{python}
 # Comparing initial and optimized model performances
-print(f'Initial vs. Optimized MSE: {mse.round(2)} vs. {mse_opt.round(2)}')
-print(f'Initial vs. Optimized R-squared: {r2.round(4)} vs. {r2_opt.round(4)}')
+print(f'Initial vs. Optimized MSE: {round(mse, 2)} vs. {round(mse_opt, 2)}')
+print(f'Initial vs. Optimized R-squared: {round(r2, 4)} vs. {round(r2_opt, 4)}')
 ```
 
 ## Residuals
@@ -1049,5 +1052,5 @@ plt.show()
 ## In-class Exercise 
 
 ::: task
-Go to [ex-08](https://datamineaz.org/exercises/ex-08.html) and perform the tasks
+Go to [ex-08](https://{{< var website.url >}}/exercises/ex-08.html) and perform the tasks
 :::

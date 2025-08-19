@@ -10,7 +10,7 @@ For any exercise where you're writing code, insert a code chunk and make sure to
 
 ### Task 1: Variables and Types
 
--   Define two variables: an integer named `age` with a value of 25 and a string named `course` with the value "Data Mining".
+-   Define two variables: an integer named `age` with a value of 25 and a string named `course` with the value "{{< var course.name >}}".
 -   Print their values and types using the `type()` function.
 
 ### Task 2: Control Structures

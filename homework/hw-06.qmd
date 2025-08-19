@@ -79,9 +79,9 @@ Prepare to dive deep into the dataset, unravel its complexities, and discover th
 
 ------------------------------------------------------------------------
 
-**Deliverables:** - A comprehensive Jupyter Notebook containing all code, visualizations, and analyses. - A detailed report summarizing the exploratory data analysis, methodology, results, and conclusions.
+**Deliverables:** - A comprehensive Quarto Notebook containing all code, visualizations, and analyses. - A detailed report summarizing the exploratory data analysis, methodology, results, and conclusions.
 
-**Submission Guidelines:** - Submit your Jupyter Notebook and report via GitHub, ensuring your repository is well-organized and your commit messages are clear.
+**Submission Guidelines:** - Submit your Quarto Notebook and report via GitHub, ensuring your repository is well-organized and your commit messages are clear.
 
 **Grading Rubric:** Your submission will be evaluated based on code correctness and completeness, the quality and clarity of visualizations and reports, the adequacy of comments and documentation, and adherence to submission guidelines.
 

@@ -141,7 +141,9 @@ This section will focus on cleaning and preparing the dataset for modeling. You 
 -   For outlier removal, you may use boolean indexing based on Z-scores or IQR to filter your data.
 -   If you don't want to remove outliers, consider transforming them using methods such as log transformation.
 
-</details>Task 3: Feature Engineering
+</details>
+
+### Task 3: Feature Engineering
 
 -   Create at least one new feature that could be useful for a data mining task.
 
@@ -179,9 +181,9 @@ This section will focus on cleaning and preparing the dataset for modeling. You 
 
 ------------------------------------------------------------------------
 
-**Deliverables:** - A Jupyter Notebook (with Quarto yaml configuration) containing all code and visualizations. - A written report summarizing your findings from the EDA, the decisions you made during preprocessing, and the rationale behind your choices.
+**Deliverables:** - A Quarto Notebook containing all code and visualizations. - A written report summarizing your findings from the EDA, the decisions you made during preprocessing, and the rationale behind your choices.
 
-**Submission Guidelines:** - Push your Jupyter Notebook to your GitHub repository. - Ensure your commit messages are descriptive. - Submit the link to your GitHub repository on the course submission page.
+**Submission Guidelines:** - Push your Quarto Notebook to your GitHub repository. - Ensure your commit messages are descriptive.
 
 **Grading Rubric:** Your work will be evaluated based on the following criteria: - Correctness and completeness of the code. - Quality and clarity of the visualizations and summary report. - Proper use of comments and documentation in the code. - Adherence to the submission guidelines.
 

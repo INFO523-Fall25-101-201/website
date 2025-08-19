@@ -1,6 +1,9 @@
 ---
 title: Unsupervised<br>Learning II
 subtitle: Lecture 12
+author: "{{< var slides.author >}}"
+institute: "{{< var slides.institute >}}"
+footer: "{{< var slides.footer >}}"
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -125,7 +128,7 @@ mlb_preprocessed_df.head()
 
 ::: {style="text-align: center;"}
 ```{=html}
-<iframe width="1200" height="400" src="https://datamineaz.org/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
+<iframe width="1200" height="400" src="https://{{< var website.url >}}/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
 ```
 :::
 
@@ -137,7 +140,9 @@ mlb_preprocessed_df.head()
 ```{python}
 #| echo: false
 from sklearn.datasets import make_blobs
-plt.style.use('seaborn-white')
+sns.set_style('ticks') # setting style
+sns.set_context('paper') # setting context
+sns.set_palette('colorblind') # setting palette
 # Generating synthetic data
 X, _ = make_blobs(n_samples = 150, centers = 4, cluster_std = 0.5, random_state = 0)
 
@@ -626,7 +631,7 @@ plt.show()
 ## Intro
 
 ::: task
-Go to [ex-12](https://datamineaz.org/exercises/ex-12.html) and perform the tasks
+Go to [ex-12](https://{{< var website.url >}}/exercises/ex-12.html) and perform the tasks
 :::
 
 ![](images/tSwift.jpeg){fig-align="center" width="630"}

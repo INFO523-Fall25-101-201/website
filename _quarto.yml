@@ -8,7 +8,7 @@ project:
 website:
   page-navigation: true
   title: "INFO 523"
-  description: "Homepage for INFO 523 - Data Mining and Discovery at The University of Arizona, Fall 2023."
+  description: "Homepage for INFO 523 - Data Mining and Discovery at The University of Arizona, Spring 2024."
   favicon: /images/logo.png
 
   repo-url: https://github.com/INFO523-S24/INFO523-S24
@@ -100,7 +100,7 @@ website:
             
   page-footer:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2023-2024, Greg Chism"
+    left: "© Copyright 2023-2024, Greg Chism"
     background: "#AB0520" # AZ Red
 
 format:
@@ -116,5 +116,6 @@ format:
 
 execute:
   freeze: auto
+  cache: true
 
 editor: visual

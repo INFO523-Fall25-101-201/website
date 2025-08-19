@@ -1,6 +1,9 @@
 ---
-title: Welcome to INFO 523
-subtitle: Data Mining and Discovery
+title: Welcome to {{< var course.number >}}
+subtitle: "{{< var course.name >}}"
+author: "{{< var slides.author >}}"
+institute: "{{< var slides.institute >}}"
+footer: "{{< var slides.footer >}}"
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -19,28 +22,28 @@ auto-stretch: false
 ::: {.column width="50%"}
 ### Instructor
 
-Dr. Greg Chism
+{{< var instructor.name >}}
 
-Office: Harvill 420,
+Office: {{< var instructor.office >}},
 
-[gchism\@arizona.edu](mailto:gchism@arizona.edu)
+[{{< var instructor.email >}}](mailto:{{< var instructor.email >}})
 :::
 
 ::: {.column width="50%"}
 ### Teaching assistant
 
-Laura Dozal
+{{< var ta.name >}}
 
-[lwerthmann\@arizona.edu](mailto:lwerthmann@arizona.edu)
+[{{< var ta.email >}}](mailto:{{< var ta.email >}})
 :::
 :::
 
 ## Timetable
 
 -   Lectures (weekly)
-    -   Wednesdays, 1:00 - 3:30 pm - Chemistry, RM 205
+    -   {{< var class.day >}}, {{< var class.time >}} - {{< var class.location >}}
 -   Meeting dates
-    -   01/10/2023 - 05/05/2023
+    -   {{< var semester.start_date >}} - {{< var semester.end_date >}}
 
 ## Themes: what, why, and how {.smaller}
 
@@ -85,7 +88,7 @@ Laura Dozal
 ## Course website
 
 ::: {.large style="text-align: center;"}
-[datamineaz.org](https://datamineaz.org/)
+[{{< var website.url >}}](https://{{< var website.url >}}/)
 :::
 
 ::: {.hand style="text-align: center;"}
@@ -94,7 +97,7 @@ aka "the one link to rule them all"
 
 ::: {style="text-align: center;"}
 ```{=html}
-<iframe width="1000" height="400" src="https://datamineaz.org" frameborder="1" style="background:white;"></iframe>
+<iframe width="1000" height="400" src="https://{{< var website.url >}}" frameborder="1" style="background:white;"></iframe>
 ```
 :::
 
@@ -122,7 +125,7 @@ aka "the one link to rule them all"
 
 It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
 
--   If you have a name that differs from those that appear in your official UArizona records, please let me know!
+-   If you have a name that differs from those that appear in your official {{< var university.short_name >}} records, please let me know!
 
 -   Please let me know your preferred pronouns.
 
@@ -280,7 +283,7 @@ Three "free passes" for the semester
 
 ## Academic integrity
 
-> To uphold the [UArizona iSchool Community Standard](https://ischool.arizona.edu/sites/ischool.arizona.edu/files/iSchool%20Policy%20on%20Academic%20Integrity%20in%20Computing%202023%20-%20approved%20by%20faculty%20vote%20April%202023.pdf#:~:text=UArizona%20iSchool%20Instructors%20are%20expected%20to%20help%20students,prohibited%20in%20some%20courses%20are%20allowed%20in%20others.):
+> To uphold the [{{< var university.short_name >}} iSchool Community Standard](https://ischool.arizona.edu/sites/ischool.arizona.edu/files/iSchool%20Policy%20on%20Academic%20Integrity%20in%20Computing%202023%20-%20approved%20by%20faculty%20vote%20April%202023.pdf#:~:text={{< var university.short_name >}}%20iSchool%20Instructors%20are%20expected%20to%20help%20students,prohibited%20in%20some%20courses%20are%20allowed%20in%20others.):
 
 > -   I will not lie, cheat, or steal in my academic endeavors;
 > -   I will conduct myself honorably in all my endeavors; and
@@ -300,15 +303,15 @@ ask if you're not sure if something violates a policy!
 
 ## Office hours {.smaller}
 
--   Greg:
+-   {{< var instructor.name >}}:
 
-    -   Mondays 1 - 2 pm - Harvill 420
+    -   {{< var instructor.office_hours.day >}}, {{< var instructor.office_hours.time >}} - {{< var instructor.office_hours.location >}}
 
-        -   Except Mon, Jan 15 (MLK Holiday)
+        -   Except for university holidays
 
-        -   Any other exceptions will be announced in class / by email
+        -   Any exceptions will be announced in class / by email
 
-    -   By appointment - Zoom or Harvill 420
+    -   By appointment - Zoom or {{< var instructor.office >}}
 
 -   \+ lots more resources listed on the syllabus!
 
@@ -339,7 +342,7 @@ I want to make sure that you learn everything you were hoping to learn from this
 ## GitHub {.smaller}
 
 ::: {.large style="text-align: center;"}
-<https://github.com/INFO523-S24>
+<{{< var links.github_org >}}>
 :::
 
 -   All of your work and your membership (enrollment) in the organization is private
@@ -394,7 +397,7 @@ Demo on Wednesday for asking good questions with proper code formatting.
 
 1.  Create a GitHub account if you don't have one
 
-2.  Read the [syllabus](https://datamineaz.org/course-syllabus)
+2.  Read the [syllabus](https://{{< var website.url >}}/course-syllabus)
 
 3.  Make sure you can use JupyterLab
 
@@ -473,7 +476,7 @@ Sit back and enjoy!
 ## Git setup
 
 ```{=html}
-<iframe width="1000" height="400" src="https://datamineaz.org/computing/computing-git.html" frameborder="1" style="background:white;"></iframe>
+<iframe width="1000" height="400" src="https://{{< var website.url >}}/computing/computing-git.html" frameborder="1" style="background:white;"></iframe>
 ```
 # Let's setup! {style="text-align: center;"}
 

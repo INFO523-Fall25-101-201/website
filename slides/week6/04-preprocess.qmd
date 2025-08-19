@@ -1,6 +1,9 @@
 ---
 title: Data Preprocessing
 subtitle: Lecture 4
+author: "{{< var slides.author >}}"
+institute: "{{< var slides.institute >}}"
+footer: "{{< var slides.footer >}}"
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -50,7 +53,7 @@ auto-stretch: false
 2.  **Ask your peers**. I have been monopolized by a few individuals, which is not fair to the rest.
     1.  Peers will likely have the answer
     2.  Peers will likely get to the question before I will.
-3.  **Ask descriptive questions**. See [this page](https://datamineaz.org/course-support.html#how-to-ask-for-help) on asking effective questions.
+3.  **Ask descriptive questions**. See [this page](https://{{< var website.url >}}/course-support.html#how-to-ask-for-help) on asking effective questions.
 4.  **Please respect my work hours**. I will no longer reply to messages after 5pm on work days and at all on weekends.
 :::
 
@@ -465,7 +468,7 @@ plt.show()
 
 ::: {style="text-align: center;"}
 ```{=html}
-<iframe width="1200" height="400" src="https://datamineaz.org/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
+<iframe width="1200" height="400" src="https://{{< var website.url >}}/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
 ```
 :::
 
@@ -1305,8 +1308,8 @@ x = esi_hfi_red['pf_score_square']
 y = esi_hfi_red['esi_log']
 corr_coefficient, p_value = pearsonr(x, y)
 
-print("Pearson correlation coefficient:", corr_coefficient.round(3))
-print("P-value:", p_value.round(5))
+print("Pearson correlation coefficient:", round(corr_coefficient, 3))
+print("P-value:", round(p_value, 5))
 ```
 
 ## Trend line
