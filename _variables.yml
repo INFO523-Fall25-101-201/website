@@ -113,6 +113,10 @@ technical:
   python_version: "3.12.0"
   standard_libraries: "pandas, numpy, scikit-learn, matplotlib, seaborn, mord"
 
+# Google Forms
+forms:
+  within_team_peer_eval: "https://forms.gle/xPUkttdss8zzhnW48"
+
 # External Resources
 resources:
   think_tank_url: "https://thinktank.arizona.edu/"
