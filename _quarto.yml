@@ -8,10 +8,10 @@ project:
 website:
   page-navigation: true
   title: "INFO 523"
-  description: "Homepage for INFO 523 - Data Mining and Discovery at The University of Arizona, Spring 2024."
+  description: "Homepage for INFO 523 - Data Mining and Discovery at The University of Arizona, Fall 2025."
   favicon: /images/logo.png
 
-  repo-url: https://github.com/INFO523-S24/INFO523-S24
+  repo-url: https://github.com/info523-fall25-101-201/website
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -23,21 +23,21 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/INFO523-S24
+        href: https://github.com/info523-fall25-101-201
         text: "GitHub organization"
       - icon: code-square
         href: https://jupyter.org/try
         text: "Jupyter Lab"
       - icon: person-fill
-        href: https://d2l.arizona.edu/d2l/home/1396832
+        href: https://d2l.arizona.edu/d2l/home/1647458
         text: "D2L"
         menu:
           - text: Announcements
-            href: https://datamineaz-spring2024.slack.com
+            href: http://info523-fall25-101201.slack.com
           - text: Zoom meetings
-            href: https://arizona.zoom.us/my/gregchism
+            href: https://arizona.zoom.us/j/83927001972
           - text: Gradebook
-            href: https://d2l.arizona.edu/d2l/home/1396832
+            href: https://d2l.arizona.edu/d2l/lms/grades/admin/manage/gradeslist.d2l?ou=1647458
 
     style: docked
     search: true
@@ -83,10 +83,10 @@ website:
             text: HW 02
           - href: homework/hw-03.qmd
             text: HW 03
-          #- href: homework/hw-04.qmd
-            #text: HW 04
-          #- href: homework/hw-05.qmd
-            #text: HW 05
+          - href: homework/hw-04.qmd
+            text: HW 04
+          - href: homework/hw-05.qmd
+            text: HW 05
           #- href: homework/hw-06.qmd
             #text: HW 06
       #- section: "Student work"
@@ -96,11 +96,10 @@ website:
           #- href: exercises/ex-08.qmd
           #- href: exercises/ex-09.qmd
           #- href: exercises/ex-12.qmd
-
             
   page-footer:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
-    left: "© Copyright 2023-2024, Greg Chism"
+    left: "© Copyright 2024-2025, John Chen (Credit: Dr. Greg Chism)"
     background: "#AB0520" # AZ Red
 
 format:

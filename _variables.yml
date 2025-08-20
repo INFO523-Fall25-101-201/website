@@ -45,7 +45,7 @@ university:
 # Class Meeting Information
 class:
   day: "Tuesday, Thursday (Suggested)"
-  time: "At Your Pace"
+  time: "(At Your Pace)"
   location: "Online, Asynchronous"
   room: "Online, Asynchronous"
 
@@ -59,17 +59,17 @@ website:
 links:
   github_org: "https://github.com/info523-fall25-101-201"
   github_repo: "https://github.com/info523-fall25-101-201/website"
-  slack: "hhttp://info523-fall25-101201.slack.com"
+  slack: "http://info523-fall25-101201.slack.com"
   d2l_id: "1647458"
   zoom: "https://arizona.zoom.us/j/83927001972"
   colab: "https://colab.research.google.com/"
   jupyter: "https://jupyter.org/try"
-  schedule_spreadsheet: "https://docs.google.com/spreadsheets/d/1QOKW_cODBJYroJMqXKDjQgJz_A705t3euAW8kqpFY_I/edit?usp=sharing"
+  schedule_spreadsheet: "https://docs.google.com/spreadsheets/d/1RAZtjwOW1UUy-0jh815N8u27y2symK5lmls6nQx5zKI/edit?usp=sharing"
 
 # Footer Information
 footer:
   copyright: "© Copyright 2025, John Chen (Credits: Dr. Greg Chism)"
-  link_text: "[🔗 datamineaz.org](https://datamineaz.org/)"
+  link_text: "[🔗 github.io](https://info523-fall25-101-201.github.io/)"
   
 # Slide Template Variables
 slides:
@@ -129,5 +129,6 @@ resources:
   cirt_url: "https://cirt.arizona.edu/case-emergency/overview"
   safety_video_url: "https://arizona.sabacloud.com/Saba/Web_spf/NA7P1PRD161/app/me/ledetail/crtfy000000000003841"
   syllabus_policies_url: "https://catalog.arizona.edu/syllabus-policies"
-  academic_calendar_url: "https://catalog.arizona.edu/2025-2026-academic-calendar"
+  academic_calendar_url: "https://catalog.arizona.edu/calendar#2025-20261"
+  academic_integrity_url: "https://infosci.arizona.edu/students-and-career/academic-integrity"
   basic_needs_url: "http://basicneeds.arizona.edu/index.html"

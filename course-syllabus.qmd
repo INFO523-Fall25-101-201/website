@@ -25,19 +25,19 @@ format:
 
 **Office**: {{< var instructor.office >}}
 
-**Office Hour**s: {{< var instructor.office_hours.day >}}, {{< var instructor.office_hours.time >}}, {{< var instructor.office_hours.location >}}
+**Office Hours**: {{< var instructor.office_hours.day >}}, {{< var instructor.office_hours.time >}}, {{< var instructor.office_hours.location >}}
 
 ## Prerequisites
 
 Students are assumed to know the basics in computer programming (e.g., variables, arrays, loops, if-then conditions), statistics (e.g., normal distribution, significance tests), and relational database (e.g., ER-diagram, SQL statements). 
-
 ## Course Format
 
-Asynchronous online lectures, {{< var class.day >}} {{< var class.time >}}, {{< var class.location >}}. Watch the lecture videos at your pace, but make sure to turn in your assignments and projects on time. 
+Asynchronous online lectures: {{< var class.day >}} {{< var class.time >}}, {{< var class.location >}}. 
+Set your own schedule to watch the lecture videos, but make sure to turn in your assignments and projects on time. 
 
 ## Course Objective
 
-{{< var course.number >}} is a required course in the {{<var university.school}}'s M.S. program. As a multidisciplinary field, the course introduce concepts and work from many areas critical to information studies including statistics, machine learning, pattern recognition, database technology, and data visualization.  
+{{< var course.number >}} is a required course in the {{< var university.school >}}'s M.S. program. As a multidisciplinary field, the course introduce concepts and work from many areas critical to information studies including statistics, machine learning, pattern recognition, database technology, and data visualization.  
 
 ## Learning Outcomes
 
@@ -61,7 +61,7 @@ By the end of this course, students will: 
 
 ## Course Schedule
 
-An up-to-date schedule, assignments, and due dates can be found on the course website: [{{< var website.url >}}]({{< var website.url >}}). Dates and time is always in **Mountain Standard Time** (UTC-7). 
+An up-to-date schedule, assignments, and due dates can be found on the [course website]({{< var website.url >}}). Dates and time is always in **Mountain Standard Time** (UTC-7). 
 
 ## Course Competencies
 
@@ -73,7 +73,7 @@ The course addresses the MS Competencies: C1 \[A, B, C, D\], C2, and C3
 
 All students must adhere to the [{{< var university.short_name >}} Student Rights & Responsibilities](https://deanofstudents.arizona.edu/student-rights-responsibilities#:~:text=The%20Code%20of%20Academic%20Integrity%20and%20Student%20Code,conduct%20expected%20within%20the%20University%20of%20Arizona%20community.): The {{< var university.name >}} is a community dedicated to scholarship, leadership, and service and to the principles of honesty, fairness, and accountability. Citizens of this community commit to reflect upon these principles in all academic and non-academic endeavors, and to protect and promote a culture of integrity.
 
-### Inclusive community
+### Inclusive Community
 
 It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with [{{< var university.short_name >}}'s Commitment to Diversity and Inclusion](https://provost.arizona.edu/content/diversity-inclusion). Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.
 
@@ -89,7 +89,7 @@ All lecture notes, assignment instructions, an up-to-date schedule, and other co
 
 I will regularly send course announcements via email and Slack, make sure to check one or the other of these regularly. If an announcement is sent Monday through Thursday, I will assume that you have read the announcement by the next day. If an announcement is sent on a Friday or over the weekend, I will assume that you have read it by Monday.
 
-### Where to get help
+### Where to Get Help
 
 -   If you have a question during lecture, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
 -   The teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
@@ -111,28 +111,26 @@ You are expected to bring a laptop to each class so that you can take part in th
 
 ## Assessment
 
-Assessment for the course is comprised of four components: participation, reading quizzes, homework assignments, and projects.
+Assessment for the course is comprised of four components: participation, reading quizzes, homework assignments, and projects. All assignments are due by 11:59pm on the indicated day on the [course schedule]({{< var website.url }}).
 
--   **Participation** is required throughout the semester. Students who participate regularly in Slack discussion will receive full credit for this portion of their grade.
+-   **Participation** is required throughout the semester. Students who participate regularly in Slack discussion will receive full credit for 10% of the grade.
 
--   **Reading quizzes** (6), due every other week (roughly), completed individually. Each quiz is worth 2% of the grade. Lowest quiz score is dropped.
+-   **Reading quizzes** (5), due every other week (roughly), completed individually. Each quiz is worth 2% of the grade.
 
-    Reading quizzes will be linked from the [course schedule]({{< var website.url }}). They always cover reading that is due since the previous quiz and up to and including the deadline for the given quiz. They're due by 11:59pm on the indicated day on the [course schedule]({{< var website.url }}).
+    Reading quizzes will be linked from the [course schedule]({{< var website.url }}). They always cover reading that is due since the previous quiz and up to and including the deadline for the given quiz. 
 
--   **Homework assignments** (6), due every other week (roughly), completed individually. Each homework assignment is worth 9% of the course grade. Lowest homework assignment score is dropped.
-
-    Homework assignments are due by 11:59pm on the indicated day on the [course schedule]({{< var website.url }}).
+-   **Homework assignments** (5), due every other week (roughly), completed individually. Each homework assignment is worth 7% of the course grade. Lowest homework assignment score is dropped.
 
 -   **Projects** (2), mid-semester and end of semester, completed in teams.
 
     -   Project 1: Teams will be given a dataset to mine. Project 1 is worth 15% of the course grade.
-    -   Project 2: Teams will pick a dataset of interest to them and develop a data mining workflow in Python (problem --\> solution). Project 2 is worth 25% of the course grade.
+    -   Project 2: Teams will pick a dataset of interest to them and develop a data mining workflow in Python (problem --\> solution). Project 2 is worth 30% of the course grade.
 
     The deliverables for each project will include a data visualization and/or analysis, a write up of the process and findings, and a presentation. For the second project, you will be encouraged to think beyond traditional data mining techniques (i.e., explore and utilize modern best practices)
 
     Each project will have a peer review component to provide at least one round of feedback during the process of development. Teams will provide periodic peer feedback to their teammates while working on the projects as well as upon completion. The scores from the peer evaluations, along with individual contributions tracked by commits on GitHub, will be used to ensure that each student has contributed to the teamwork.
 
-    All team members must take part in the presentation. Presentations must be given in person in class, or via Zoom if the team requires. My preference is that the team stick to one method of delivery (all presenters in person or all presenters on Zoom), but I realize a lot can change throughout this semester, and we'll adjust accordingly.
+    All team members must take part in the presentation. Presentations must be given via Zoom, or in recording if the team requires. My preference is that the team stick to one method of delivery (all presenters on Zoom or in recording), but I realize a lot can change throughout this semester, and we'll adjust accordingly.
 
 All work is expected to be submitted by the deadline and there are no make ups for any missed assessments. See [Late work policy](#late-work-extensions) for policies on late work.
 
@@ -149,27 +147,17 @@ The final letter grade will be determined based on the following thresholds:
 | E            | 50-59.99           |
 | F            | \< 60              |
 
-These are upper bounds for grade cutoffs, depending on the class performance the cutoffs may be lowered but they won't be increased.
-
-## Final Projects
-
-Your task for this project is to go beyond the usual data mining projects on, for example, Kaggle.
-
-This is intentionally vague \-- part of the challenge is to design a project that showcases best your interests and strengths.
-
-One requirement is that your project should feature some element that you had to learn on your own. This could be a package you use that we didn't teach in class (e.g., a package for building 3D visualizations) or a workflow (e.g., making a package) or anything else. If you're not sure if your "new" thing counts, just ask!
-
-More information will be provided throughout the semester.
+These are upper bounds for grade cutoffs. Depending on the class performance the cutoffs may be lowered, but not increased.
 
 ## Teams
 
-You will be assigned to a different team for each of your two projects. You are encouraged to sit with your teammates in lectures. All team members are expected to contribute equally to the completion of each project and you will be asked to evaluate your team members after each assignment is due. Failure to adequately contribute to an assignment will result in a penalty to your mark relative to the team's overall mark.
+You will be assigned to a different team for each of your two projects. You are encouraged to work in a shared Slack channel with your team members. All team members are expected to contribute equally to the completion of each project and you will be asked to evaluate your team members after each assignment is due. Failure to adequately contribute to an assignment will result in a penalty to your mark relative to the team's overall mark.
 
 You are expected to make use of the provided GitHub repository as their central collaborative platform. Commits to this repository will be used as a metric (one of several) of each team member's relative contribution for each project.
 
-## Course policies
+## Course Policies
 
-### Academic honesty
+### Academic Honesty
 
 **TL;DR: Don't cheat!**
 
@@ -187,20 +175,11 @@ Please abide by the following as you work on assignments in this course:
 
 -   **Sharing and reusing code:** I am well aware that a huge volume of code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. On individual assignments you may not directly share code with another student in this class, and on team assignments you may not directly share code with another team in this class.
 
-### Generative AI Policy
-
-**<span style="color: #FFBF00">AI is Sometimes Permitted</span>**
-
-As a researcher in human-AI interaction, I published highly impactful [research study](https://dl.acm.org/doi/full/10.1145/3613904.3642377) on how people use Generative AI for coding. I also personally use advanced AI coding tools (e.g. ClaudeCode, Cursor, etc.) as well as more straightforward tools (e.g. ChatGPT, GitHub Copilot, Gemini). Hence, I might have more to say about this topic. 
-
-Following the University's [established AI policy](https://docs.google.com/document/d/1ZE3iWssjpt2XkEH9UvBkJY252Iwyd_4o04o20Ktm-q4/edit?tab=t.0), this class encourages you to use/experiment with Generative AI in all assignments and projects.
-- The only exception are **quizzes**. They serve as your own checkpoint and for your reflection purposes. Using AI there is a waste of time (and computing power), especially since we are not grading on whether you get to the correct answer. 
-
 ## **College of Information Science Academic Integrity Policy**
 
-This policy agreed upon by faculty in the UArizona iSchool applies in addition to the Dean of Students' [Code of Academic Integrity](https://deanofstudents.arizona.edu/policies/code-academic-integrity).
+This policy agreed upon by faculty in the {{< var university.short_name >}} {{< var university.school >}} applies in addition to the Dean of Students' [Code of Academic Integrity](https://deanofstudents.arizona.edu/policies/code-academic-integrity).
 
-Students in courses at the {{< var university.short_name >}} iSchool are expected to maintain rigor in their academic performance with intent to learn, practice, and overcome challenges toward personal growth and enrichment. As future professionals in digital environments, iSchool students are also expected to exercise transparency and integrity in collaborations and in the use of tools and resources that may aid completion in assignments for our courses.
+Students in courses at the {{< var university.short_name >}} {{< var university.school >}} are expected to maintain rigor in their academic performance with intent to learn, practice, and overcome challenges toward personal growth and enrichment. As future professionals in digital environments, {{< var university.school >}} students are also expected to exercise transparency and integrity in collaborations and in the use of tools and resources that may aid completion in assignments for our courses.
 
 **Consider the following PROHIBITED** practices in this course, unless the instructor has specifically written instructions or permission to do otherwise:
 
@@ -218,15 +197,24 @@ Students in courses at the {{< var university.short_name >}} iSchool are expecte
 
 ***Exceptions: Clear Instructions will be Provided***
 
-In any cases in which this course requires or permits students to use practices in the list above, clear written instructions will specify the tools allowed or required, so students can be certain they are working as instructed. See the [{{< var university.short_name >}} iSchool Academic Integrity Policy](https://ischool.arizona.edu/node/519), the [{{< var university.short_name >}} Code of Academic Integrity](https://deanofstudents.arizona.edu/policies/code-academic-integrity) and [Syllabus policy](https://catalog.arizona.edu/syllabus-policies) for more information.
+In any cases in which this course requires or permits students to use practices in the list above, clear written instructions will specify the tools allowed or required, so students can be certain they are working as instructed. See the [{{< var university.short_name >}} {{< var university.school >}} Academic Integrity Policy]({{< var resources.academic_integrity_url >}}), the [{{< var university.short_name >}} Code of Academic Integrity](https://deanofstudents.arizona.edu/policies/code-academic-integrity) and [Syllabus policy](https://catalog.arizona.edu/syllabus-policies) for more information.
 
-### **LLMs and ChatGPT**
+### **Generative AI Policy**
 
-Large language models (LLMs) like ChatGPT are a type of artificial intelligence (AI) engine that can look like it generates the code you need for Python labs and short answer questions. You are encouraged to use ChatGPT to debug code and experiment. However, abuse of ChatGPT can be traced (e.g., failing to give credit or cite ChatGPT when it is used) which could result in your suspension or termination from the course and even your program of study. Keep in mind, too, that while the code may appear legitimate, early studies have shown ChatGPT is not all that accurate with sophisticated coding. Exercise your scholarly discretion and maintain a sense of integrity in your statistical learning journey.
+**<span style="color: #FFBF00">AI is Sometimes Permitted</span>**
+
+As a researcher in human-AI interaction, I published highly impactful [research study](https://dl.acm.org/doi/full/10.1145/3613904.3642377) on how people use Generative AI for coding. I also personally use advanced AI coding tools (e.g. ClaudeCode, Cursor, etc.) as well as more straightforward tools (e.g. ChatGPT, GitHub Copilot, Gemini). Hence, I might have more to say about this topic. 
+
+Following the University's [established AI policy](https://docs.google.com/document/d/1ZE3iWssjpt2XkEH9UvBkJY252Iwyd_4o04o20Ktm-q4/edit?tab=t.0), this class encourages you to use/experiment with Generative AI in all assignments and projects.
+- The only exception are **quizzes**. They serve as your own checkpoint and for your reflection purposes. Using AI there is a waste of time (and computing power), especially since we are not grading on whether you get to the correct answer. 
+- Always keep control of your code and work by reviewing, criticizing, and steering AI responses While AI-generated code may appear legitimate, [my studies](https://dl.acm.org/doi/full/10.1145/3613904.3642377) show that tools like ChatGPT easily hallucinate or miss your intention. While latest tools such as Claude Code or Cursor may allow "automonous" mode, it is still prone to overthinking or misunderstanding. 
+- Whenever you use Generative AI tools, clearly state in your assignment or project write-up which Generative AI tool(s) you used, what you used it for, and how you incorporated its output. In addition, **write reflections about your workflow and AI's responses, which will be graded.**
+
+At the end of the day, Generative AI tools won't be responsible for your grades or your learning. Abusing of Generative AI tools be traced (e.g., failing to give credit or cite ChatGPT when it is used) which could result in your suspension or termination from the course and even your program of study.
 
 *See my policies on this subject above.*
 
-### Late work & extensions {#late-work-extensions}
+### Late Work & Extensions {#late-work-extensions}
 
 The due dates for assignments are there to help you keep up with the course material and to ensure the teaching team can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline.
 
@@ -256,21 +244,21 @@ Policy on late work depends on the particular course component:
 
     -   Peer evaluation: Late peer evaluations are not accepted and there are no make ups for missed presentations. If you do not turn in your peer evaluation, you get 0 points for your own peer score as well, regardless of how your teammates have evaluated you.
 
-### Free passes
+### Free Passes
 
 I allow three "free passes", which extends your homework deadline by one full day. They can also be stacked, so two or three passes can apply to a single homework assignment. To utilize these passes, submit a GitHub issue with the number that you will be using. Use sparingly, I will not allow late un-penalized late work after they are gone.
 
-### Waiver for extenuating circumstances
+### Waiver for Extenuating Circumstances
 
 If there are circumstances that prevent you from completing a reading quiz or homework assignment by the stated due date, you may email me ([{{< var instructor.email >}}](mailto:{{< var instructor.email >}})) before the deadline to waive the late penalty. In your email, you only need to request the waiver; you do not need to provide explanation. This waiver may only be used for once in the semester, so only use it for a truly extenuating circumstance.
 
 If there are circumstances that are having a longer-term impact on your academic performance, please let your academic dean know, as they can be a resource. Please let me know if you need help contacting your academic dean.
 
-### Regrade requests
+### Regrade Requests
 
 #### Before hw-02 (training wheels on)
 
-I will regrade your homework assignments 1 once to encourage the correct format for future submissions. Your final score will be the midpoint of the first and second score (e.g., first score: 70%, second score: 100% = final score: 85%). Re-submissions must be received within 1-week of the original grade.
+I will regrade your homework assignments 1 once to encourage the correct format for future submissions. If you made any improvements, I will use the higher grade. Re-submissions must be received within 1-week of the original grade.
 
 #### From hw-02 and on (training wheels come off)
 
@@ -278,7 +266,7 @@ Regrade requests must be made within one week of when the assignment is returned
 
 *No grades will be changed after the project presentations.*
 
-### "Incomplete" grade
+### "Incomplete" Grade
 
 The grade of "I" may be awarded only at the end of a term, when all but a minor portion of the course work has been satisfactorily completed. The grade of I is not to be awarded in place of a failing grade or when the student is expected to repeat the course; in such a case, a grade other than I must be assigned. Students should make arrangements with the instructor to receive an incomplete grade before the end of the term. If the incomplete is not removed by the instructor within one year the I grade will revert to a failing grade.
 
@@ -286,27 +274,13 @@ The grade of "I" may be awarded only at the end of a term, when all but a minor 
 
 Tutoring can be found through the {{< var university.short_name >}} [Think Tank](#0 "https://thinktank.arizona.edu/").
 
-### Attendance policy
+### Attendance Policy
 
-Responsibility for class attendance rests with individual students. Since regular and punctual class attendance is expected, students must accept the consequences of failure to attend.
+While the online nature of the class adds to the flexibility, responsibility for class attendance rests with individual students. We cannot enforce when and how you watch the lecture videos. That said, students must accept the consequences of failure to attend or participate, including not being able to complete homework and turn in projects.
 
-However, there may be many reasons why you cannot be in class on a given day, particularly with possible extra personal and academic stress and health concerns this semester. I am always available to personally catch you up from missed lectures. Please contact me directly about these additional "office hours".
+Note that participation is part of your grade as well.
 
-Note that attendance and participation is part of your grade as well.
-
-### Attendance policy related to COVID symptoms, exposure, or infection
-
-Student health, safety, and well-being are the university's top priorities. To help ensure your well-being and the well-being of those around you, please do not come to class if you have symptoms related to COVID-19, have had a known exposure to COVID-19, or have tested positive for COVID-19. If any of these situations apply to you, you must follow university guidance related to the ongoing COVID-19 pandemic and current health and safety protocols. If you are experiencing any COVID-19 symptoms, contact student health at (520) 621-9202. To keep the university community as safe and healthy as possible, you will be expected to follow these and the [university guidelines on COVID-19 mitigation](http://www.covid19.arizona.edu/). Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class.
-
-Notify your instructor(s) if you will be missing up to one week of course meetings and/or assignment deadlines
-
-If you must miss the equivalent of more than one week of class and have an emergency, the Dean of Students is the proper office to contact ([DOS-deanofstudents\@email.arizona.edu](mailto:DOS-deanofstudents@email.arizona.edu)). The Dean of Students considers the following as qualified emergencies: the birth of a child, mental health hospitalization, domestic violence matter, house fire, hospitalization for physical health (concussion/emergency surgery/coma/COVID-19 complications/ICU), death of immediate family, Title IX matters, etc.
-
-Please understand that there is no guarantee of an extension when you are absent from class and/or miss a deadline.
-
-*Note: If you've read this far in the syllabus, email me a picture of your pet if you have one or your favorite meme!*
-
-## Additional university policies
+## Additional University Policies
 
 Additional policies can be found at this link (please read through them): <https://catalog.arizona.edu/syllabus-policies>
 
@@ -316,7 +290,7 @@ For a list of emergency procedures for all types of incidents, please visit the 
 
 Also watch the video available at <https://arizona.sabacloud.com/Saba/Web_spf/NA7P1PRD161/common/learningeventdetail/crtfy000000000003560>
 
-## Important dates
+## Important Dates
 
 See the full [{{< var university.short_name >}} Academic Calendar]({{< var resources.academic_calendar_url >}}).
 
