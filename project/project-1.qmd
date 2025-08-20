@@ -1,5 +1,7 @@
 ---
 title: "Project 1"
+execute:
+    cache: false
 ---
 
 Welcome to our first data mining project, an engaging exercise in exploratory data analysis (EDA) and data preprocessing, two essential steps in the data science pipeline. For this project, we will delve into a dataset from the TidyTuesday initiative, a weekly project that supplies a new dataset to the R for Data Science community. You can choose any dataset you want from the datasets released in 2023 as part of this project: <https://github.com/rfordatascience/tidytuesday/tree/master/data/2023#readme>. Your aim is to perform a thorough EDA, prepare the data for analysis, and set a strong foundation for further machine learning tasks.
@@ -119,7 +121,7 @@ Your presentation should generally follow the same structure as your write-up. E
 
 ### Website
 
-Each of your projects will have a website that looks like <{{< var links.github_org >}}/project-01>. You are not expected to change the styling of the website, but if you want to, you'll need to edit the `_quarto.yml` file in your repo. Feel free to Google your way around it or ask on the discussion forum / office hours!
+Each of your projects will have a website that looks like \<{{< var links.github_org >}}/project-01\>. You are not expected to change the styling of the website, but if you want to, you'll need to edit the `_quarto.yml` file in your repo. Feel free to Google your way around it or ask on the discussion forum / office hours!
 
 ## Repo organization
 
@@ -143,23 +145,25 @@ The following folders and files in your project repository:
 
 ## Grading
 
-+------------------------------------------------------------------------+--------------------------------------------------+
-| Total                                                                  | 100 pts                                          |
-+========================================================================+==================================================+
-| Proposal[^2]                                                           | 10 pts                                           |
-+------------------------------------------------------------------------+--------------------------------------------------+
-| Presentation[^3]                                                       | 30 pts                                           |
-|                                                                        |                                                  |
-|                                                                        | (25 pts from teaching team, 5 pts from audience) |
-+------------------------------------------------------------------------+--------------------------------------------------+
-| Write-up[^4]                                                           | 30 pts                                           |
-+------------------------------------------------------------------------+--------------------------------------------------+
-| Reproducibility, style, and organization[^5]                           | 10 pts                                           |
-+------------------------------------------------------------------------+--------------------------------------------------+
-| [Within team peer evaluation]({{< var forms.within_team_peer_eval >}})[^6] | 10 pts                                           |
-+------------------------------------------------------------------------+--------------------------------------------------+
-| Between team peer evaluation[^7]                                       | 10 pts                                           |
-+------------------------------------------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+--------------------------------------------------+-----------+
+| # Total                                                                              | # 100 pts                                        |           |
+|                                                                                      |                                                  |           |
+| Proposal[^2]                                                                         | 10 pts                                           |           |
++--------------------------------------------------------------------------------------+--------------------------------------------------+-----------+
+|                                                                                      |                                                  |           |
++--------------------------------------------------------------------------------------+--------------------------------------------------+-----------+
+| Presentation[^3]                                                                     | 30 pts                                           |           |
+|                                                                                      |                                                  |           |
+|                                                                                      | (25 pts from teaching team, 5 pts from audience) |           |
++--------------------------------------------------------------------------------------+--------------------------------------------------+-----------+
+| Write-up[^4]                                                                         | 30 pts                                           |           |
++--------------------------------------------------------------------------------------+--------------------------------------------------+-----------+
+| Reproducibility, style, and organization[^5]                                         | 10 pts                                           |           |
++--------------------------------------------------------------------------------------+--------------------------------------------------+-----------+
+| [Within team peer evaluation]({{< var forms.within_team_peer_eval >}})[^6] \| 10 pts |                                                  |           |
++--------------------------------------------------------------------------------------+--------------------------------------------------+-----------+
+| Between team peer evaluation[^7]                                                     | 10 pts                                           |           |
++--------------------------------------------------------------------------------------+--------------------------------------------------+-----------+
 
 [^2]: Your proposal score will also take into consideration how much you've improved your proposal based on peer feedback.
 

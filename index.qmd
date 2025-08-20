@@ -36,7 +36,7 @@ d |>
   ) |>
   gt() |>
   fmt_date(date, date_style = 31) |>
-  sub_missing(columns = c(week, what, topic, prepare, due), missing_text = "") |>
+  sub_missing(columns = c(week, topic, prepare, due), missing_text = "") |>
   cols_align(
     align = "center", 
     columns = c(week)
@@ -47,7 +47,7 @@ d |>
     ) |>
   cols_align(
     align = "left", 
-    columns = c(what, topic, prepare, due)
+    columns = c(topic, prepare, due)
     ) |>
   tab_style(
     style = cell_borders(
@@ -64,14 +64,13 @@ d |>
   ) |>
   cols_width(
     week ~ px(15),
-    date ~ px(150), 
+    date ~ px(200), 
     topic ~ px(500),
     video ~ px(300),
     prepare ~ px(400),
     due ~ px(150)
   ) |>
   cols_label(
-    what = "",
     week = "Week",
     date = "Date", 
     due = "Due",

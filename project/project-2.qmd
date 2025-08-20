@@ -1,5 +1,7 @@
 ---
 title: "Final Project"
+execute:
+    cache: false
 ---
 
 ```{r}
