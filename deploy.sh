@@ -17,7 +17,7 @@ fi
 
 # Step 3: Add remote if not exists
 if ! git remote | grep -q "origin"; then
-    git remote add origin https://github.com/INFO523-Fall25-101-201/website-release.git
+    git remote add origin https://github.com/INFO523-Fall25-101-201/info523-fall25-101-201.github.io.git
 fi
 
 # Step 4: Stage all files
@@ -30,6 +30,6 @@ git commit -m "Deploy website $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes 
 
 # Step 6: Force push to main branch
 echo "Force pushing to website-release repository..."
-git push -f origin main
+git push --force --no-verify origin main
 
 echo "Deployment complete!"

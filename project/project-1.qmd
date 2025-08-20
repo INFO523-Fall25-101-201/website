@@ -19,10 +19,15 @@ Each of the two questions you come up with should involve more than two variable
 ```{r}
 #| echo: false
 #| message: false
+#| warning: false
 library(lubridate)
+library(yaml)
 
 # Get semester start date from variables
-semester_start <- mdy("{{< var semester.start_date >}}")
+vars <- read_yaml("../_variables.yml")
+
+# Parse the date (this will be "01/10/2024" after Quarto processing)
+semester_start <- mdy(vars$semester$start_date)
 
 # Find the Monday of Week 1 (semester start week)
 week1_monday <- floor_date(semester_start, "week", week_start = 1)

@@ -9,9 +9,13 @@ title: "Final Project"
 library(tidyverse)
 library(gt)
 library(lubridate)
+library(yaml)
 
 # Get semester start date from variables
-semester_start <- mdy("{{< var semester.start_date >}}")
+vars <- read_yaml("../_variables.yml")
+
+# Get semester start date from variables
+semester_start <- mdy(vars$semester$start_date)
 
 # Find the Monday of Week 1 (semester start week)
 week1_monday <- floor_date(semester_start, "week", week_start = 1)
