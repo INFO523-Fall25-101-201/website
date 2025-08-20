@@ -16,22 +16,37 @@ It is also very important that the dataset you choose allows for two distinct qu
 
 Each of the two questions you come up with should involve more than two variables two answer. You should phrase them in a way that the is within the scope of inference of your data. For example, if you have an observational dataset, you shouldn't phrase your question in a causal way.
 
+```{r}
+#| echo: false
+#| message: false
+library(lubridate)
+
+# Get semester start date from variables
+semester_start <- mdy("{{< var semester.start_date >}}")
+
+# Find the Monday of Week 1 (semester start week)
+week1_monday <- floor_date(semester_start, "week", week_start = 1)
+
+# Calculate all Mondays for the semester (array of dates)
+mondays <- week1_monday + weeks(0:20)
+```
+
 ## Workflow
 
--   Week 1 of project (week of January 30): Choose a dataset and write up your proposal in `proposal.qmd`.
+-   Week 1 of project (week of `r format(mondays[3], "%B %d")`): Choose a dataset and write up your proposal in `proposal.qmd`.
 
--   Week 2 of project (week of February 6): Provide peer review to two other teams in the form of issues in their GitHub repos, address the issues left on your team's project repo by closing them with explicit commits. Feel free to get started on your presentation as well.
+-   Week 2 of project (week of `r format(mondays[4], "%B %d")`): Provide peer review to two other teams in the form of issues in their GitHub repos, address the issues left on your team's project repo by closing them with explicit commits. Feel free to get started on your presentation as well.
 
--   Week 3 of project (week of February 13): Review feedback from me on your proposal and close any remaining issues. Work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
+-   Week 3 of project (week of `r format(mondays[5], "%B %d")`): Review feedback from me on your proposal and close any remaining issues. Work on your presentation in `presentation.qmd` and write-up in `index.qmd`.
 
--   Weeks 4-5 of project (week of February 19, 26): Finalize your write-up, presentation, and your project website. Present in class on the Wednesday after Spring Break (March 13th).
+-   Weeks 4-5 of project (week of `r format(mondays[6], "%B %d")`, `r format(mondays[7], "%B %d")`): Finalize your write-up, presentation, and your project website. Present in class on the Wednesday after Spring Break (`r format(mondays[9] + days(2), "%B %d")`).»
 
 ## Due dates
 
--   Proposals for peer review: due on Wednesday, February 7 at noon.
--   Revised proposals for teaching team review: due Monday, February 12 at 5pm.
--   Presentation: due Wednesday, March 13 at the **beginning** of class.
--   Write-up: due Wednesday, March 13 at 11:59pm.
+-   Proposals for peer review: due on Wednesday, `r format(mondays[4] + days(2), "%B %d")` at noon.
+-   Revised proposals for teaching team review: due Monday, `r format(mondays[5], "%B %d")` at 5pm.
+-   Presentation: due Wednesday, `r format(mondays[9] + days(2), "%B %d")` at the **beginning** of class.
+-   Write-up: due Wednesday, `r format(mondays[9] + days(2), "%B %d")` at 11:59pm.
 
 ## Deliverables
 
@@ -48,7 +63,7 @@ Your proposal should include:
 
 #### Reviewer tasks {.unnumbered}
 
-Each team will review the proposals of two other teams. The peer review will be completed during class on Wednesday, February 7. On that day teams will have access to the project repos of the two teams whose work they're reviewing. Reviews should start by cloning the team's repo, re-rendering it locally to make sure you can reproduce their work, and then adding an issue to their repo with your peer review feedback.
+Each team will review the proposals of two other teams. The peer review will be completed during class on Wednesday, `r format(mondays[4] + days(2), "%B %d")`. On that day teams will have access to the project repos of the two teams whose work they're reviewing. Reviews should start by cloning the team's repo, re-rendering it locally to make sure you can reproduce their work, and then adding an issue to their repo with your peer review feedback.
 
 The reviewer / reviewee assignments are as follows:
 

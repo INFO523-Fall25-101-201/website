@@ -117,6 +117,34 @@ technical:
 forms:
   within_team_peer_eval: "https://forms.gle/xPUkttdss8zzhnW48"
 
+# Academic Calendar
+academic_calendar:
+  classes_begin:
+    date: "Wednesday, January 10"
+    note: "Classes begin, Wednesday schedule"
+  mlk_day:
+    date: "Monday, January 15"
+    note: "MLK Day, no class"
+  drop_add_ends:
+    date: "Wednesday, January 17"
+    note: "Drop/add ends"
+  last_drop_without_w:
+    date: "Tuesday, February 06"
+    note: "Last day to drop without a W (withdraw)"
+  spring_recess:
+    date: "Monday-Sunday, March 04-10"
+    note: "Spring recess, no class"
+  last_withdraw_online:
+    date: "Tuesday, March 26"
+    note: "Last day to withdraw from a class online through UAccess"
+  last_day_of_class:
+    date: "Wednesday, May 01"
+    note: "Last day of class, no registration changes can be made"
+  final_presentations:
+    date: "Monday, May 06"
+    time: "1:00pm-3:00pm"
+    note: "Project 2 (Final Project) presentations"
+
 # External Resources
 resources:
   think_tank_url: "https://thinktank.arizona.edu/"

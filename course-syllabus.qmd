@@ -159,10 +159,6 @@ One requirement is that your project should feature some element that you had to
 
 More information will be provided throughout the semester.
 
-### Final Project Date
-
-**Monday, May 06, 1:00pm-3:00pm**
-
 ## Teams
 
 You will be assigned to a different team for each of your two projects. You are encouraged to sit with your teammates in lectures. All team members are expected to contribute equally to the completion of each project and you will be asked to evaluate your team members after each assignment is due. Failure to adequately contribute to an assignment will result in a penalty to your mark relative to the team's overall mark.
@@ -313,16 +309,18 @@ Also watch the video available at <https://arizona.sabacloud.com/Saba/Web_spf/N
 
 ## Important dates
 
--   **Wednesday, January 10:** Classes begin, Wednesday schedule
--   **Monday,** **January 15:** MLK Day, no class
--   **Wednesday, January 17**: Drop/add ends
--   **Tuesday, February 06**: Last day to drop without a W (withdraw)
--   **Monday-Sunday, March 04-10**: Spring recess, no class
--   **Tuesday, March 26**: Last day to withdraw from a class online through UAccess
--   **Wednesday, May 01**: Last day of class, no registration changes can be made
--   **Monday, May 06**: Project 2 presentations, 1:00pm-3:00pm
+-   **{{< var academic_calendar.classes_begin.date >}}:** {{< var academic_calendar.classes_begin.note >}}
+-   **{{< var academic_calendar.mlk_day.date >}}:** {{< var academic_calendar.mlk_day.note >}}
+-   **{{< var academic_calendar.drop_add_ends.date >}}**: {{< var academic_calendar.drop_add_ends.note >}}
+-   **{{< var academic_calendar.last_drop_without_w.date >}}**: {{< var academic_calendar.last_drop_without_w.note >}}
+-   **{{< var academic_calendar.spring_recess.date >}}**: {{< var academic_calendar.spring_recess.note >}}
+-   **{{< var academic_calendar.last_withdraw_online.date >}}**: {{< var academic_calendar.last_withdraw_online.note >}}
+-   **{{< var academic_calendar.last_day_of_class.date >}}**: {{< var academic_calendar.last_day_of_class.note >}}
+-   **{{< var academic_calendar.final_presentations.date >}}**: {{< var academic_calendar.final_presentations.note >}}, {{< var academic_calendar.final_presentations.time >}}
 
-For more important dates, see the full [{{< var university.short_name >}} Academic Calendar](https://catalog.arizona.edu/2023-2024-academic-calendar).
+**{{< var academic_calendar.final_presentations.date >}}, {{< var academic_calendar.final_presentations.time >}}**
+
+For more important dates, see the full [{{< var university.short_name >}} Academic Calendar]({{< var resources.academic_calendar_url >}}).
 
 ## Graduate Student Resources
 
