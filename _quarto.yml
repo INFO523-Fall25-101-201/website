@@ -71,10 +71,8 @@ website:
             text: Setting up Git
       - section: "Projects"
         contents: 
-          - href: project/project-1.qmd
-            text: Project 1
           - href: project/project-2.qmd
-            text: Project 2
+            text: Final Project
       - section: "Homework"
         contents:
           - href: homework/hw-01.qmd

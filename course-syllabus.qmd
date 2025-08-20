@@ -111,7 +111,7 @@ You are expected to bring a laptop to each class so that you can take part in th
 
 ## Assessment
 
-Assessment for the course is comprised of four components: participation, reading quizzes, homework assignments, and projects. All assignments are due by 11:59pm on the indicated day on the [course schedule]({{< var website.url }}).
+Assessment for the course is comprised of four components: participation, reading quizzes, homework assignments, and projects. All assignments are due by 11:59pm on the indicated day on the [course schedule]({{< var website.url >}}).
 
 -   **Participation** is required throughout the semester. Students who participate regularly in Slack discussion will receive full credit for 10% of the grade.
 
@@ -119,16 +119,13 @@ Assessment for the course is comprised of four components: participation, readin
 
     Reading quizzes will be linked from the [course schedule]({{< var website.url }}). They always cover reading that is due since the previous quiz and up to and including the deadline for the given quiz. 
 
--   **Homework assignments** (5), due every other week (roughly), completed individually. Each homework assignment is worth 7% of the course grade. Lowest homework assignment score is dropped.
+-   **Homework assignments** (5), due every other week (roughly), completed individually. Each homework assignment is worth 8% of the course grade. Lowest homework assignment score is dropped.
 
--   **Projects** (2), mid-semester and end of semester, completed in teams.
+-   **Final Project** (1), completed in teams, worth 40% of the course grade.
+    
+    Teams will pick a dataset of interest to them and develop a data mining workflow in Python (problem --\> solution). The deliverables will include a data visualization and/or analysis, a write up of the process and findings, and a presentation. For the second project, you will be encouraged to think beyond traditional data mining techniques (i.e., explore and utilize modern best practices)
 
-    -   Project 1: Teams will be given a dataset to mine. Project 1 is worth 15% of the course grade.
-    -   Project 2: Teams will pick a dataset of interest to them and develop a data mining workflow in Python (problem --\> solution). Project 2 is worth 30% of the course grade.
-
-    The deliverables for each project will include a data visualization and/or analysis, a write up of the process and findings, and a presentation. For the second project, you will be encouraged to think beyond traditional data mining techniques (i.e., explore and utilize modern best practices)
-
-    Each project will have a peer review component to provide at least one round of feedback during the process of development. Teams will provide periodic peer feedback to their teammates while working on the projects as well as upon completion. The scores from the peer evaluations, along with individual contributions tracked by commits on GitHub, will be used to ensure that each student has contributed to the teamwork.
+    It will have a peer review component to provide at least one round of feedback during the process of development. Teams will provide periodic peer feedback to their teammates while working on the projects as well as upon completion. The scores from the peer evaluations, along with individual contributions tracked by commits on GitHub, will be used to ensure that each student has contributed to the teamwork.
 
     All team members must take part in the presentation. Presentations must be given via Zoom, or in recording if the team requires. My preference is that the team stick to one method of delivery (all presenters on Zoom or in recording), but I realize a lot can change throughout this semester, and we'll adjust accordingly.
 
