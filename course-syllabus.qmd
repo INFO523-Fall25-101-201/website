@@ -33,11 +33,11 @@ Students are assumed to know the basics in computer programming (e.g., variables
 
 ## Course Format
 
-Live in-person lectures, {{< var class.day >}} {{< var class.time >}}, {{< var class.location >}}. Attendance is mandatory.
+Asynchronous online lectures, {{< var class.day >}} {{< var class.time >}}, {{< var class.location >}}. Watch the lecture videos at your pace, but make sure to turn in your assignments and projects on time. 
 
 ## Course Objective
 
-{{< var course.number >}} is a required course in the iSchool's M.S. program. As a multidisciplinary field, the course introduce concepts and work from many areas critical to information studies including statistics, machine learning, pattern recognition, database technology, and data visualization.  
+{{< var course.number >}} is a required course in the {{<var university.school}}'s M.S. program. As a multidisciplinary field, the course introduce concepts and work from many areas critical to information studies including statistics, machine learning, pattern recognition, database technology, and data visualization.  
 
 ## Learning Outcomes
 
@@ -49,6 +49,8 @@ By the end of this course, students will: 
 
 -   Explain and interpret results from data mining analyses.
 
+-   (Optional) Exploring the usage of Generative AI in and for data mining.
+
 ## Textbooks:
 
 -   `[Data mining conceptual]` Jiawei Han, Jian Pei, Hanghang Tong. [Data Mining Concepts and Techniques](./textbooks/hanDataMiningConceptual.pdf). 4th edition. Morgan Kaufmann, 2023.
@@ -59,7 +61,7 @@ By the end of this course, students will: 
 
 ## Course Schedule
 
-An up-to-date schedule, assignments, and due dates can be found on the course website: [{{< var website.url >}}]({{< var website.url >}}).
+An up-to-date schedule, assignments, and due dates can be found on the course website: [{{< var website.url >}}]({{< var website.url >}}). Dates and time is always in **Mountain Standard Time** (UTC-7). 
 
 ## Course Competencies
 
@@ -93,7 +95,7 @@ I will regularly send course announcements via email and Slack, make sure to che
 -   The teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
 -   Outside of class and office hours, any general questions about course content or assignments should be posted on the course Slack. There is a chance another student has already asked a similar question, so please check the other posts on Slack before adding a new question. If you know the answer to a question posted on Slack, I encourage you to respond!
 
-Check out the [Support](https://datamineaz.org/course-support) page for more resources.
+Check out the [Support]({{< var website.url >}}/course-support) page for more resources.
 
 I want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don't hesitate to ask.
 
@@ -109,17 +111,17 @@ You are expected to bring a laptop to each class so that you can take part in th
 
 ## Assessment
 
-Assessment for the course is comprised of four components: attendance and participation, reading quizzes, homework assignments, and projects.
+Assessment for the course is comprised of four components: participation, reading quizzes, homework assignments, and projects.
 
--   **Attendance and participation** is required throughout the semester. Students who attend at least 80% of the lectures and participate regularly during lecture will receive full credit for this portion of their grade. Participation on Slack will also count towards this component.
+-   **Participation** is required throughout the semester. Students who participate regularly in Slack discussion will receive full credit for this portion of their grade.
 
 -   **Reading quizzes** (6), due every other week (roughly), completed individually. Each quiz is worth 2% of the grade. Lowest quiz score is dropped.
 
-    Reading quizzes will be linked from the [course schedule](https://datamineaz.org/). They always cover reading that is due since the previous quiz and up to and including the deadline for the given quiz. They're due by 11:59pm on the indicated day on the [course schedule](https://datamineaz.org/).
+    Reading quizzes will be linked from the [course schedule]({{< var website.url }}). They always cover reading that is due since the previous quiz and up to and including the deadline for the given quiz. They're due by 11:59pm on the indicated day on the [course schedule]({{< var website.url }}).
 
 -   **Homework assignments** (6), due every other week (roughly), completed individually. Each homework assignment is worth 9% of the course grade. Lowest homework assignment score is dropped.
 
-    Homework assignments are due by 11:59pm on the indicated day on the [course schedule](https://datamineaz.org/).
+    Homework assignments are due by 11:59pm on the indicated day on the [course schedule]({{< var website.url }}).
 
 -   **Projects** (2), mid-semester and end of semester, completed in teams.
 
@@ -185,9 +187,16 @@ Please abide by the following as you work on assignments in this course:
 
 -   **Sharing and reusing code:** I am well aware that a huge volume of code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. On individual assignments you may not directly share code with another student in this class, and on team assignments you may not directly share code with another team in this class.
 
--   **Generative AI (e.g., ChatGPT):** I am additionally aware of the potential code AI for coding (I taught a workshop on it...). While these tools are amazing, learners should be aware of the impacts that using such tools can have on core competency. David Humphrey, a computer science professor, [**wrote about ChatGPT and its potentially negative impacts on core learning.**](https://blog.humphd.org/cheatgpt/) It is a good read about the pitfalls of using generative AI in an educational context. By using a generative AI, learners may miss the opportunity to discover how something works and why things are done that way. It is also important to note that the iSchool generally bans utilizing ChatGPT and generative AI in our [Academic Integrity Policy](https://ischool.arizona.edu/sites/ischool.arizona.edu/files/iSchool%20Policy%20on%20Academic%20Integrity%20in%20Computing%202023%20-%20approved%20by%20faculty%20vote%20April%202023.pdf#:~:text=UArizona%20iSchool%20Instructors%20are%20expected%20to%20help%20students,prohibited%20in%20some%20courses%20are%20allowed%20in%20others.).
+### Generative AI Policy
 
-## **iSchool Academic Integrity Policy**
+**<span style="color: #FFBF00">AI is Sometimes Permitted</span>**
+
+As a researcher in human-AI interaction, I published highly impactful [research study](https://dl.acm.org/doi/full/10.1145/3613904.3642377) on how people use Generative AI for coding. I also personally use advanced AI coding tools (e.g. ClaudeCode, Cursor, etc.) as well as more straightforward tools (e.g. ChatGPT, GitHub Copilot, Gemini). Hence, I might have more to say about this topic. 
+
+Following the University's [established AI policy](https://docs.google.com/document/d/1ZE3iWssjpt2XkEH9UvBkJY252Iwyd_4o04o20Ktm-q4/edit?tab=t.0), this class encourages you to use/experiment with Generative AI in all assignments and projects.
+- The only exception are **quizzes**. They serve as your own checkpoint and for your reflection purposes. Using AI there is a waste of time (and computing power), especially since we are not grading on whether you get to the correct answer. 
+
+## **College of Information Science Academic Integrity Policy**
 
 This policy agreed upon by faculty in the UArizona iSchool applies in addition to the Dean of Students' [Code of Academic Integrity](https://deanofstudents.arizona.edu/policies/code-academic-integrity).
 
@@ -309,18 +318,7 @@ Also watch the video available at <https://arizona.sabacloud.com/Saba/Web_spf/N
 
 ## Important dates
 
--   **{{< var academic_calendar.classes_begin.date >}}:** {{< var academic_calendar.classes_begin.note >}}
--   **{{< var academic_calendar.mlk_day.date >}}:** {{< var academic_calendar.mlk_day.note >}}
--   **{{< var academic_calendar.drop_add_ends.date >}}**: {{< var academic_calendar.drop_add_ends.note >}}
--   **{{< var academic_calendar.last_drop_without_w.date >}}**: {{< var academic_calendar.last_drop_without_w.note >}}
--   **{{< var academic_calendar.spring_recess.date >}}**: {{< var academic_calendar.spring_recess.note >}}
--   **{{< var academic_calendar.last_withdraw_online.date >}}**: {{< var academic_calendar.last_withdraw_online.note >}}
--   **{{< var academic_calendar.last_day_of_class.date >}}**: {{< var academic_calendar.last_day_of_class.note >}}
--   **{{< var academic_calendar.final_presentations.date >}}**: {{< var academic_calendar.final_presentations.note >}}, {{< var academic_calendar.final_presentations.time >}}
-
-**{{< var academic_calendar.final_presentations.date >}}, {{< var academic_calendar.final_presentations.time >}}**
-
-For more important dates, see the full [{{< var university.short_name >}} Academic Calendar]({{< var resources.academic_calendar_url >}}).
+See the full [{{< var university.short_name >}} Academic Calendar]({{< var resources.academic_calendar_url >}}).
 
 ## Graduate Student Resources
 

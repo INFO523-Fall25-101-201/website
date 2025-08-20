@@ -2,7 +2,7 @@
 title: "Homework 1"
 ---
 
-For any exercise where you're writing code, insert a code chunk and make sure to label the chunk. Use a short and informative label. For any exercise where you're creating a plot, make sure to label all axes, legends, etc. and give it an informative title. For any exercise where you're including a description and/or interpretation, use full sentences. Make a commit at least after finishing each exercise, or better yet, more frequently. Push your work regularly to GitHub, and make sure all checks pass.
+{{< var instructions.standard >}}
 
 ------------------------------------------------------------------------
 
@@ -84,20 +84,14 @@ For any exercise where you're writing code, insert a code chunk and make sure to
 
 **Submission Guidelines:**
 
--   Push your Quarto Notebook to your GitHub repository.
+{{< var instructions.submission_guidelines >}}
 
--   Ensure your commit messages are descriptive.
+**Grading Rubric:** 
 
-**Grading Rubric:** Your work will be evaluated based on the following criteria:
+{{< var grading.rubric >}}
 
--   Correctness and completeness of the code.
+**Points Distribution:** 
 
--   Quality and clarity of the visualizations and summary report.
+{{< var grading.points_distribution >}}
 
--   Proper use of comments and documentation in the code.
-
--   Adherence to the submission guidelines.
-
-**Points Distribution:** Each task is allocated a specific number of points. Points will be awarded based on the completeness and correctness of the work submitted. Be sure to follow best practices in data analysis and provide interpretations for your findings and decisions during preprocessing.
-
-Good luck, and may your insights be profound!
+{{< var closing.phrase >}}
