@@ -38,7 +38,7 @@ git commit -m "Deploy website $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes 
 
 # Step 8: Push to main branch
 echo "Pushing to website-release repository..."
-git push origin main
+git push
 
 # Step 9: Clean up
 cd ..

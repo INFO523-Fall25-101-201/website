@@ -3,6 +3,7 @@ title: "{{< var course.full_name >}}"
 subtitle: "{{< var instructor.name >}}"
 execute:
   freeze: false
+  cache: false
 editor_options: 
   chunk_output_type: console
 ---
@@ -64,7 +65,8 @@ d |>
   cols_width(
     week ~ px(15),
     date ~ px(150), 
-    topic ~ px(550),
+    topic ~ px(500),
+    video ~ px(300),
     prepare ~ px(400),
     due ~ px(150)
   ) |>
@@ -74,6 +76,7 @@ d |>
     date = "Date", 
     due = "Due",
     topic = "Topic",
+    video = "Video",
     prepare = "Prepare",
     due = "Due"
   ) |>
