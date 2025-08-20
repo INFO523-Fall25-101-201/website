@@ -6,6 +6,8 @@ Course website for INFO 523 - Data Mining and Discovery at The University of Ari
 
 This repository relies on Quarto for compilation. You also need to install R and its dependencies, as well as Python and its dependencies `pip install numpy pandas matplotlib seaborn scipy scikit-learn statsmodels scikit-learn-extra mord mlxtend xgboost tensorflow pygam patsy feature-engine skimpy yellowbrick scikit-optimize missingno jupyter-cache`. 
 
+On macOS, a compatibility issue exists between PyArrow and Tensorflow. You may need to uninstall PyArrow from the virtual environment.
+
 ## Colors
 
 -   `#8B0015` - Chili
