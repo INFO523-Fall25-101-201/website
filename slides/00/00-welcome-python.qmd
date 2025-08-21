@@ -101,13 +101,29 @@ aka "the one link to rule them all"
 ```
 :::
 
-## Lectures {.smaller}
+## Lectures
 
 -   Asynchronous online format, watch at your pace
 
 -   Active participation is expected throughout the semester
 
 -   Discussions and Q&A are expected and encouraged in the Slack channel, more details to come
+
+## Division of Labor
+
+-   Will reuse some of Dr. Greg Chism's recordings
+
+-   Dr. Chism designed the class and has been teaching for many semesters at {{< var university.short_name >}}
+
+-   I will record ad-hoc sections: 
+    
+    -   To discuss our usage of Generative AI in data mining 
+
+    -   If some of you want to learn an extra technique (email me!)
+
+    -   To address common issues among homework/project submissions
+
+-   I will provide timely support on Slack channel
 
 ## Announcements
 
@@ -320,19 +336,19 @@ I want to make sure that you learn everything you were hoping to learn from this
 
 # Course Tools
 
-## JupyterLab
+## Visual Studio Code
 
 ::: {.large style="text-align: center;"}
-<https://jupyter.org/try>
+<https://code.visualstudio.com/>
 :::
 
--   Browser based JupyterLab instance(s)
+-   Full-featured IDE with native Jupyter Notebook support
 
--   Requires internet connection to access
+-   Integrated Python debugger with inline variable values
 
--   Provides consistency in hardware and software environments
+-   Built-in variable viewer and data explorer for notebooks
 
--   Local Python and JupyterLab installations are fine but we will not guarantee support
+-   Supports both local and remote development (including GitHub Codespaces)
 
 ## GitHub {.smaller}
 
