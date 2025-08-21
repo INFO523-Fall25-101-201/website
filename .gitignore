@@ -5,6 +5,7 @@
 
 /.quarto/
 docs/
+docs-temp/
 *.key
 
 .DS_Store

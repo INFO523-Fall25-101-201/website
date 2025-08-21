@@ -40,8 +40,4 @@ git commit -m "Deploy website $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes 
 echo "Pushing to website-release repository..."
 git push
 
-# Step 9: Clean up
-cd ..
-rm -rf doc-temp
-
 echo "Deployment complete!"
