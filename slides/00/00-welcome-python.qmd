@@ -265,11 +265,16 @@ Three "free passes" for the semester
 
 ## ChatGPT / AI policy
 
--   We are additionally aware of the potential code AI for coding (your instructor taught a workshop on it...).
+-   **AI is Sometimes Permitted** - This class encourages you to use/experiment with Generative AI in all assignments and projects
 
--   While these tools are amazing, learners should be aware of the impacts that using such tools can have on core competency. David Humphrey, a computer science professor, [**wrote about ChatGPT and its potentially negative impacts on core learning.**](https://blog.humphd.org/cheatgpt/) It is a good read about the pitfalls of using generative AI in an educational context.
+-   **Exception:** Quizzes - AI use is not permitted for quizzes as they serve as your own checkpoint and reflection
 
--   By using a generative AI, learners may miss the opportunity to discover how something works and why things are done that way.
+-   **Requirements when using AI:**
+    - Always maintain control by reviewing, criticizing, and steering AI responses
+    - Clearly state which AI tools you used and how you incorporated their output
+    - Write reflections about your workflow and AI's responses (graded component)
+
+-   Remember: AI tools won't be responsible for your grades or learning - you are!
 
 ## Academic integrity
 
@@ -295,11 +300,11 @@ ask if you're not sure if something violates a policy!
 
 -   {{< var instructor.name >}}:
 
-    -   Mondays, TBA - Zoom
+    -   {{< var instructor.office_hours.day >}}, {{< var instructor.office_hours.time >}} - {{< var instructor.office_hours.location >}}
 
         -   Except for university holidays
 
-        -   Any exceptions will be announced via Slack / email
+        -   Any exceptions will be announced via Slack / D2L
 
     -   By appointment - Zoom or {{< var instructor.office >}}
 
