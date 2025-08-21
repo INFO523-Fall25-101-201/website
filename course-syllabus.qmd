@@ -29,11 +29,9 @@ format:
 
 ## Prerequisites
 
-Students are assumed to know the basics in computer programming (e.g., variables, arrays, loops, if-then conditions), statistics (e.g., normal distribution, significance tests), and relational database (e.g., ER-diagram, SQL statements). 
-## Course Format
+Students are assumed to know the basics in computer programming (e.g., variables, arrays, loops, if-then conditions), statistics (e.g., normal distribution, significance tests), and relational database (e.g., ER-diagram, SQL statements).  \## Course Format
 
-Asynchronous online lectures: {{< var class.day >}} {{< var class.time >}}, {{< var class.location >}}. 
-Set your own schedule to watch the lecture videos, but make sure to turn in your assignments and projects on time. 
+Asynchronous online lectures: {{< var class.day >}} {{< var class.time >}}, {{< var class.location >}}. Set your own schedule to watch the lecture videos, but make sure to turn in your assignments and projects on time.
 
 ## Course Objective
 
@@ -61,7 +59,7 @@ By the end of this course, students will: 
 
 ## Course Schedule
 
-An up-to-date schedule, assignments, and due dates can be found on the [course website]({{< var website.url >}}). Dates and time is always in **Mountain Standard Time** (UTC-7). 
+An up-to-date schedule, assignments, and due dates can be found on the [course website]({{< var website.url >}}). Dates and time is always in **Mountain Standard Time** (UTC-7).
 
 ## Course Competencies
 
@@ -73,9 +71,9 @@ The course addresses the MS Competencies: C1 \[A, B, C, D\], C2, and C3
 
 All students must adhere to the [{{< var university.short_name >}} Student Rights & Responsibilities](https://deanofstudents.arizona.edu/student-rights-responsibilities#:~:text=The%20Code%20of%20Academic%20Integrity%20and%20Student%20Code,conduct%20expected%20within%20the%20University%20of%20Arizona%20community.): The {{< var university.name >}} is a community dedicated to scholarship, leadership, and service and to the principles of honesty, fairness, and accountability. Citizens of this community commit to reflect upon these principles in all academic and non-academic endeavors, and to protect and promote a culture of integrity.
 
-### Inclusive Community
+### A Welcoming Community for Everyone
 
-It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with [{{< var university.short_name >}}'s Commitment to Diversity and Inclusion](https://provost.arizona.edu/content/diversity-inclusion). Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.
+It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are welcoming to everyone. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.
 
 Furthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities. To help accomplish this:
 
@@ -117,12 +115,12 @@ Assessment for the course is comprised of four components: participation, readin
 
 -   **Reading quizzes** (5), due every other week (roughly), completed individually. Each quiz is worth 2% of the grade.
 
-    Reading quizzes will be linked from the [course schedule]({{< var website.url }}). They always cover reading that is due since the previous quiz and up to and including the deadline for the given quiz. 
+    Reading quizzes will be linked from the [course schedule](%7B%7B%3C%20var%20website.url%20%7D%7D). They always cover reading that is due since the previous quiz and up to and including the deadline for the given quiz.
 
 -   **Homework assignments** (5), due every other week (roughly), completed individually. Each homework assignment is worth 8% of the course grade. Lowest homework assignment score is dropped.
 
 -   **Final Project** (1), completed in teams, worth 40% of the course grade.
-    
+
     Teams will pick a dataset of interest to them and develop a data mining workflow in Python (problem --\> solution). The deliverables will include a data visualization and/or analysis, a write up of the process and findings, and a presentation. For the second project, you will be encouraged to think beyond traditional data mining techniques (i.e., explore and utilize modern best practices)
 
     It will have a peer review component to provide at least one round of feedback during the process of development. Teams will provide periodic peer feedback to their teammates while working on the projects as well as upon completion. The scores from the peer evaluations, along with individual contributions tracked by commits on GitHub, will be used to ensure that each student has contributed to the teamwork.
@@ -198,14 +196,11 @@ In any cases in which this course requires or permits students to use practices 
 
 ### **Generative AI Policy**
 
-**<span style="color: #FFBF00">AI is Sometimes Permitted</span>**
+[**AI is Sometimes Permitted**]{style="color: #FFBF00"}
 
-As a researcher in human-AI interaction, I published highly impactful [research study](https://dl.acm.org/doi/full/10.1145/3613904.3642377) on how people use Generative AI for coding. I also personally use advanced AI coding tools (e.g. ClaudeCode, Cursor, etc.) as well as more straightforward tools (e.g. ChatGPT, GitHub Copilot, Gemini). Hence, I might have more to say about this topic. 
+As a researcher in human-AI interaction, I published highly impactful [research study](https://dl.acm.org/doi/full/10.1145/3613904.3642377) on how people use Generative AI for coding. I also personally use advanced AI coding tools (e.g. ClaudeCode, Cursor, etc.) as well as more straightforward tools (e.g. ChatGPT, GitHub Copilot, Gemini). Hence, I might have more to say about this topic.
 
-Following the University's [established AI policy](https://docs.google.com/document/d/1ZE3iWssjpt2XkEH9UvBkJY252Iwyd_4o04o20Ktm-q4/edit?tab=t.0), this class encourages you to use/experiment with Generative AI in all assignments and projects.
-- The only exception are **quizzes**. They serve as your own checkpoint and for your reflection purposes. Using AI there is a waste of time (and computing power), especially since we are not grading on whether you get to the correct answer. 
-- Always keep control of your code and work by reviewing, criticizing, and steering AI responses While AI-generated code may appear legitimate, [my studies](https://dl.acm.org/doi/full/10.1145/3613904.3642377) show that tools like ChatGPT easily hallucinate or miss your intention. While latest tools such as Claude Code or Cursor may allow "automonous" mode, it is still prone to overthinking or misunderstanding. 
-- Whenever you use Generative AI tools, clearly state in your assignment or project write-up which Generative AI tool(s) you used, what you used it for, and how you incorporated its output. In addition, **write reflections about your workflow and AI's responses, which will be graded.**
+Following the University's [established AI policy](https://docs.google.com/document/d/1ZE3iWssjpt2XkEH9UvBkJY252Iwyd_4o04o20Ktm-q4/edit?tab=t.0), this class encourages you to use/experiment with Generative AI in all assignments and projects. - The only exception are **quizzes**. They serve as your own checkpoint and for your reflection purposes. Using AI there is a waste of time (and computing power), especially since we are not grading on whether you get to the correct answer. - Always keep control of your code and work by reviewing, criticizing, and steering AI responses While AI-generated code may appear legitimate, [my studies](https://dl.acm.org/doi/full/10.1145/3613904.3642377) show that tools like ChatGPT easily hallucinate or miss your intention. While latest tools such as Claude Code or Cursor may allow "automonous" mode, it is still prone to overthinking or misunderstanding. - Whenever you use Generative AI tools, clearly state in your assignment or project write-up which Generative AI tool(s) you used, what you used it for, and how you incorporated its output. In addition, **write reflections about your workflow and AI's responses, which will be graded.**
 
 At the end of the day, Generative AI tools won't be responsible for your grades or your learning. Abusing of Generative AI tools be traced (e.g., failing to give credit or cite ChatGPT when it is used) which could result in your suspension or termination from the course and even your program of study.
 

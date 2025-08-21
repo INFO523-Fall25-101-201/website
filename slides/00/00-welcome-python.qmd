@@ -103,17 +103,11 @@ aka "the one link to rule them all"
 
 ## Lectures {.smaller}
 
--   In person
+-   Asynchronous online format, watch at your pace
 
--   Attendance is required (as long as you're healthy!)
+-   Active participation is expected throughout the semester
 
--   A little bit of everything:
-
-    -   Traditional lecture
-
-    -   Live coding + demos
-
-    -   Short exercises + solution discussion
+-   Discussions and Q&A are expected and encouraged in the Slack channel, more details to come
 
 ## Announcements
 
@@ -121,7 +115,7 @@ aka "the one link to rule them all"
 
 -   I'll assume that you've read an announcement by the next "business" day
 
-## Diversity and inclusion {.smaller}
+## A Course for Everyone {.smaller}
 
 It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
 
@@ -129,9 +123,11 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 -   Please let me know your preferred pronouns.
 
+. . .
+
 -   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.
 
--   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
+-   If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
 
 ## Accessibility
 
@@ -141,31 +137,40 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 # Assessments
 
-## Attendance + participation (5%)
+-   All deadlines are on 11:59pm MST.
+-   The course schedule is designed so you can easily remember:
+    -   Monday: Suggested time for watching the lecture. Quiz deadlines.
+    -   Thursday: Assignment deadlines.
 
+## Attendance + participation (10%)
 -   Required throughout the semester in lecture
-
--   Students who attend at least 80% of the lectures and participate regularly in lecture and/or other course venues (Slack) will receive full credit for this portion of their grade
+-   Students who participate regularly in course venues (especially Slack) will receive full credit for this portion of their grade
 
 ## Reading quizzes (10%)
-
 -   Online, individual
--   Cover reading that is due since the previous quiz and up to and including the deadline for the given quiz
--   Due by 11:59 pm AZ Time on the indicated day on the course schedule
--   **Lowest dropped**
+-   Deadline typically on Mondays
+-   5 quizzes throughout the semester (2% each)
+-   Cover reading that is due since the previous quiz
 
-## Homework assignments (45%)
-
+## Homework assignments (40%)
 -   Submitted on GitHub, individual
--   Some lab sessions allocated to working on homework / getting feedback from your TA
--   Due by 11:59 pm AZ Time on the indicated day on the course schedule
--   **Lowest dropped**
+-   Deadline typically on Thursdays
+-   Co-working sessions based on your availability
+-   Office hours to help with your needs
 
-## Projects (40%)
-
+## The Final Project (40%)
 -   Submitted on GitHub, team-based
+-   Open-ended, choose your own adventure
+-   Deadline typically on Thursdays
+-   Presentation + Writeup
 
--   Interim deadlines, peer review on content, peer evaluation for team contribution
+. . .
+
+-   Milestone deadlines: 
+    - Submitting your idea
+    - Peer review on the proposal
+    - Instructor feedback on the proposal
+    - Peer evaluation for team contribution
 
 ## Teams
 
@@ -178,35 +183,18 @@ It is my intent that students from all diverse backgrounds and perspectives be w
     -   Everyone is expected to understand *all* code turned in
     -   Individual contribution evaluated by peer evaluation, commits, etc.
 
-## Project 1 (15%)
-
--   Same/similar data, different results
-
--   Presentation and write-up
-
--   Wrapped up before midterms grades are due
-
-## Project 2 (25%)
-
--   The world is your oyster! (and more details TBA)
-
--   New team
-
--   Presentation and write-up
-
--   Wrapped up on the final exam date
-
 ## Grading {.smaller}
 
 This course is assessed 100% on your coursework (there is no exam). We will be assessing you based on the following assignments,
 
+**Note:** Please refer to the course syllabus and schedule for specific dates and detailed requirements.
+
 | Assignment | Type | Value | n | Due |
 |:--------------|:--------------|:--------------|:--------------|---------------|
-| Attendance + participation | Individual | 5% |  |  |
-| Reading quizzes | Individual | 10% | 6 | \~ Every other week |
-| Homeworks | Individual | 45% | 6 | \~ Every 2-3 weeks |
-| Project 1 | Team | 15% | 1 | \~ Week 10 + earlier interim deadlines |
-| Project 2 | Team | 25% | 1 | \~ Finals week + earlier interim deadlines |
+| Attendance + participation | Individual | 10% |  | Throughout semester |
+| Reading quizzes | Individual | 10% | 5 | ~ Every other week |
+| Homeworks | Individual | 40% | 5 | ~ Every 2-3 weeks |
+| Final Project | Team | 40% | 1 | Milestones + Finals week |
 
 # Course policies
 
@@ -228,6 +216,13 @@ This course is assessed 100% on your coursework (there is no exam). We will be a
     -   Late, but next day (after noon): -20% of available points
     -   Two days late or later: No credit, and we will not provide written feedback
 
+-   Peer evaluation:
+
+    -   Late submissions not accepted
+    -   Must turn in peer evaluation if you want your own score from others
+
+. . .
+
 -   Project presentations: Late submissions not accepted
 
 -   Project write-ups:
@@ -235,11 +230,6 @@ This course is assessed 100% on your coursework (there is no exam). We will be a
     -   Late, but next day (before noon): -10% of available points
     -   Late, but next day (after noon): -20% of available points
     -   Two days late or later: No credit, and we will not provide written feedback
-
--   Peer evaluation:
-
-    -   Late submissions not accepted
-    -   Must turn in peer evaluation if you want your own score from others
 
 ## Free passes
 
@@ -305,11 +295,11 @@ ask if you're not sure if something violates a policy!
 
 -   {{< var instructor.name >}}:
 
-    -   {{< var instructor.office_hours.day >}}, {{< var instructor.office_hours.time >}} - {{< var instructor.office_hours.location >}}
+    -   Mondays, TBA - Zoom
 
         -   Except for university holidays
 
-        -   Any exceptions will be announced in class / by email
+        -   Any exceptions will be announced via Slack / email
 
     -   By appointment - Zoom or {{< var instructor.office >}}
 
