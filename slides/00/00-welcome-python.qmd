@@ -387,21 +387,15 @@ Some brief advice about selecting your account names (particularly for GitHub),
 
 -   Once you join, browse the channels to make sure you're posting questions in the right channel, update your profile with your name, photo/avatar of you that matches your GitHub profile, and your pronouns
 
--   **Unfortunately** Slack is **not** the best place to ask coding questions, but it's a great place for real-time connection and collaboration
-
-::: task
-Demo on Wednesday for asking good questions with proper code formatting.
-:::
-
-## Before the weekend
+## Before Week 2
 
 1.  Create a GitHub account if you don't have one
 
 2.  Read the [syllabus](https://{{< var website.url >}}/course-syllabus)
 
-3.  Make sure you can use JupyterLab
+3.  Make sure you can use Codespaces
 
-    1.  If not, install Python and JupyterLab (or VS Code)
+    1.  If not, install Python and VS Code
 
 # Quarto
 
