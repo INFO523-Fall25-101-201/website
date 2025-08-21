@@ -76,29 +76,31 @@ Above all, engage in extensive brainstorming, sifting through various ideas unti
 
 ## Workflow
 
--   Week 1 of project (week of `r format(mondays[11], "%b %d")`): Pick a focus for your project.
+-   Week 0 of project (week of `r format(mondays[7], "%b %d")`): Pick an idea for your project and put it in the Slack channel.
 
--   Week 2 of project (week of `r format(mondays[12], "%b %d")`): Work on developing your project proposal and setting up the structure for your repository.
+-   Week 2 of project (week of `r format(mondays[9], "%b %d")`): Develop your project proposal and set up the structure for your repository.
 
--   Week 3 of project (week of `r format(mondays[13], "%b %d")`): Finalize your project proposal + Conduct peer review on project proposals
+-   Week 3 of project (week of `r format(mondays[10], "%b %d")`): Submit a draft your project proposal + Conduct peer review on project proposals
 
--   Week 5 of project (week of `r format(mondays[14], "%b %d")`): Continue working on your project, and optionally, submit in an updated version of your proposal.
+-   Week 4 of project (week of `r format(mondays[11], "%b %d")`): Finish the peer review + Submit the revised draft of your project proposal + Receive feedback from the instructor
 
--   Week 6 of project (week of `r format(mondays[15], "%b %d")`): Continue working on your project, incorporating feedback from proposals.
+-   Week 5 of project (week of `r format(mondays[12], "%b %d")`): Incorporate instructor feedback into your proposal.
 
--   Week 7 of project (week of `r format(mondays[16], "%b %d")`): Continue working on your project.
+-   Week 6-9 of project: Work on your project.
 
--   Week 8 of project (week of `r format(mondays[17], "%b %d")`): Conduct peer code review.
+-   Week 9 of project (week of `r format(mondays[16], "%b %d")`): Conduct peer code review.
 
--   Week 9 of project (week of `r format(mondays[17], "%b %d")` - finals week): Present projects and turn in final write-up.
+-   Week 10 of project (week of `r format(mondays[17], "%b %d")` - finals week): Present projects and turn in final write-up.
 
 ## Due dates
 
--   Proposals for peer review: due `r format(mondays[13] + days(2), "%a, %b %d")` at 1pm.
--   Peer review of proposals: `r format(mondays[13], "%a, %b %d")` in class
--   Revised proposals for instructor review: due `r format(mondays[14], "%a, %b %d")` at 5pm.
--   Peer review of code: `r format(mondays[17] + days(2), "%a, %b %d")` in class
--   Write-up and presentation: due `r format(mondays[17], "%a, %b %d")`, 1:00pm - 3:00pm (scheduled final date)
+-   Project ideas (can change later): due `r format(mondays[7] + days(3), "%a, %b %d")` at 11:59pm.
+-   Proposals for peer review: due `r format(mondays[10] + days(3), "%a, %b %d")` at 11:59pm.
+-   Peer review of proposals: due `r format(mondays[11], "%a, %b %d")` at 11:59pm.
+-   Revised proposals for instructor review: due `r format(mondays[11] + days(3), "%a, %b %d")` at 11:59pm.
+-   Peer review of code: due `r format(mondays[16] + days(3), "%a, %b %d")` at 11:59pm
+-   Presentation: due `r format(mondays[16] + days(4), "%a, %b %d")` at 1:59pm
+-   Write-up: due `r format(mondays[17] + days(1), "%a, %b %d")` at 11:59pm
 
 ## Deliverables
 
