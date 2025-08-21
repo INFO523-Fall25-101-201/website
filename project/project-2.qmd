@@ -14,7 +14,7 @@ library(lubridate)
 library(yaml)
 
 # Get semester start date from variables
-vars <- read_yaml("../_variables.yml")
+vars <- read_yaml("../_variables.yml", warn=FALSE)
 
 # Get semester start date from variables
 semester_start <- mdy(vars$semester$start_date)

@@ -45,7 +45,7 @@ Office: {{< var instructor.office >}},
 -   Meeting dates
     -   {{< var semester.start_date >}} - {{< var semester.end_date >}}
 
-## Themes: what, why, and how {.smaller}
+## Themes: what, why, and how
 
 -   **What:** the techniques
     -   Specific Types of Mining Techniques like clustering for pattern discovery, decision trees for classification, and association rules for finding relationships.
@@ -69,18 +69,18 @@ Office: {{< var instructor.office >}},
 
 # But first...
 
-## Show and tell {.smaller}
+## Show and Tell
 
 ::: task
--   Form a small group (2-4 people) with people sitting around you
+-   **Introduction (by Monday 11:59pm):** Post a brief introduction in the #introductions channel on Slack -- include your name (with pronunciation guide if helpful), year, major, location/timezone, and one thing you're excited to learn about data mining
 
--   First, introduce yourselves to each other -- name (and proper pronunciation of name), year, major, where are you from, etc.
+-   **Discussion (by Wednesday 11:59pm):** In the #discussion channel, start a thread about: **What could be a good scenario for data mining?**  Then, choose one of the two topics:
+    -   What makes an effective data mining workflow?
+    -   What makes an ineffective data mining workflow?
+    
+-   **Engagement (by Thursday 11:59pm):** Reply to at least 2 other posts
 
--   Start what you think makes an effective data mining workflow.
-
--   Then, discuss what makes an ineffective data mining workflow.
-
--   Finally, choose the **one** discussion from your group, either "bad" or "good", and have one team member share the discussion on #general in Slack.
+-   **Synthesis:** I will summarize key themes from your discussions in our next async update
 :::
 
 # Course components
@@ -131,7 +131,7 @@ aka "the one link to rule them all"
 
 -   I'll assume that you've read an announcement by the next "business" day
 
-## A Course for Everyone {.smaller}
+## A Course for Everyone
 
 It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
 
@@ -139,7 +139,7 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 -   Please let me know your preferred pronouns.
 
-. . .
+## A Course for Everyone
 
 -   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.
 
@@ -180,7 +180,7 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 -   Deadline typically on Thursdays
 -   Presentation + Writeup
 
-. . .
+## The Final Project (40%)
 
 -   Milestone deadlines: 
     - Submitting your idea
@@ -199,7 +199,7 @@ It is my intent that students from all diverse backgrounds and perspectives be w
     -   Everyone is expected to understand *all* code turned in
     -   Individual contribution evaluated by peer evaluation, commits, etc.
 
-## Grading {.smaller}
+## Grading
 
 This course is assessed 100% on your coursework (there is no exam). We will be assessing you based on the following assignments,
 
@@ -214,15 +214,7 @@ This course is assessed 100% on your coursework (there is no exam). We will be a
 
 # Course policies
 
-## COVID policies
-
--   Wear a mask if the university requires
-
--   Stay home if you're sick and follow guidance
-
--   Read and follow university guidance
-
-## Late work policy {.smaller}
+## Late work policy
 
 -   Reading quizzes: Late submissions not accepted
 
@@ -237,7 +229,7 @@ This course is assessed 100% on your coursework (there is no exam). We will be a
     -   Late submissions not accepted
     -   Must turn in peer evaluation if you want your own score from others
 
-. . .
+## Late work policy
 
 -   Project presentations: Late submissions not accepted
 
@@ -312,7 +304,7 @@ ask if you're not sure if something violates a policy!
 
 # Support
 
-## Office hours {.smaller}
+## Office Hours
 
 -   {{< var instructor.name >}}:
 
@@ -350,7 +342,7 @@ I want to make sure that you learn everything you were hoping to learn from this
 
 -   Supports both local and remote development (including GitHub Codespaces)
 
-## GitHub {.smaller}
+## GitHub
 
 ::: {.large style="text-align: center;"}
 \<{{< var links.github_org >}}\>
@@ -366,7 +358,7 @@ I want to make sure that you learn everything you were hoping to learn from this
 Send me your Github account names on Slack, later this week you will be invited to the course organization.
 :::
 
-## Username advice {.smaller}
+## Username advice
 
 ::: hand
 in case you don't yet have a GitHub account...
@@ -384,7 +376,7 @@ Some brief advice about selecting your account names (particularly for GitHub),
 
 -   Make it timeless. Avoid highlighting your current university, employer, or place of residence
 
-## Slack {.smaller}
+## Slack
 
 -   Online forum for asking and answering questions
 
