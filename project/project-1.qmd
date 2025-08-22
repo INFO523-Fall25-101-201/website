@@ -26,7 +26,7 @@ library(lubridate)
 library(yaml)
 
 # Get semester start date from variables
-vars <- read_yaml("../_variables.yml", warn=FALSE)
+vars <- read_yaml("../_variables.yml", readLines.warn=FALSE)
 
 # Parse the date (this will be "01/10/2024" after Quarto processing)
 semester_start <- mdy(vars$semester$start_date)
