@@ -88,6 +88,7 @@ instructions:
 grading:
   rubric: |
     Your work will be evaluated based on the following criteria:
+    
     - Correctness and completeness of the code
     - Quality and clarity of the visualizations and summary report
     - Proper use of comments and documentation in the code

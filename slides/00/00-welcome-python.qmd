@@ -16,6 +16,28 @@ auto-stretch: false
 
 # Course Details
 
+## Themes: What
+
+-   **What:** the techniques
+    -   Specific Types of Mining Techniques like clustering for pattern discovery, decision trees for classification, and association rules for finding relationships.
+    -   Tooling to produce them (e.g., specific Python libraries)
+
+## Themes: How
+
+-   **How:** the process
+    -   Planning and understanding (workflow + pseudo code)
+    -   Pre-process data (e.g., cleaning, transforming, normalizing, etc.)
+    -   Applying Mining Algorithms (e.g., K-means clustering, decision trees, etc.)
+    -   Evaluating and tuning based on model performance
+    -   Interpretation and reporting
+
+## Themes: Why
+
+-   **Why:** the mechanism
+    -   Tie together "how" and "what" through Python
+    -   Understanding data patterns and predictions
+    -   Ethics and best practices
+
 ## Teaching team
 
 ::::: columns
@@ -30,7 +52,7 @@ Office: {{< var instructor.office >}},
 :::
 
 ::: {.column width="50%"}
-### Teaching assistant
+### Teaching Assistant
 
 {{< var ta.name >}}
 
@@ -45,47 +67,24 @@ Office: {{< var instructor.office >}},
 -   Meeting dates
     -   {{< var semester.start_date >}} - {{< var semester.end_date >}}
 
-## Themes: what, why, and how
-
--   **What:** the techniques
-    -   Specific Types of Mining Techniques like clustering for pattern discovery, decision trees for classification, and association rules for finding relationships.
-    -   Tooling to produce them (e.g., specific Python libraries)
-
-. . .
-
--   **How:** the process
-    -   Planning and understanding (workflow + pseudo code)
-    -   Pre-process data (e.g., cleaning, transforming, normalizing, etc.)
-    -   Applying Mining Algorithms (e.g., K-means clustering, decision trees, etc.)
-    -   Evaluating and tuning based on model performance
-    -   Interpretation and reporting
-
-. . .
-
--   **Why:** the theory
-    -   Tie together "how" and "what" through Python
-    -   Understanding data patterns and predictions
-    -   Ethics and best practices
-
-# But first...
+# But First...
 
 ## Show and Tell
 
 ::: task
--   **Introduction (by Monday 11:59pm):** Post a brief introduction in the #introductions channel on Slack -- include your name (with pronunciation guide if helpful), year, major, location/timezone, and one thing you're excited to learn about data mining
+-   **Introduction (by Monday 11:59pm):** Post a brief introduction in the #introductions channel on Slack - your name (with pronunciation guide if helpful), year, major, location/timezone, and one thing you're excited to learn about data mining
 
--   **Discussion (by Wednesday 11:59pm):** In the #discussion channel, start a thread about: **What could be a good scenario for data mining?**  Then, choose one of the two topics:
+-   **Discussion (by Wednesday 11:59pm):** In the #discussion channel, start a thread about: **What could be a good scenario for data mining?** Then, choose one of the two topics:
+
     -   What makes an effective data mining workflow?
     -   What makes an ineffective data mining workflow?
-    
--   **Engagement (by Thursday 11:59pm):** Reply to at least 2 other posts
 
--   **Synthesis:** I will summarize key themes from your discussions in our next async update
+-   **Engagement (by Thursday 11:59pm):** Reply to at least 2 other posts
 :::
 
-# Course components
+# Course Components
 
-## Course website
+## Course Website
 
 ::: {.large style="text-align: center;"}
 [{{< var website.url >}}](https://{{< var website.url >}}/)
@@ -115,9 +114,9 @@ aka "the one link to rule them all"
 
 -   Dr. Chism designed the class and has been teaching for many semesters at {{< var university.short_name >}}
 
--   I will record ad-hoc sections: 
-    
-    -   To discuss our usage of Generative AI in data mining 
+-   I will record ad-hoc sections:
+
+    -   To discuss our usage of Generative AI in data mining
 
     -   If some of you want to learn an extra technique (email me!)
 
@@ -158,23 +157,27 @@ It is my intent that students from all diverse backgrounds and perspectives be w
     -   Monday: Suggested time for watching the lecture. Quiz deadlines.
     -   Thursday: Assignment deadlines.
 
-## Attendance + participation (10%)
+## Participation (10%)
+
 -   Required throughout the semester in lecture
 -   Students who participate regularly in course venues (especially Slack) will receive full credit for this portion of their grade
 
-## Reading quizzes (10%)
+## Reading Quizzes (10%)
+
 -   Online, individual
 -   Deadline typically on Mondays
 -   5 quizzes throughout the semester (2% each)
 -   Cover reading that is due since the previous quiz
 
-## Homework assignments (40%)
+## Homework Assignments (40%)
+
 -   Submitted on GitHub, individual
 -   Deadline typically on Thursdays
 -   Co-working sessions based on your availability
 -   Office hours to help with your needs
 
 ## The Final Project (40%)
+
 -   Submitted on GitHub, team-based
 -   Open-ended, choose your own adventure
 -   Deadline typically on Thursdays
@@ -182,11 +185,11 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 ## The Final Project (40%)
 
--   Milestone deadlines: 
-    - Submitting your idea
-    - Peer review on the proposal
-    - Instructor feedback on the proposal
-    - Peer evaluation for team contribution
+-   Milestone deadlines:
+    -   Submitting your idea
+    -   Peer review on the proposal
+    -   Instructor feedback on the proposal
+    -   Peer evaluation for team contribution
 
 ## Teams
 
@@ -205,16 +208,16 @@ This course is assessed 100% on your coursework (there is no exam). We will be a
 
 **Note:** Please refer to the course syllabus and schedule for specific dates and detailed requirements.
 
-| Assignment | Type | Value | n | Due |
+| Assignment                 | Type       | Value | n   | Due                      |
 |:--------------|:--------------|:--------------|:--------------|---------------|
-| Attendance + participation | Individual | 10% |  | Throughout semester |
-| Reading quizzes | Individual | 10% | 5 | ~ Every other week |
-| Homeworks | Individual | 40% | 5 | ~ Every 2-3 weeks |
-| Final Project | Team | 40% | 1 | Milestones + Finals week |
+| Attendance + participation | Individual | 10%   |     | Throughout semester      |
+| Reading quizzes            | Individual | 10%   | 5   | \~ Every other week      |
+| Homeworks                  | Individual | 40%   | 5   | \~ Every 2-3 weeks       |
+| Final Project              | Team       | 40%   | 1   | Milestones + Finals week |
 
-# Course policies
+# Course Policies
 
-## Late work policy
+## Late Work Policy
 
 -   Reading quizzes: Late submissions not accepted
 
@@ -229,7 +232,7 @@ This course is assessed 100% on your coursework (there is no exam). We will be a
     -   Late submissions not accepted
     -   Must turn in peer evaluation if you want your own score from others
 
-## Late work policy
+## Late Work Policy
 
 -   Project presentations: Late submissions not accepted
 
@@ -239,7 +242,7 @@ This course is assessed 100% on your coursework (there is no exam). We will be a
     -   Late, but next day (after noon): -20% of available points
     -   Two days late or later: No credit, and we will not provide written feedback
 
-## Free passes
+## Free Passes
 
 Three "free passes" for the semester
 
@@ -248,14 +251,14 @@ Three "free passes" for the semester
 
 -   Passes can be stacked up to 3
 
--   Once they're gone, that's it...
+-   Write to my email to use it
 
--   ...so use them wisely!
+-   Once they're gone, that's it...so use them wisely!
 
 -   *Hint: like during midterms...*
 :::
 
-## Collaboration policy
+## Collaboration Policy
 
 -   Only work that is clearly assigned as team work should be completed collaboratively (Projects)
 
@@ -263,11 +266,11 @@ Three "free passes" for the semester
 
 -   Homework assignments must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice
 
-## Sharing / reusing code policy
+## Sharing / Reusing Code Policy
 
--   We are aware that a huge volume of code is available on the web, and many tasks may have solutions posted
+-   We are aware that many tasks may have solutions posted online
 
--   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
+-   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
 
 -   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source
 
@@ -278,13 +281,14 @@ Three "free passes" for the semester
 -   **Exception:** Quizzes - AI use is not permitted for quizzes as they serve as your own checkpoint and reflection
 
 -   **Requirements when using AI:**
-    - Always maintain control by reviewing, criticizing, and steering AI responses
-    - Clearly state which AI tools you used and how you incorporated their output
-    - Write reflections about your workflow and AI's responses (graded component)
+
+    -   Always maintain control by reviewing, criticizing, and steering AI responses
+    -   Clearly state which AI tools you used and how you incorporated their output
+    -   Write reflections about your workflow and AI's responses (graded component)
 
 -   Remember: AI tools won't be responsible for your grades or learning - you are!
 
-## Academic integrity
+## Academic Integrity
 
 > To uphold the [{{< var university.short_name >}} iSchool Community Standard](https://ischool.arizona.edu/sites/ischool.arizona.edu/files/iSchool Policy on Academic Integrity in Computing 2023 - approved by faculty vote April 2023.pdf#:~:text={{< var university.short_name >}} iSchool Instructors are expected to help students,prohibited in some courses are allowed in others.):
 
