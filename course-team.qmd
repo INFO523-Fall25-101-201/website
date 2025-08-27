@@ -11,4 +11,4 @@ title: "Teaching team"
 | Office hours    | Location            |
 |-----------------|---------------------|
 | {{< var instructor.office_hours.day >}} {{< var instructor.office_hours.time >}} | {{< var instructor.office_hours.location >}}         |
-| By appointment  | {{< var instructor.office >}} or Zoom |
+| By appointment | {{< var instructor.office >}} or \[{{< var links.zoom >}}\](Zoom) |

@@ -346,6 +346,18 @@ I want to make sure that you learn everything you were hoping to learn from this
 
 -   Supports both local and remote development (including GitHub Codespaces)
 
+## GitHub Codespaces
+
+::: {.large style="text-align: center;"}
+<https://code.visualstudio.com/docs/remote/codespaces>
+:::
+
+-   Visual Studio Code in your browser
+
+-   No need to set up Python dependencies
+
+-   Automatic integration with GitHub
+
 ## GitHub
 
 ::: {.large style="text-align: center;"}

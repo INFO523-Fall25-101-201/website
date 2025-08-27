@@ -60,7 +60,7 @@ d |>
     )
   ) |>
   fmt_markdown(
-    columns = c(topic, prepare, due)
+    columns = c(topic, prepare, video, due)
   ) |>
   cols_width(
     week ~ px(15),
