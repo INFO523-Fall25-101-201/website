@@ -1,9 +1,6 @@
 ---
 title: Data Preprocessing
-subtitle: Lecture 4
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -15,47 +12,6 @@ execute:
   error: false
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   RQ 02 is due Wed, Feb 14, 11:59pm
-
--   HW 02 is due Wed, Feb 21, 11:59pm
-
--   Project 1 proposal reviews will be returned to you by Friday
-
-## HW 1 lessons learned
-
-::: incremental
--   Review HW 1 issues, and show us you reviewed them by closing the issue.
-
--   DO NOT hard code local paths!
-
-    -   **Instead**, you can use **{pyprojroot}**:
-
-        -   `python -m pip install pyprojroot`
-
-        -   `from pyprojroot.here import here`
-
-        -   e.g., `pd.read_csv(here('data/data.csv'))`
-
-    -   **Related**: data should go into a `data` folder
-
--   Narrative/code description text should be plain text under a `###` or `####` header under the appropriate code chunk.
-:::
-
-## HW 1 lessons learned cont...
-
-::: incremental
-1.  **Start early**. No late work exceptions will be made in the future
-2.  **Ask your peers**. I have been monopolized by a few individuals, which is not fair to the rest.
-    1.  Peers will likely have the answer
-    2.  Peers will likely get to the question before I will.
-3.  **Ask descriptive questions**. See [this page](https://{{< var website.url >}}/course-support.html#how-to-ask-for-help) on asking effective questions.
-4.  **Please respect my work hours**. I will no longer reply to messages after 5pm on work days and at all on weekends.
-:::
 
 ## Setup
 
@@ -100,7 +56,7 @@ hfi = pd.read_csv("data/hfi.csv")
 esi = pd.read_csv("data/esi.csv")
 ```
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 **Human Freedom Index**
 
@@ -141,7 +97,7 @@ ax.set(title = "Environmental Sustainability")
 plt.show()
 ```
 :::
-:::
+:::::
 
 ## Question
 
@@ -200,7 +156,7 @@ We will be using `pf_score` from `hsi`: 80 missing values
 
 > In [statistics](https://en.wikipedia.org/wiki/Statistics "Statistics"), **imputation** is the process of replacing [missing data](https://en.wikipedia.org/wiki/Missing_data "Missing data") with substituted values.
 
-::: fragment
+:::: fragment
 #### Considerations
 
 ::: incremental
@@ -210,16 +166,16 @@ We will be using `pf_score` from `hsi`: 80 missing values
 -   Multiple imputation
 -   Can also be used on **outliers**
 :::
-:::
+::::
 
 ## Mean imputation {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Definition
 
 **How it Works**: Replace missing values with the arithmetic **mean** of the non-missing values in the same variable.
 
-::: fragment
+::::: fragment
 **Pros**:
 
 ::: incremental
@@ -235,7 +191,7 @@ We will be using `pf_score` from `hsi`: 80 missing values
 -   Not very accurate.
 -   Doesn't account for the uncertainty in the imputations.
 :::
-:::
+:::::
 
 ## Visual
 
@@ -275,16 +231,16 @@ plt.legend()
 
 plt.show()
 ```
-:::
+::::::
 
 ## Median imputation {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Definition
 
 **How it Works**: Replace missing values with the **median** of the non-missing values in the same variable.
 
-::: fragment
+::::: fragment
 **Pros** (same as mean):
 
 ::: incremental
@@ -300,7 +256,7 @@ plt.show()
 -   Not very accurate.
 -   Doesn't account for the uncertainty in the imputations.
 :::
-:::
+:::::
 
 ## Visual
 
@@ -338,16 +294,16 @@ plt.legend()
 
 plt.show()
 ```
-:::
+::::::
 
 ## Mode imputation {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Definition
 
 **How it Works**: Replace missing values with the **mode** of the non-missing values in the same variable.
 
-::: fragment
+::::: fragment
 **Pros**:
 
 ::: incremental
@@ -361,7 +317,7 @@ plt.show()
 -   It also doesn't factor the correlations between features.
 -   It can introduce bias in the data.
 :::
-:::
+:::::
 
 ## Visual
 
@@ -399,16 +355,16 @@ plt.legend()
 
 plt.show()
 ```
-:::
+::::::
 
 ## Capping (Winsorizing) imputation {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Definition
 
 **How it Works**: Removing extreme values, or **outliers** based on cut-offs
 
-::: fragment
+::::: fragment
 **Pros**:
 
 ::: incremental
@@ -421,7 +377,7 @@ plt.show()
 -   Capping only modifies the smallest and largest values slightly.
 -   If no extreme outliers are present, Winsorization may be unnecessary.
 :::
-:::
+:::::
 
 ## Visual
 
@@ -462,13 +418,13 @@ plt.legend()
 
 plt.show()
 ```
-:::
+::::::
 
 ## Other Imputation Methods {.smaller}
 
 ::: {style="text-align: center;"}
 ```{=html}
-<iframe width="1200" height="400" src="https://{{< var website.url >}}/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
+<iframe width="1200" height="400" src="https://datamineaz.org/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
 ```
 :::
 
@@ -628,7 +584,7 @@ hfi_copy[['ef_score_scale', 'pf_score_scale']].describe()
 
 ## Normality test: Q-Q plot {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Q-Q Plot
 
 ```{python}
@@ -661,53 +617,53 @@ plt.show()
 
 -   **Right Tail**: Points curve upwards, showing potential for **extreme high values (positive skewness)**.
 :::
-:::
+::::
 
 ## Correcting skew {.smaller}
 
-::: fragment
+:::: fragment
 [Square-root transformation](https://en.wikipedia.org/wiki/Square_root). $\sqrt x$ Used for **moderately** right-skew **(positive skew)**
 
 ::: incremental
 -   Cannot handle negative values (but can handle zeros)
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 [Log transformation](https://en.wikipedia.org/wiki/Logarithm). $log(x + 1)$ Used for **substantial** right-skew **(positive skew)**
 
 ::: incremental
 -   Cannot handle negative or zero values
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 [Inverse transformation](https://en.wikipedia.org/wiki/Inverse_function). $\frac{1}{x}$ Used for **severe** right-skew **(positive skew)**
 
 ::: incremental
 -   Cannot handle negative or zero values
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 [Squared transformation](https://en.wikipedia.org/wiki/Quadratic_function). $x^2$ Used for **moderately** left-skew **(negative skew)**
 
 ::: incremental
 -   Effective when lower values are densely packed together
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 [Cubed transformation](https://en.wikipedia.org/wiki/Cubic_function). $x^3$ Used for **severely** left-skew **(negative skew)**
 
 ::: incremental
 -   Further stretches the tail of the distribution
 :::
-:::
+::::
 
 ## Comparing transformations {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Original
 
 ```{python}
@@ -830,7 +786,7 @@ ax2.set_title('Cubed Q-Q plot')
 plt.tight_layout()
 plt.show()
 ```
-:::
+::::
 
 ## What did we learn?
 
@@ -894,7 +850,7 @@ Common choices for the kernel function $K$ include the [**Gaussian kernel**](htt
 
 **In density estimations, there is a smoothing parameter**
 
-::: fragment
+:::: fragment
 **Scott's Rule**
 
 ::: incremental
@@ -904,9 +860,9 @@ Common choices for the kernel function $K$ include the [**Gaussian kernel**](htt
 -   Tends to produce a smoother density estimation
 -   Suitable for data that is roughly normally distributed
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Silverman's Rule**
 
 ::: incremental
@@ -915,7 +871,7 @@ Common choices for the kernel function $K$ include the [**Gaussian kernel**](htt
 -   Formula: $h = \left( \frac{4\hat{\sigma}^5}{3n} \right)^{\frac{1}{5}}$
 -   Can be better for data with outliers or heavy tails
 :::
-:::
+::::
 
 ## KDE: our data {.smaller}
 
@@ -969,7 +925,7 @@ plt.show()
 
 > **Dimension reduction**, is the transformation of data from a high-dimensional space into a low-dimensional space so that the low-dimensional representation retains some meaningful properties of the original data, ideally close to its [intrinsic dimension](https://en.wikipedia.org/wiki/Intrinsic_dimension "Intrinsic dimension").
 
-::: fragment
+:::: fragment
 **Principal component analysis (PCA)** - Unsupervised
 
 ::: incremental
@@ -979,9 +935,9 @@ plt.show()
 
 -   Useful for feature extraction and data visualization.
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **t-Distributed Stochastic Neighbor Embedding (t-SNE)** - Unsupervised
 
 ::: incremental
@@ -993,7 +949,7 @@ plt.show()
 
 -   Ideal for complex data visualization
 :::
-:::
+::::
 
 ## Dimensional reduction: applied {.smaller}
 
@@ -1115,13 +1071,13 @@ plt.show()
 
 How does **environmental stability** [correlate]{.underline} with **human freedom indices** in [different countries]{.underline}, and what [trends]{.underline} can be observed over [recent years]{.underline}?
 
-::: fragment
+:::: fragment
 ::: incremental
 -   We can use the **`pf_score`** from the `hfi` dataset that we've been using.
 
 -   ...but we need an environmental stability index score.
 :::
-:::
+::::
 
 ## Dataset #2: Environmental Stability {.smaller}
 
@@ -1130,7 +1086,7 @@ esi = pd.read_csv("data/esi.csv")
 esi.head()
 ```
 
-::: fragment
+:::: fragment
 ::: incremental
 -   Looks like the `esi` column will work!
 
@@ -1140,7 +1096,7 @@ esi.head()
 
 -   P.S. there's no missing values
 :::
-:::
+::::
 
 ## Grouping and aggregating {.smaller}
 
@@ -1308,8 +1264,8 @@ x = esi_hfi_red['pf_score_square']
 y = esi_hfi_red['esi_log']
 corr_coefficient, p_value = pearsonr(x, y)
 
-print("Pearson correlation coefficient:", round(corr_coefficient, 3))
-print("P-value:", round(p_value, 5))
+print("Pearson correlation coefficient:", corr_coefficient.round(3))
+print("P-value:", p_value.round(5))
 ```
 
 ## Trend line

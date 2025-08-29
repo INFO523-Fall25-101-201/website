@@ -1,9 +1,6 @@
 ---
 title: Unsupervised<br>Learning I
-subtitle: Lecture 11
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -15,12 +12,6 @@ execute:
   error: false
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   HW 05 is due Fri Apr 26, 11:59pm
 
 ## Setup {.smaller}
 
@@ -99,7 +90,7 @@ Can we [identify distinct baseball player groupings]{.underline} based on their 
 
 ## Our data: MLB player stats {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Read + Head
 
 ```{python}
@@ -163,7 +154,7 @@ for col, data in category_analysis.items():
 ```{python}
 mlb_players_18.describe()
 ```
-:::
+::::
 
 ## Preprocessing {.smaller}
 
@@ -218,7 +209,7 @@ mlb_preprocessed_df.head()
 
 ## Similarity {.smaller}
 
-::: panel-tabset
+::::::::::: panel-tabset
 ## Cosine
 
 ![](images/cosine.jpg){fig-align="center" width="795"}
@@ -263,7 +254,7 @@ $r = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum (X_i - \bar{X})^2 \su
 
 ## Spearman $\rho$
 
-::: columns
+:::::: columns
 ::: {.column width="33.33%"}
 ![](images/spearman-1.png){fig-align="center" width="370"}
 :::
@@ -275,7 +266,7 @@ $r = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum (X_i - \bar{X})^2 \su
 ::: {.column width="33.33%"}
 ![](images/spearman-3.png){fig-align="center" width="370"}
 :::
-:::
+::::::
 
 $\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}$
 
@@ -286,11 +277,11 @@ $\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}$
 
 -   [Python](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html)
 :::
-:::
+:::::::::::
 
 ## Dissimilarity {.smaller}
 
-::: panel-tabset
+::::::::::: panel-tabset
 ## Euclidean
 
 ![](images/euclidean.png){fig-align="center" width="363"}
@@ -341,7 +332,7 @@ $d(\mathbf{p}, \mathbf{q}) = \left( \sum_{i=1}^{n} |p_i - q_i|^p \right)^{\frac{
 
 ## Mahalanobis
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ```{python}
 #| echo: false
@@ -392,7 +383,7 @@ plt.show()
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 $$d(\mathbf{x}, \mathbf{y}) = \sqrt{(\mathbf{x} - \mathbf{y})^T S^{-1} (\mathbf{x} - \mathbf{y})}$$
 
 ::: incremental
@@ -402,9 +393,9 @@ $$d(\mathbf{x}, \mathbf{y}) = \sqrt{(\mathbf{x} - \mathbf{y})^T S^{-1} (\mathbf{
 
 -   [Python](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.mahalanobis.html)
 :::
-:::
-:::
-:::
+::::
+::::::
+:::::::::::
 
 # Clustering
 
@@ -412,13 +403,13 @@ $$d(\mathbf{x}, \mathbf{y}) = \sqrt{(\mathbf{x} - \mathbf{y})^T S^{-1} (\mathbf{
 
 ::: {style="text-align: center;"}
 ```{=html}
-<iframe width="1200" height="400" src="https://{{< var website.url >}}/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
+<iframe width="1200" height="400" src="https://datamineaz.org/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
 ```
 :::
 
 ## K-Means Clustering {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Visual
 
 ```{python}
@@ -479,11 +470,11 @@ $J = \sum_{i=1}^{k} \sum_{x \in C_i} ||x - \mu_i||^2$
 -   **Sensitivity**: Results can vary based on initial centroid selection; techniques like "k-means++" improve initial centroid choices.
 
 -   **Efficiency**: Generally good, but worsens with increasing $k$ and data dimensionality; sensitive to outliers.
-:::
+::::
 
 ## K-Medians Clustering {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Visual
 
 ```{python}
@@ -541,7 +532,7 @@ $\min \sum_{i=1}^{k} \sum_{x \in C_i} ||x - m_i||_1$
 
 -   **Efficiency**: Generally good, but can worsen with increasing $k$ and data dimensionality; often more robust to outliers compared to k-means.
 :::
-:::
+::::
 
 ## K-Means vs. K-Medians clustering {.smaller}
 
@@ -597,7 +588,7 @@ $\min \sum_{i=1}^{k} \sum_{x \in C_i} ||x - m_i||_1$
 
 ## Elbow Method {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 ```{python}
@@ -646,11 +637,11 @@ plt.show()
 
 -   **Sensitive to initialization**: The initial placement of centroids can influence the identification of the elbow point.
 :::
-:::
+:::::
 
 ## Silhouette Score {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Visual
 
 ```{python}
@@ -720,11 +711,11 @@ $s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}$
 
 -   Does not perform well with clusters of varying densities.
 :::
-:::
+::::::
 
 ## Davies-Bouldin Index {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Visual
 
 ```{python}
@@ -786,11 +777,11 @@ $DBI = \frac{1}{k} \sum_{i=1}^{k} \max_{j \neq i} \left( \frac{\sigma_i + \sigma
 
 -   **Ambiguity in Interpretation**: While lower values are better, there's no clear threshold below which clusters are considered 'good' or 'optimal'.
 :::
-:::
+::::::
 
 ## Calinski-Harabasz Index {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Visual
 
 ```{python}
@@ -859,11 +850,11 @@ $CH = \frac{SS_B / (k - 1)}{SS_W / (n - k)}$
 
 -   **Not Ideal for Overlapping Clusters**: Assumes distinct, non-overlapping clusters.
 :::
-:::
+::::::
 
 ## BIC {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Visual
 
 ```{python}
@@ -920,7 +911,7 @@ $\text{BIC} = -2 \ln(\hat{L}) + k \ln(n)$
 -   **Sensitivity to Model Assumptions**: Performance depends on the underlying assumptions of the model being correct.
 
 -   **Not Always Intuitive**: Determining the absolute best model may still require domain knowledge and additional diagnostics.
-:::
+::::
 
 ## Systematic comparison: Equal clusters {.smaller}
 

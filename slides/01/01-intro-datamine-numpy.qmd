@@ -1,9 +1,6 @@
 ---
 title: Introduction to Data Mining
-subtitle: Lecture 1
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -12,15 +9,7 @@ format: revealjs
 auto-stretch: false
 ---
 
-# Warm up
-
-## Announcements
-
--   Reading Quiz #1 is due Friday, Jan 19th, 11:59pm
-
--   Project 1 overview next week
-
-    -   Teams will be announced as well
+# Data Mining
 
 ## What is data mining?
 
@@ -44,9 +33,9 @@ One of many definitions:
 
 ## Why data mining?<br>Commercial viewpoint {.smaller}
 
-::: columns
-::: {.column width="50%"}
-::: fragment
+:::::::::: columns
+:::::::: {.column width="50%"}
+:::: fragment
 **Businesses collect + store tons of data**
 
 ::: incremental
@@ -55,13 +44,13 @@ One of many definitions:
 -   Web and social media data
 -   Mobile and IOT
 :::
-:::
+::::
 
 ::: fragment
 **Computers are cheaper + more powerful**
 :::
 
-::: fragment
+:::: fragment
 **Competition to provide better services**
 
 ::: incremental
@@ -69,8 +58,8 @@ One of many definitions:
 -   Targeted advertising
 -   Improved logistics
 :::
-:::
-:::
+::::
+::::::::
 
 ::: {.column width="50%"}
 ![](images/commercial1.png){fig-align="center" width="201"}
@@ -79,7 +68,7 @@ One of many definitions:
 
 ![](images/iot.png){fig-align="center" width="354"}
 :::
-:::
+::::::::::
 
 ## Knowledge discovery in databases (KDD) {.smaller}
 
@@ -91,27 +80,27 @@ Usama M. Fayyad et al., 1996.
 
 ## Data mining tasks
 
-::: fragment
+:::: fragment
 #### Descriptive
 
 ::: incremental
 Find human-interpretable patterns that describes the data
 :::
-:::
+::::
 
 <br>
 
-::: fragment
+:::: fragment
 #### Predictive Methods
 
 ::: incremental
 Use features to predict unknown or future values of another feature
 :::
-:::
+::::
 
 ## Predictive modeling {.smaller}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 #### Classification
 
@@ -198,7 +187,7 @@ regression_df = pd.DataFrame({'Feature': X.flatten(), 'Target': y})
 regression_df.head()
 ```
 :::
-:::
+:::::
 
 ## Classification {.smaller}
 
@@ -208,7 +197,7 @@ Find a **model** for the class attribute as a function of the other attributes
 
 E.g., Customer Attrition, Directed Marketing
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ```{python}
 #| echo: false
@@ -260,7 +249,7 @@ df['Campaign_Success'] = y
 df.head(10)
 ```
 :::
-:::
+:::::
 
 ## Regression {.smaller}
 
@@ -268,7 +257,7 @@ Find a **model** that predicts a variable (Y) from another variable (X)
 
 Both are continuous variables (floats)
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ```{python}
 #| echo: false
@@ -306,7 +295,7 @@ regression_df = pd.DataFrame({'Feature': X.flatten(), 'Target': y})
 regression_df.head(10)
 ```
 :::
-:::
+:::::
 
 ## Association mining
 
@@ -344,8 +333,8 @@ print(rules)
 
 ## Association mining {.smaller}
 
-::: columns
-::: {.column width="50%"}
+:::::: columns
+:::: {.column width="50%"}
 ::: incremental
 -   Let the rule discovered be: `{Potato Chips, …} → {Soft drink}`
 
@@ -355,12 +344,12 @@ print(rules)
 
 -   **Potato Chips in LHS** and Soft drink in RHS: What products should be sold with Potato Chips to promote sales of Soft drinks!
 :::
-:::
+::::
 
 ::: {.column width="50%"}
 ![](images/shopping.webp){fig-align="center" width="500"}
 :::
-:::
+::::::
 
 ## Association mining goals {.smaller}
 
@@ -373,7 +362,7 @@ print(rules)
 
 ## Clustering
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ```{python}
 #| echo: false
@@ -401,7 +390,7 @@ plt.show()
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 ::: incremental
 -   Group points that are similar to one another
 
@@ -411,14 +400,14 @@ plt.show()
 
 -   E.g., Market Segmentation, Document Types
 :::
-:::
-:::
+::::
+::::::
 
 ## Anomaly detection
 
 Detect significant deviations from normal behavior.
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ```{python}
 #| echo: false
@@ -451,7 +440,7 @@ plt.show()
 
 ![](images/ips.jpeg){fig-align="center" width="400"}
 :::
-:::
+:::::
 
 ## Other data mining tasks
 
@@ -501,8 +490,8 @@ plt.show()
 
 ## Conclusions
 
-::: columns
-::: {.column width="50%"}
+::::::: columns
+:::: {.column width="50%"}
 **Data Mining is interdisciplinary**
 
 ::: incremental
@@ -514,9 +503,9 @@ plt.show()
 
 -   Optimization
 :::
-:::
+::::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 **Data mining is a team effort**
 
 ::: incremental
@@ -530,8 +519,8 @@ plt.show()
 
 -   Application domain
 :::
-:::
-:::
+::::
+:::::::
 
 # Intro to NumPy {style="text-align: center;"}
 

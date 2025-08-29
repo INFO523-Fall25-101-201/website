@@ -8,9 +8,9 @@ execute:
 
 [**Git**](https://en.wikipedia.org/wiki/Git) is a distributed version control system that allows developers to track changes in their code, collaborate with others, and manage different versions of their projects. [**GitHub**](https://en.wikipedia.org/wiki/GitHub), on the other hand, is a web-based platform built around Git's functionality, offering a place to host repositories, collaborate with others, and provide tools for code review, project management, and community interaction. While Git provides the underlying version control capabilities, GitHub enhances these capabilities with a user-friendly interface and additional features. Together, they are crucial for modern software development, fostering collaboration, ensuring code integrity, and enabling the open-source movement.
 
-## Installing up Git
+## Installing Git
 
-### **For Mac:**
+### For Mac:
 
 1.  **Check Existing Installation**: Since macOS might already have Git installed, open Terminal and type:
 

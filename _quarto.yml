@@ -67,6 +67,8 @@ website:
             text: Troubleshooting
           - href: computing/computing-cheatsheets.qmd
             text: Cheatsheets
+          - href: computing/computing-python.qmd
+            text: Setting up Python
           - href: computing/computing-git.qmd
             text: Setting up Git
       - section: "Projects"
@@ -75,6 +77,10 @@ website:
             text: Final Project
       - section: "Homework"
         contents:
+          - href: homework/workflow.qmd
+            text: Computing workflow
+          - href: homework/codespaces.qmd
+            text: Codespaces
           - href: homework/hw-01.qmd
             text: HW 01
           - href: homework/hw-02.qmd
@@ -91,9 +97,9 @@ website:
       - section: Exercises
         contents:
           - href: exercises/ex-06.qmd
-          #- href: exercises/ex-08.qmd
-          #- href: exercises/ex-09.qmd
-          #- href: exercises/ex-12.qmd
+          - href: exercises/ex-08.qmd
+          - href: exercises/ex-09.qmd
+          - href: exercises/ex-12.qmd
             
   page-footer:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
@@ -109,10 +115,9 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
-    mainfont: "Montserrat"
+    mainfont: "Lexend"
 
 execute:
   freeze: auto
-  cache: true
 
 editor: visual

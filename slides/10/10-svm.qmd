@@ -1,9 +1,6 @@
 ---
 title: Support Vector Machines (SVMs)
-subtitle: Lecture 10
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -11,14 +8,6 @@ title-slide-attributes:
 format: revealjs
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   RQ 04 is due tonight, 11:59pm
-
--   HW 05 is due Fri Apr 26, 11:59pm
 
 ## Setup {.smaller}
 
@@ -85,15 +74,15 @@ laborDiscrim.head()
 
 ## Metadata
 
-| **variable**      | **class**     | **description**                                                                                                                          |
-|-------------------|-------------------|----------------------------------|
-| `education`       | int           | Level of education: `0` = not reported; `1` = high school diploma; `2` = high school graduate; `3` = some college; `4` = college or more |
-| `special_skills`  | int / boolean | Whether they mentioned special skills                                                                                                    |
-| `computer_skills` | int / boolean | Whether they mentioned computer skills                                                                                                   |
-| `honors`          | int / boolean | Whether they mentioned some honors                                                                                                       |
-| `sex`             | object        | Applicant's gender                                                                                                                       |
-| `race`            | object        | Applicant's race                                                                                                                         |
-| `call`            | int / boolean | Whether they received a call back                                                                                                        |
+| **variable** | **class** | **description** |
+|------------------------|------------------------|------------------------|
+| `education` | int | Level of education: `0` = not reported; `1` = high school diploma; `2` = high school graduate; `3` = some college; `4` = college or more |
+| `special_skills` | int / boolean | Whether they mentioned special skills |
+| `computer_skills` | int / boolean | Whether they mentioned computer skills |
+| `honors` | int / boolean | Whether they mentioned some honors |
+| `sex` | object | Applicant's gender |
+| `race` | object | Applicant's race |
+| `call` | int / boolean | Whether they received a call back |
 
 ## Info
 
@@ -186,7 +175,7 @@ plt.show()
 
 ## Classification using a hyperplane {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 ![](images/hyperplane.png){fig-align="center" width="450"}
@@ -214,11 +203,11 @@ The objective is to classify data points into two classes based on which side of
 
 -   If $w^{T}x + b < 0$it is classified into the other class
 :::
-:::
+:::::
 
 ## Constructing the marginal classifier {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Visual
 
 **Goal**: Construct a hyperplane that maximizes the margin between classes, creating optimal separation with a buffer zone around the hyperplane that's free of data.
@@ -304,11 +293,11 @@ Subject to $y_i(w^{T}x + b) \geq 1$ for all $i$, where $y_i$ are class labels ($
 
     -   Finding optimal hyperplane involves quadratic programming to maximize margin.
 :::
-:::
+::::
 
 ## The non-separable case {.smaller}
 
-::: panel-tabset
+::::::: panel-tabset
 ## Visual
 
 > When data cannot be perfectly divided by a linear boundary, SVMs adapt using soft margins and the kernel trick to handle overlaps and complex patterns.
@@ -362,11 +351,11 @@ Subject to $y_i(w^{T}x + b) \geq 1$ for all $i$, where $y_i$ are class labels ($
 
 -   **Parameter Tuning**: Critical for optimizing the trade-off between model complexity and generalization ability, often achieved through cross-validation.
 :::
-:::
+:::::::
 
 ## Support vector machines - revisited {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 > **SVMs** adapt the [Maximal Margin Classifier]{.underline} for linearly non-separable data using slack variables and kernel functions, focusing on [soft margin classification for linear data]{.underline} and the [kernel trick for non-linear cases]{.underline}.
@@ -418,7 +407,7 @@ Subject to $0 \leq \alpha_1 \leq C$ for all $i$ and $\sum_{i=1}^{n}\alpha_iy_i =
 
 -   **Decision Function**: For a new data point $x$, the decision function becomes $\text{sign}\left(\sum_{i=1}^{n} \alpha_i y_i K(x_i, x) + b\right)$, determining the class membership based on the sign of the output.
 :::
-:::
+:::::
 
 ## Back to our data - preprocessing {.smaller}
 
@@ -450,7 +439,7 @@ preprocessor = ColumnTransformer(
 
 ## SVMs (linear kernel) - applied {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Model summary
 
 ```{python}
@@ -527,7 +516,7 @@ print(classification_report(y_test, y_pred))
 
 -   **Weighted Average**: Indicates averages weighted by class support, resulting in 87% precision, 93% accuracy, and 90% F1-score, highlighting performance adjustments due to class imbalance.
 :::
-:::
+::::::
 
 ## Model tuning: SVM {.smaller}
 
@@ -619,7 +608,7 @@ weighted avg       0.87      0.93      0.90       974
 
 ## Aside: SVM Regression {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Visual
 
 Support Vector Regression (SVR) adapts SVMs for regression, aiming to predict values within an $\epsilon$-margin of the actual targets while maintaining simplicity.
@@ -697,7 +686,7 @@ $\xi_i, \xi_i^* \geq 0$
 
 5.  **Versatility**: Suitable for both linear and non-linear regression tasks across various domains.
 :::
-:::
+::::
 
 ## Conclusions {.smaller}
 

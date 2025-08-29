@@ -10,7 +10,7 @@ title: "Homework 1"
 
 ### Task 1: Variables and Types
 
--   Define two variables: an integer named `age` with a value of 25 and a string named `course` with the value "{{< var course.name >}}".
+-   Define two variables: an integer named `age` with a value of 25 and a string named `course` with the value "Data Mining".
 -   Print their values and types using the `type()` function.
 
 ### Task 2: Control Structures

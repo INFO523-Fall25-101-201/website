@@ -1,9 +1,6 @@
 ---
 title: Unsupervised<br>Learning II
-subtitle: Lecture 12
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -15,14 +12,6 @@ execute:
   error: false
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   HW 05 is due Fri Apr 26, 11:59pm
--   RQ 05 is due Wed May 01, 11:59pm
--   Final Project Presentations are Mon May 06, 1pm
 
 ## Setup {.smaller}
 
@@ -128,21 +117,19 @@ mlb_preprocessed_df.head()
 
 ::: {style="text-align: center;"}
 ```{=html}
-<iframe width="1200" height="400" src="https://{{< var website.url >}}/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
+<iframe width="1200" height="400" src="https://datamineaz.org/tables/model-cheatsheet.html" frameborder="1" style="background:white;"></iframe>
 ```
 :::
 
 ## Hierarchical Clustering {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 ```{python}
 #| echo: false
 from sklearn.datasets import make_blobs
-sns.set_style('ticks') # setting style
-sns.set_context('paper') # setting context
-sns.set_palette('colorblind') # setting palette
+plt.style.use('seaborn-v0_8-white')
 # Generating synthetic data
 X, _ = make_blobs(n_samples = 150, centers = 4, cluster_std = 0.5, random_state = 0)
 
@@ -201,7 +188,7 @@ plt.show()
 
 -   **Efficiency**: More computationally intensive than k-means, suitable for detailed hierarchical analysis.
 :::
-:::
+:::::
 
 ## Hierarchical clustering: applied {.smaller}
 
@@ -360,7 +347,7 @@ plt.show()
 
 ## Hierarchical vs. Model-based clustering {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Hierarchical
 
 ::: incremental
@@ -404,14 +391,14 @@ plt.show()
 
 -   **Flexibility and Interpretability**: Hierarchical offers granularity and intuitive dendrograms; model-based allows diverse cluster shapes but requires understanding of probabilistic models.
 :::
-:::
+::::::
 
 ## Multivariate normal distribution {.smaller}
 
-::: panel-tabset
+::::::: panel-tabset
 ## Visual
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ```{python}
 #| echo: false
@@ -477,7 +464,7 @@ cbar.set_label('PDF')
 plt.show()
 ```
 :::
-:::
+:::::
 
 ## Formula
 
@@ -496,11 +483,11 @@ $f(x; \mu, \Sigma) = \frac{1}{(2\pi)^{d/2}|\Sigma|^{1/2}} \exp\left( -\frac{1}{2
 
 -   $T$ denotes the transpose of a vector
 :::
-:::
+:::::::
 
 ## Soft clustering and mixtures of normals {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Visual
 
 ```{python}
@@ -543,7 +530,7 @@ plt.show()
 
 -   **Applications**: Useful in fields like image processing and bioinformatics, where the nuanced understanding of data structure is crucial.
 :::
-:::
+::::
 
 ## Soft clustering: applied {.smaller}
 
@@ -627,11 +614,11 @@ plt.show()
 
 ## In-class activity {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## Intro
 
 ::: task
-Go to [ex-12](https://{{< var website.url >}}/exercises/ex-12.html) and perform the tasks
+Go to [ex-12](https://datamineaz.org/exercises/ex-12.html) and perform the tasks
 :::
 
 ![](images/tSwift.jpeg){fig-align="center" width="630"}
@@ -639,4 +626,4 @@ Go to [ex-12](https://{{< var website.url >}}/exercises/ex-12.html) and perform 
 ## Visual
 
 ![](images/20231017.png){fig-align="center"}
-:::
+::::

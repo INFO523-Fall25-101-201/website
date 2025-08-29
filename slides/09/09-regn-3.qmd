@@ -1,9 +1,6 @@
 ---
 title: Regressions III
-subtitle: Lecture 9
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -11,14 +8,6 @@ title-slide-attributes:
 format: revealjs
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   RQ 4 is due Wed Apr 10, 11:59pm
-
--   HW 05 is due Fri Apr 12, 11:59pm
 
 ## Setup {.smaller}
 
@@ -69,18 +58,16 @@ sns.set_theme(style = "white", palette = "colorblind")
 sns.set(font_scale = 1.25)
 ```
 
-# Regressions III
-
 ## Our data: Tucson daily average temps {.smaller}
 
 ::: panel-tabset
 ## Read + head
 
 ```{python}
-from skimpy import clean_columns
+import janitor
 
 tucsonTemp = pd.read_csv("data/tucsonWeather.csv", encoding = 'iso-8859-1')[["STATION", "NAME", "DATE", "TAVG"]]
-tucsonTemp = clean_columns(tucsonTemp)
+tucsonTemp = janitor.clean_names(tucsonTemp)
 tucsonTemp['date'] = pd.to_datetime(tucsonTemp['date'])
 tucsonTemp['date_numeric'] = (tucsonTemp['date'] - tucsonTemp['date'].min()).dt.days
 
@@ -177,7 +164,7 @@ $Y_i = \beta_0 + \beta_1 X_i + \epsilon_i$
 
 ## Polynomial regression {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 ```{python}
@@ -256,7 +243,7 @@ $Y = \beta_0 + \beta_1X + \beta_2X^2 + \dots + \beta_nX^n + \epsilon$
 
 -   **Use Cases:** Suitable for modeling phenomena where the relationship between predictors and response variable is known to be non-linear, such as in biological, agricultural, or environmental data.
 :::
-:::
+:::::
 
 ## Polynomial regression: applied {.smaller}
 
@@ -286,8 +273,8 @@ y_pred = linear_reg.predict(X_test_poly)
 # Calculate and print the MSE and R-squared
 mse_initial = mean_squared_error(y_test, y_pred)
 r2_initial = r2_score(y_test, y_pred)
-print(f'Mean Squared Error: {round(mse_initial, 2)}')
-print(f'R-squared: {round(r2_initial, 2)}')
+print(f'Mean Squared Error: {mse_initial}')
+print(f'R-squared: {r2_initial}')
 ```
 
 ## Polynomial fit
@@ -358,7 +345,7 @@ for degree in degrees:
 
 # Display the MSE and R-squared for each degree
 for degree, mse, r2 in zip(degrees, mse_scores, r2_scores):
-    print(f'Degree: {degree}, MSE: {round(mse, 3)}, R-squared: {round(r2, 4)}')
+    print(f'Degree: {degree}, MSE: {mse}, R-squared: {r2}')
 
 ```
 
@@ -383,7 +370,7 @@ y_pred_best = best_model.predict(X_test_poly_best)
 # Calculate new MSE and R-squared
 mse_best = mean_squared_error(y_test, y_pred_best)
 r2_best = r2_score(y_test, y_pred_best)
-print(f'Best Degree: {best_degree}, MSE: {round(mse_best, 3)}, R-squared: {round(r2_best, 4)}')
+print(f'Best Degree: {best_degree}, MSE: {mse_best}, R-squared: {r2_best}')
 ```
 
 ## Polynomial fits
@@ -440,7 +427,7 @@ plt.show()
 
 ## Step functions {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 ```{python}
@@ -510,7 +497,7 @@ $f(x) = \beta_0 + \beta_1 I(x \in C_1) + \beta_2 I(x \in C_2) + \dots + \beta_k 
 
 -   **Discontinuity Handling:** Can model sudden jumps in the response variable, a feature not readily handled by smooth models like polynomials or splines.
 :::
-:::
+:::::
 
 ## Step functions: applied {.smaller}
 
@@ -562,7 +549,7 @@ plt.show()
 
 ## Basis functions {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Visual
 
 ```{python}
@@ -653,7 +640,7 @@ $\phi_j(x) = \exp\left(-\frac{(x - \mu_j)^2}{2s^2}\right)$
 
 -   **Computational Efficiency:** While basis functions can provide powerful models, they may introduce computational complexity, especially when the number of basis functions is large.
 :::
-:::
+::::::
 
 ## Basis function regression: Applied {.smaller}
 
@@ -726,7 +713,7 @@ plt.show()
 
 ## Aside: Grid search cross-validation {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 ![](images/single-grid.jpg){fig-align="center" width="364"}
@@ -766,11 +753,11 @@ $CV_{\text{score}} = \frac{1}{k} \sum_{i=1}^{k} \text{score}_i$
 Here, we identify an area where the model performs well, then launch a second grid:
 
 ![](images/grid-cv.jpeg){fig-align="center" width="708"}
-:::
+:::::
 
 ## Aside: random search {.smaller}
 
-::: panel-tabset
+:::::: panel-tabset
 ## Visual
 
 ![](images/single-rand.jpeg){fig-align="center" width="528"}
@@ -820,11 +807,11 @@ $\text{Select the set with the best } CV_{\text{score}}.$
 
 -   **Less Consistent:** Might require more iterations to match the precision of grid search.
 :::
-:::
+::::::
 
 ## Best of both worlds? {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 ![](images/random-grid.jpeg){fig-align="center" width="661"}
@@ -854,7 +841,7 @@ $\text{Select the set with the best } CV_{\text{score}}.$
 
 -   **Resource Management**: Needs careful distribution of computational effort.
 :::
-:::
+:::::
 
 ## Model tuning: Basis function regression {.smaller}
 
@@ -926,8 +913,8 @@ y_pred_best = best_basis_model.predict(X_test)
 # Calculate R-squared and Mean Squared Error (MSE) with the best model
 r2_best = r2_score(y_test, y_pred_best)
 mse_best = mean_squared_error(y_test, y_pred_best)
-print(f'Mean Squared Error: {round(mse_best, 3)}')
-print(f'R-squared: {round(r2_best, 4)}')
+print(f'Mean Squared Error: {mse_best}')
+print(f'R-squared: {r2_best}')
 
 ```
 
@@ -939,8 +926,8 @@ mse_initial = mean_squared_error(y_test, y_pred)
 r2_initial = r2_score(y_test, y_pred)
 
 # Print comparison
-print(f'Initial MSE: {round(mse_initial, 3)}, Best Parameters MSE: {round(mse_best, 3)}')
-print(f'Initial R-squared: {round(r2_initial, 4)}, Best Parameters R-squared: {round(r2_best, 5)}')
+print(f'Initial MSE: {mse_initial}, Best Parameters MSE: {mse_best}')
+print(f'Initial R-squared: {r2_initial}, Best Parameters R-squared: {r2_best}')
 ```
 
 ## Residuals
@@ -958,7 +945,7 @@ plt.show()
 
 ## Piecewise polynomials {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 ```{python}
@@ -1029,7 +1016,7 @@ $$
 
 -   **Interpretation**: While more complex than a single polynomial model, piecewise polynomials can offer intuitive insights into changes in trends or behaviors within different regions of the data.
 :::
-:::
+:::::
 
 ## Piecewise polynomial regression: Applied {.smaller}
 
@@ -1183,7 +1170,7 @@ Pretty advanced, so we will skip this one.
 
 ## Conclusions {.smaller}
 
-## Table
+### Table
 
 | Model                                          | MSE       | $R^{2}$  |
 |------------------------------------------------|-----------|----------|
@@ -1196,9 +1183,8 @@ Pretty advanced, so we will skip this one.
 **Occam's Razor loses!..**
 :::
 
-## In-class exercise 
+## In-class exercise
 
 ::: task
-Go to [ex-09](https://{{< var website.url >}}/exercises/ex-09.html) and perform the tasks
+Go to [ex-09](https://datamineaz.org/exercises/ex-09.html) and perform the tasks
 :::
-

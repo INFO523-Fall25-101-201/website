@@ -1,9 +1,6 @@
 ---
 title: Classification II + Model Evaluation
-subtitle: Lecture 6
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -11,14 +8,6 @@ title-slide-attributes:
 format: revealjs
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   HW 03 is due Wed, Mar 20, 11:59pm
-
--   RQ 3 is due Wed, Mar 20, 11:59pm
 
 ## Setup {.smaller}
 
@@ -182,7 +171,7 @@ ord_log_reg = m.LogisticAT(alpha = 1)
 ord_log_reg.fit(X_train_pca, y_train)
 
 ordinal_predictions = ord_log_reg.predict(X_test_pca)
-print("Ordinal Logistic Regression Accuracy:", round(accuracy_score(y_test, ordinal_predictions), 3))
+print("Ordinal Logistic Regression Accuracy:", accuracy_score(y_test, ordinal_predictions))
 
 decisionplot(ord_log_reg, pd.DataFrame(X_train_pca, columns = ['PC1', 'PC2']), y_train)
 plt.show()
@@ -241,7 +230,7 @@ plt.show()
 
 ## Accuracy {.smaller}
 
-::: panel-tabset
+::::::::: panel-tabset
 ## Visual
 
 ![](images/accuracy.png){fig-align="left" width="612"}
@@ -258,7 +247,7 @@ plt.show()
 **Use Case**: Best for balanced datasets where each class is approximately equally represented.
 :::
 
-::: fragment
+:::: fragment
 **Pros**:
 
 ::: incremental
@@ -266,21 +255,21 @@ plt.show()
 
 -   Useful when the costs of false positives and false negatives are similar.
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Cons**:
 
 ::: incremental
 -   Can be misleading in imbalanced datasets (where one class significantly outnumbers the other).
 -   Doesn't consider the type of errors (false positives vs. false negatives).
 :::
-:::
-:::
+::::
+:::::::::
 
 ## Precision {.smaller}
 
-::: panel-tabset
+::::::::: panel-tabset
 ## Visual
 
 ![](images/precision.png){fig-align="left" width="612"}
@@ -297,7 +286,7 @@ plt.show()
 **Use Case**: Important when the cost of false positives is high (e.g., in spam detection).
 :::
 
-::: fragment
+:::: fragment
 **Pros**:
 
 ::: incremental
@@ -305,20 +294,20 @@ plt.show()
 
 -   Useful in imbalanced datasets to evaluate the performance of the minority class.
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Cons**:
 
 ::: incremental
 -   Does not consider false negatives (i.e., how many positive cases were missed).
 :::
-:::
-:::
+::::
+:::::::::
 
 ## Recall (Sensitivity) {.smaller}
 
-::: panel-tabset
+::::::::: panel-tabset
 ## Visual
 
 ![](images/recall.png){fig-align="left" width="612"}
@@ -335,7 +324,7 @@ plt.show()
 **Use Case**: Crucial when the cost of false negatives is high (e.g., in disease screening).
 :::
 
-::: fragment
+:::: fragment
 **Pros**:
 
 ::: incremental
@@ -343,20 +332,20 @@ plt.show()
 
 -   Very useful in imbalanced datasets for evaluating how well the minority class is being predicted
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Cons**:
 
 ::: incremental
 -   Does not consider false positives (i.e., can lead to many false alarms).
 :::
-:::
-:::
+::::
+:::::::::
 
 ## F1 Score {.smaller}
 
-::: panel-tabset
+::::::::: panel-tabset
 ## Visual
 
 ![](images/f1-score.png){fig-align="left" width="612"}
@@ -373,7 +362,7 @@ plt.show()
 **Use Case**: When you need a balance between precision and recall.
 :::
 
-::: fragment
+:::: fragment
 **Pros**:
 
 ::: incremental
@@ -381,21 +370,21 @@ plt.show()
 
 -   Useful in imbalanced datasets or when both types of errors are equally costly.
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Cons**:
 
 ::: incremental
 -   Not as intuitive as accuracy.
 -   Harmonic mean can be influenced heavily by lower values of either precision or recall.
 :::
-:::
-:::
+::::
+:::::::::
 
 ## **AUC-ROC** {.smaller}
 
-::: panel-tabset
+::::::::::::::: panel-tabset
 ## +/- Positives
 
 ![](images/trueFalsePositives.png){fig-align="center" width="888"}
@@ -410,7 +399,7 @@ plt.show()
 
 ## ROC
 
-::: columns
+::::: columns
 ::: {.column width="53%"}
 ![](images/roc.png){fig-align="center" width="838"}
 :::
@@ -418,15 +407,15 @@ plt.show()
 ::: {.column width="47%"}
 ![](images/roc-1.png){fig-align="center" width="635"}
 :::
-:::
+:::::
 
-::: fragment
+:::: fragment
 ::: incremental
 -   **Left side** = more "confident" thresholds: lower recall and fewer false positive errors
 
 -   **Right side** = "less strict" scenarios when the threshold is low: both recall and False Positive rates are higher, ultimately reaching 100%
 :::
-:::
+::::
 
 ## ROC AUC
 
@@ -448,7 +437,7 @@ plt.show()
 **Use Case**: Effective for balanced and imbalanced datasets, especially for binary classification problems.
 :::
 
-::: fragment
+:::: fragment
 **Pros**:
 
 ::: incremental
@@ -456,9 +445,9 @@ plt.show()
 
 -   AUC-ROC near 1 indicates a good ability to distinguish between positive and negative classes.
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Cons**:
 
 ::: incremental
@@ -466,15 +455,14 @@ plt.show()
 
 -   Does not distinguish between types of errors.
 :::
-:::
-:::
+::::
+:::::::::::::::
 
 ## Applying model evaluation {.smaller}
 
 Using the decision tree model
 
 ```{python}
-#| echo: false
 dtree = DecisionTreeClassifier()
 dtree.fit(X_train_pca, y_train)
 predictions = dtree.predict(X_test_pca)
@@ -571,7 +559,7 @@ print(f"Micro-average ROC-AUC: {roc_auc_micro:.2f}")
 **Use Case**: Widely used for assessing the effectiveness of predictive models, helping to safeguard against overfitting.
 :::
 
-::: fragment
+:::: fragment
 **Pros**:
 
 ::: incremental
@@ -579,9 +567,9 @@ print(f"Micro-average ROC-AUC: {roc_auc_micro:.2f}")
 
 -   Utilizes the data efficiently as every observation is used for both training and validation.
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Cons**:
 
 ::: incremental
@@ -589,7 +577,7 @@ print(f"Micro-average ROC-AUC: {roc_auc_micro:.2f}")
 
 -   Results can vary depending on how the data is divided.
 :::
-:::
+::::
 
 ## Cross validation methods
 
@@ -601,15 +589,15 @@ print(f"Micro-average ROC-AUC: {roc_auc_micro:.2f}")
 
 ## Leave-One-Out Cross-Validation (LOOCV) {.smaller}
 
-::: panel-tabset
+:::::::::::::: panel-tabset
 ## Visual
 
-::: columns
+::::::: columns
 ::: {.column width="60%"}
 ![](images/loocv.webp){fig-align="left" width="653"}
 :::
 
-::: {.column width="40%"}
+::::: {.column width="40%"}
 **Overall score**:
 
 $\frac{score_1 + score_2 + score_3 + score_4 + score_5 + score_6}{6}$
@@ -623,8 +611,8 @@ For classification the score is:
 -   Precision, Recall, F1-Score
 -   AUC-ROC
 :::
-:::
-:::
+:::::
+:::::::
 
 ## Pros + Cons
 
@@ -636,7 +624,7 @@ For classification the score is:
 **Use Case**: Useful for small datasets where maximizing the training data is important.
 :::
 
-::: fragment
+:::: fragment
 **Pros**:
 
 ::: incremental
@@ -644,29 +632,29 @@ For classification the score is:
 
 -   Reduces bias as each data point gets to be in the test set exactly once.
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Cons**:
 
 ::: incremental
 -   Highly computationally expensive with large datasets.
 -   High variance in the estimate of model performance as the evaluation can be highly dependent on the data points chosen as the test set.
 :::
-:::
-:::
+::::
+::::::::::::::
 
 ## k-Fold Cross-Validation (k-Fold) {.smaller}
 
-::: panel-tabset
+::::::::::::::: panel-tabset
 ## Visual
 
-::: columns
+::::::: columns
 ::: {.column width="60%"}
 ![](images/kfold.webp){fig-align="left" width="653"}
 :::
 
-::: {.column width="40%"}
+::::: {.column width="40%"}
 **Overall score**:
 
 $\frac{score_1 + score_2 + score_3}{3}$
@@ -680,8 +668,8 @@ For classification the score is:
 -   Precision, Recall, F1-Score
 -   AUC-ROC
 :::
-:::
-:::
+:::::
+:::::::
 
 ## Pros + Cons
 
@@ -693,7 +681,7 @@ For classification the score is:
 **Use Case**: Ideal for both small and medium-sized datasets and when the balance between bias and variance is crucial.
 :::
 
-::: fragment
+:::: fragment
 **Pros**:
 
 ::: incremental
@@ -701,27 +689,27 @@ For classification the score is:
 
 -   More reliable estimate of out-of-sample performance than LOOCV.
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Cons**:
 
 ::: incremental
 -   Still computationally intensive, especially with large k.
 -   Results can be dependent on the random division of the data into folds.
 :::
-:::
+::::
 
 ## Bias-Variance Trade-off
 
 ::: fragment
 **Definition**: Refers to managing the trade-off between the bias of the model (error due to overly simplistic assumptions) and its variance (error due to sensitivity to small fluctuations in the training set).
 :::
-:::
+:::::::::::::::
 
 ## The bootstrap method {.smaller}
 
-::: panel-tabset
+:::::::::: panel-tabset
 ## Visual
 
 ![](images/bootstrap.png){fig-align="center" width="1644"}
@@ -744,7 +732,7 @@ For classification the score is:
 **Use Case**: Ideal for small datasets or when assessing model performance variability. Commonly used for accuracy estimation and model validation.
 :::
 
-::: fragment
+:::: fragment
 **Pros**:
 
 ::: incremental
@@ -752,9 +740,9 @@ For classification the score is:
 
 -   **Flexible**: Non-parametric and adaptable to various data distributions.
 :::
-:::
+::::
 
-::: fragment
+:::: fragment
 **Cons**:
 
 ::: incremental
@@ -762,8 +750,8 @@ For classification the score is:
 
 -   **Overfitting bias**: Can be overly optimistic for overfitting models.
 :::
-:::
-:::
+::::
+::::::::::
 
 ## Applying resampling methods {.smaller}
 
@@ -923,5 +911,5 @@ print(f"Average F1-Score for Decision Tree: {dtree_f1_average:.2f}")
 ## In-class Exercise
 
 ::: task
-Go to [ex-06](https://{{< var website.url >}}/exercises/ex-06.html) and perform the tasks
+Go to [ex-06](https://datamineaz.org/exercises/ex-06.html) and perform the tasks
 :::

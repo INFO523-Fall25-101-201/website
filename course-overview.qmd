@@ -2,15 +2,9 @@
 title: "Course overview"
 ---
 
-This is the homepage for {{< var course.number >}} - {{< var course.name >}} taught by [{{< var instructor.name >}}]({{< var instructor.website >}}) in {{< var semester.term >}} at The {{< var university.name >}}. All course materials will be posted on this site.
+This is the homepage for INFO 523 - Data Mining and Discovery taught originally taught by [Dr. Greg Chism](https://gregtchism.com) at The University of Arizona. All course materials will be posted on this site.
 
 You can find the course syllabus [here](/course-syllabus.html) and the course schedule [here](/).
-
-## Class meetings
-
-| Meeting | Location          | Time               |
-|---------|-------------------|--------------------|
-| Lecture | {{< var class.location >}} | {{< var class.day >}} {{< var class.time >}} |
 
 <br>
 

@@ -1,9 +1,6 @@
 ---
 title: Regressions I
-subtitle: Lecture 7
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -11,16 +8,6 @@ title-slide-attributes:
 format: revealjs
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   RQ 3 is due today, 11:59pm
-
--   HW 3 is due today, 11:59pm
-
--   Final project peer-review is Wed Mar 27
 
 ## Setup {.smaller}
 
@@ -58,7 +45,7 @@ sns.set_theme(style = "white")
 
 ## Linear regression {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ## Visual
 
 ```{python}
@@ -120,11 +107,11 @@ $Y_i = \beta_0 + \beta_1 X_i + \epsilon_i$
 :::
 
 ## 
-:::
+:::::
 
 ## Assumptions {.smaller}
 
-::: columns
+:::::: columns
 ::: {.column .fragment width="33.3%" fragment-index="1"}
 **Linearity**
 
@@ -148,9 +135,9 @@ $Y_i = \beta_0 + \beta_1 X_i + \epsilon_i$
 
 ![](images/assumptions3.png)
 :::
-:::
+::::::
 
-::: columns
+:::::: columns
 ::: {.column .fragment width="33.3%" fragment-index="4"}
 **Independence**
 
@@ -174,11 +161,11 @@ $Y_i = \beta_0 + \beta_1 X_i + \epsilon_i$
 
 ![](images/assumptions6.png)
 :::
-:::
+::::::
 
 ## Ordinary Least Squares (OLS) {.smaller}
 
-::: columns
+::::: columns
 ::: {.column .fragment width="50%" fragment-index="1"}
 ![](images/error-in-machine-learning-ols.webp)
 :::
@@ -186,9 +173,9 @@ $Y_i = \beta_0 + \beta_1 X_i + \epsilon_i$
 ::: {.column .fragment width="50%" fragment-index="2"}
 ![](images/error-ordinary-least-squares-ols.webp)
 :::
-:::
+:::::
 
-::: {.fragment fragment-index="3"}
+:::: {.fragment fragment-index="3"}
 $\displaystyle y_{i}=\beta_{1} x{i_1}+\beta_{2} x{i_2}+\cdots +\beta_{p} x{i_p}+\varepsilon _{i}$
 
 ::: incremental
@@ -197,7 +184,7 @@ $\displaystyle y_{i}=\beta_{1} x{i_1}+\beta_{2} x{i_2}+\cdots +\beta_{p} x{i_
 3.  $x_{i1}, ​x_{i1},…, x_{ip}$: Independent variables for the $i$-th observation.
 4.  $\epsilon_i$​: Error term for the $i$-th observation, indicating unexplained variance.
 :::
-:::
+::::
 
 ## Assessing accuracy of coefficients {.smaller}
 
@@ -219,7 +206,7 @@ $\displaystyle y_{i}=\beta_{1} x{i_1}+\beta_{2} x{i_2}+\cdots +\beta_{p} x{i_
 
 ## Assessing accuracy of model {.smaller}
 
-::: panel-tabset
+::::::::::::::::: panel-tabset
 ## Overview
 
 ::: {.fragment fragment-index="1"}
@@ -291,7 +278,7 @@ $R^2 = 1 - \frac{RSS}{TSS}$
 **Formula** $R^2 = 1 - \frac{RSS / df_{res}}{TSS / df_{tot}}$
 :::
 
-::: {.fragment fragment-index="9"}
+:::: {.fragment fragment-index="9"}
 **Key points**:
 
 ::: incremental
@@ -301,7 +288,7 @@ $R^2 = 1 - \frac{RSS}{TSS}$
 
 -   **Value Range**: Can be negative if the model is worse than using just the mean of the dependent variable, whereas R-squared is always between 0 and 1.
 :::
-:::
+::::
 
 ::: incremental
 -   $df_{res}$: [degrees of freedom](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)) of the estimate of the population variance around the model
@@ -335,7 +322,7 @@ plt.ylabel('Residuals')
 plt.title('Residual Plot')
 plt.show()
 ```
-:::
+:::::::::::::::::
 
 ## Our data {.smaller}
 
@@ -427,10 +414,10 @@ plt.show()
 
 ## Multiple regression
 
-::: panel-tabset
+::::::: panel-tabset
 ## Visual
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ```{python}
 #| echo: false
@@ -463,7 +450,7 @@ plt.title('Interaction Effect of X1 and X2 on Y')
 plt.show()
 ```
 :::
-:::
+:::::
 
 ## Key points
 
@@ -482,7 +469,7 @@ plt.show()
 
 7.  **Interaction Effects**: Can be included to see if the effect of one predictor on the response variable depends on another predictor.
 :::
-:::
+:::::::
 
 ## Our data {.smaller}
 
@@ -502,16 +489,16 @@ loans.head()
 
 ## Relevant variables
 
-| **Variable**      | **Description**                                                                                                                                                                    |
+| **Variable** | **Description** |
 |:-------------------------|:---------------------------------------------|
-| `interest_rate`   | Interest rate on the loan, in an annual percentage.                                                                                                                                |
-| `verified_income` | Borrower's income verification: `Verified`, `Source Verified`, and `Not Verified`.                                                                                                 |
-| `debt_to_income`  | Debt-to-income ratio, which is the percentage of total debt of the borrower divided by their total income.                                                                         |
-| `credit_util`     | The fraction of available credit utilized.                                                                                                                                         |
-| `bankruptcy`      | An indicator variable for whether the borrower has a past bankruptcy in their record. This variable takes a value of `1` if the answer is **yes** and `0` if the answer is **no**. |
-| `term`            | The length of the loan, in months.                                                                                                                                                 |
-| `issue_month`     | The month and year the loan was issued.                                                                                                                                            |
-| `credit_checks`   | Number of credit checks in the last 12 months.                                                                                                                                     |
+| `interest_rate` | Interest rate on the loan, in an annual percentage. |
+| `verified_income` | Borrower's income verification: `Verified`, `Source Verified`, and `Not Verified`. |
+| `debt_to_income` | Debt-to-income ratio, which is the percentage of total debt of the borrower divided by their total income. |
+| `credit_util` | The fraction of available credit utilized. |
+| `bankruptcy` | An indicator variable for whether the borrower has a past bankruptcy in their record. This variable takes a value of `1` if the answer is **yes** and `0` if the answer is **no**. |
+| `term` | The length of the loan, in months. |
+| `issue_month` | The month and year the loan was issued. |
+| `credit_checks` | Number of credit checks in the last 12 months. |
 
 ## Info
 
@@ -537,7 +524,7 @@ plt.show()
 ```
 :::
 
-## Our data: preprocessed
+## Our data: preprocessed {.smaller}
 
 ```{python}
 loans['credit_util'] = loans['total_credit_utilized'] / loans['total_credit_limit']
@@ -576,7 +563,6 @@ print(model_summary2)
 
 ## Coefficients
 
-```{=tex}
 \begin{aligned}
 \widehat{\texttt{interest\_rate}} &= b_0 \\
 &+ b_1 \times \texttt{verified\_income}_{\texttt{Source Verified}} \\
@@ -589,7 +575,7 @@ print(model_summary2)
 &+ b_7 \times \texttt{issue\_month}_{\texttt{Jan-2018}} \\
 &+ b_8 \times \texttt{issue\_month}_{\texttt{Mar-2018}}
 \end{aligned}
-```
+
 ## Residual plot
 
 ```{python}
@@ -625,7 +611,7 @@ plt.show()
 
 ## Model optimization {.smaller}
 
-::: panel-tabset
+:::::::: panel-tabset
 ## Overview
 
 **Three major methods**:
@@ -716,7 +702,7 @@ plt.show()
 
 4.  **No Single Best Model**: only provides an estimation of how well a model type will perform.
 :::
-:::
+::::::::
 
 # Model selection
 
@@ -733,7 +719,7 @@ plt.show()
 
 ## Best subset selection {.smaller}
 
-::: panel-tabset
+::::::: panel-tabset
 ## Overview
 
 **Definition**
@@ -797,11 +783,11 @@ $RSS = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
 
 3.  **Model Selection Complexity**: Requires careful choice and interpretation of model selection criteria to balance between model fit and complexity.
 :::
-:::
+:::::::
 
 ## Stepwise selection (both types) {.smaller}
 
-::: panel-tabset
+:::::::: panel-tabset
 ## Overview
 
 **Definition**
@@ -871,7 +857,7 @@ Similar criteria but in reverse, considering the increase in $RSS$ or the **p-va
 
 4.  **Statistical Issues**: Stepwise methods can inflate the significance of variables and do not account for the search process in assessing the fit.
 :::
-:::
+::::::::
 
 ## Best Subset Selection: applied {.smaller}
 
@@ -926,7 +912,7 @@ for result in subset_results:
         best_model_1 = result
         
 print("Best Model Predictors:", best_model_1['predictors'])
-print("Best Model AIC:", round(best_aic, 2))
+print("Best Model AIC:", best_aic.round(2))
 ```
 
 ## BIC
@@ -941,7 +927,7 @@ for result in subset_results:
         best_model_2 = result
         
 print("Best Model Predictors:", best_model_2['predictors'])
-print("Best Model BIC:", round(best_bic, 2))
+print("Best Model BIC:", best_bic.round(2))
 ```
 
 ## $R^{2}_{adj}$
@@ -956,7 +942,7 @@ for result in subset_results:
         best_model_3 = result
         
 print("Best Model Predictors:", best_model_3['predictors'])
-print("Best Model Adjusted R-squared:", round(best_r_sq_adj, 2))
+print("Best Model Adjusted R-squared:", best_r_sq_adj.round(2))
 ```
 :::
 
@@ -1028,9 +1014,9 @@ model_sm = sm.OLS(y_train, X_train_selected_with_const).fit()
 # Output the results
 print("Forward Selection Results")
 print("Selected predictors:", selected_features)
-print("AIC:", round(model_sm.aic, 3))
-print("BIC:", round(model_sm.bic, 3))
-print("Adjusted R-squared:", round(model_sm.rsquared_adj, 3))
+print("AIC:", model_sm.aic.round(3))
+print("BIC:", model_sm.bic.round(3))
+print("Adjusted R-squared:", model_sm.rsquared_adj.round(3))
 ```
 
 ## Backward selection
@@ -1076,9 +1062,9 @@ model_sm = sm.OLS(y_train, X_train_selected_with_const).fit()
 # Output the results
 print("Backward Selection Results")
 print("Selected predictors:", selected_features)
-print("AIC:", round(model_sm.aic, 3))
-print("BIC:", round(model_sm.bic, 3))
-print("Adjusted R-squared:", round(model_sm.rsquared_adj, 3))
+print("AIC:", model_sm.aic.round(3))
+print("BIC:", model_sm.bic.round(3))
+print("Adjusted R-squared:", model_sm.rsquared_adj.round(3))
 ```
 :::
 
@@ -1207,136 +1193,3 @@ print(model_summary2)
 -   Stepwise selection is faster
 
 -   Stepwise inflates Type I error with multiple testing...
-
-## Live coding: Indoor air pollution
-
-::: panel-tabset
-## Fuel access
-
-| variable          | class     | description                                                          |
-|-----------------|-----------------|--------------------------------------|
-| Entity            | character | Country name                                                         |
-| Code              | character | Country code                                                         |
-| Year              | double    | Year                                                                 |
-| access_clean_perc | double    | Access to clean fuels and technologies for cooking (% of population) |
-
-## Fuel GDP
-
-| variable          | class     | description                                          |
-|------------------|------------------|-------------------------------------|
-| Entity            | character | The country                                          |
-| Code              | character | Country code                                         |
-| Year              | double    | Year                                                 |
-| access_clean_perc | double    | \% of population with access to clean cooking fuels  |
-| GDP               | double    | GDP per capita, PPP (constant 2017 international \$) |
-| popn              | double    | Country population                                   |
-| Continent         | character | Continent the country resides on                     |
-
-## Death source
-
-| variable       | class     | description                                                            |
-|-----------------|-----------------|---------------------------------------|
-| Entity         | character | The country                                                            |
-| Code           | character | Country code                                                           |
-| Year           | double    | Year                                                                   |
-| Death_Rate_ASP | double    | Cause of death related to air pollution from solid fuels, standardized |
-:::
-
-## Live coding {.smaller}
-
-```{python}
-#| code-fold: true
-#| eval: false
-from sklearn.impute import SimpleImputer
-from feature_engine.imputation import CategoricalImputer
-
-# Read in data
-fuel_access = pd.read_csv('data/fuel_access.csv')
-fuel_gdp = pd.read_csv('data/fuel_gdp.csv')
-death_source = pd.read_csv('data/death_source.csv')
-
-# Select relevant columns and rename for consistency if needed
-fuel_access = fuel_access[['Entity', 'Year', 'access_clean_perc']]
-fuel_gdp = fuel_gdp[['Entity', 'Year', 'GDP', 'popn']]
-death_source = death_source[['Entity', 'Year', 'Death_Rate_ASP']]
-
-# Ensure 'Year' is an integer
-fuel_access['Year'] = fuel_access['Year'].astype(int)
-fuel_gdp['Year'] = fuel_gdp['Year'].astype(int)
-death_source['Year'] = death_source['Year'].astype(int)
-
-# Merge datasets on 'Entity' and 'Year'
-merged_data = pd.merge(fuel_access, fuel_gdp, on = ['Entity', 'Year'], how = 'inner')
-merged_data = pd.merge(merged_data, death_source, on = ['Entity', 'Year'], how = 'inner')
-
-# Check for missing values
-print(merged_data.isnull().sum())
-
-# Handle missing values if necessary (e.g., fill with mean or median, or drop)
-num_imputer = SimpleImputer(strategy = 'mean')  # or 'median'
-numerical_cols = merged_data.select_dtypes(include = ['int64', 'float64']).columns.tolist()
-merged_data[numerical_cols] = num_imputer.fit_transform(merged_data[numerical_cols])
-
-merged_data.dropna()
-merged_data['Entity'] = pd.factorize(merged_data['Entity'])[0]
-
-# Final check for data types and missing values
-print(merged_data.info())
-print(merged_data.isnull().sum())
-
-# Optional: Standardize/normalize numerical columns if necessary
-from sklearn.preprocessing import StandardScaler
-
-scaler = StandardScaler()
-numerical_columns = ['access_clean_perc', 'GDP', 'popn']
-merged_data[numerical_columns] = scaler.fit_transform(merged_data[numerical_columns])
-merged_data.to_csv()
-# Define the predictor variables and the response variable
-X = merged_data.drop(['Death_Rate_ASP'], axis = 1)  # Assuming 'Death_Rate_ASP' is the response variable
-y = merged_data['Death_Rate_ASP']
-
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
-
-# Initialize LinearRegression model
-lr = LinearRegression()
-
-# Initialize SequentialFeatureSelector for forward selection with cross-validation
-sfs = SFS(lr,
-          k_features = 'best',  # 'best' or specify a number with ('1, 10') for range
-          forward = True,  # Forward selection
-          floating = False,  # Set to True for stepwise selection
-          scoring = 'neg_mean_squared_error',  # Using negative MSE as scoring criterion
-          cv = KFold(n_splits = 5, shuffle = True, random_state = 42))  # 5-fold cross-validation
-
-# Fit SFS on the training data
-sfs.fit(X_train, y_train)
-
-# Get the names of the selected features
-selected_features = list(sfs.k_feature_names_)
-
-# Fit the final Linear Regression model using selected features
-final_model = lr.fit(X_train[selected_features], y_train)
-
-# Evaluate the model performance on the test set
-from sklearn.metrics import mean_squared_error
-
-y_pred = final_model.predict(X_test[selected_features])
-mse = mean_squared_error(y_test, y_pred)
-
-print("Selected predictors (forward selection):", selected_features)
-print("Test MSE:", mse)
-
-# Extracting predictor variables (X) and the target variable (y)
-X = merged_data[selected_features]
-Y = merged_data['Death_Rate_ASP']
-
-# Adding a constant for the intercept term
-X = sm.add_constant(X)
-
-# Fit the regression model
-model = sm.OLS(y, X).fit()
-
-model_summary = model.summary2()
-print(model_summary)
-```

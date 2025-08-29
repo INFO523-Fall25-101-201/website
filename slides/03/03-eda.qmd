@@ -1,9 +1,6 @@
 ---
 title: Exploratory Data Analysis + Data Visualization
-subtitle: Lecture 3
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -11,16 +8,6 @@ title-slide-attributes:
 format: revealjs
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   HW 01 is due tonight, 11:59pm
-
--   RQ #2 is due Feb 07, 11:59pm
-
--   Project 01 peer-review is Feb 07, first round proposals are due before class
 
 ## Setup
 
@@ -409,7 +396,7 @@ plt.ylabel('Probability Density')
 plt.show()
 ```
 
-::: fragment
+:::: fragment
 ::: incremental
 -   **Histogram**: bell-shaped curve
 
@@ -419,7 +406,7 @@ plt.show()
 
 -   **Empirical Rule**: 68-95-99.7% rule (data within 1, 2, and 3 st dev. of the mean).
 :::
-:::
+::::
 
 ## Skewness {.smaller}
 
@@ -460,14 +447,14 @@ plt.show()
 
 ```
 
-::: fragment
+:::: fragment
 ::: incremental
 -   Several definitions
 -   Sensitive to outliers
 -   Designed for one peak (*unimodal*)
 -   Mean and median are inconclusive from skew alone
 :::
-:::
+::::
 
 ## Kurtosis {.smaller}
 
@@ -496,13 +483,13 @@ for distname in distnames:
 plt.show()
 ```
 
-::: fragment
+:::: fragment
 ::: incremental
 -   Several definitions...
 -   Sensitive to outliers
 -   Designed for one peak (*unimodal*)
 :::
-:::
+::::
 
 ## Q-Q plot {.smaller}
 
@@ -581,7 +568,7 @@ plt.show()
 
 ## Testing normality: data shape {.smaller}
 
-::: panel-tabset
+:::: panel-tabset
 ## One column
 
 ```{python}
@@ -651,7 +638,7 @@ for k in dataRed.columns:
     plt.tight_layout()
     plt.show()
 ```
-:::
+::::
 
 ## Conclusions
 
@@ -677,7 +664,7 @@ My definition: telling a story with your data, visually.
 
 ## Why storytelling? {.smaller}
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](images/gilgamesh-1.png){fig-align="center" width="678"}
 :::
@@ -685,9 +672,9 @@ My definition: telling a story with your data, visually.
 ::: {.column width="50%"}
 ![](images/gilgamesh-2.jpeg){fig-align="center" width="266"}
 :::
-:::
+:::::
 
-::: fragment
+:::: fragment
 ::: incremental
 -   **Epic of Gilgamesh** (c. 2100 BC)
 
@@ -695,11 +682,11 @@ My definition: telling a story with your data, visually.
 
 -   **Goal**: Apply storytelling to your visuals
 :::
-:::
+::::
 
 ## **Aircraft-Wildlife Collisions**
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 <br>
 
@@ -709,7 +696,7 @@ My definition: telling a story with your data, visually.
 ::: {.column width="50%"}
 ![](images/plane-birds-1.webp){fig-align="center" width="450"}
 :::
-:::
+:::::
 
 ## Aircraft-Wildlife Collisions {.smaller}
 
@@ -772,35 +759,35 @@ birds.describe().round(2)
 
 ## One Numeric Variable
 
-::: columns
-::: {.column width="50%" style="text-align: center;"}
+::::::::: columns
+::::: {.column width="50%" style="text-align: center;"}
 **Histogram**
 
 ![](images/Histogram.png){fig-align="center" width="75"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Frequency Distribution
 -   Easy to Interpret
 -   Identifies Patterns
 :::
-:::
-:::
+::::
+:::::
 
-::: {.column width="50%" style="text-align: center;"}
+::::: {.column width="50%" style="text-align: center;"}
 **Density Plot**
 
 ![](images/Density.png){fig-align="center" width="75"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Smooth Distribution Curve
 -   Highlights Density
 -   Comparative Analysis
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
 
 ## Histograms {.smaller}
 
@@ -839,35 +826,35 @@ plt.show()
 
 ## Two Numeric Variables
 
-::: columns
-::: {.column width="50%" style="text-align: center;"}
+::::::::: columns
+::::: {.column width="50%" style="text-align: center;"}
 **Scatterplot**
 
 ![](images/ScatterPlot.png){fig-align="center" width="100"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Relationship Visualization
 -   Outlier Identification
 -   Pattern Recognition
 :::
-:::
-:::
+::::
+:::::
 
-::: {.column width="50%" style="text-align: center;"}
+::::: {.column width="50%" style="text-align: center;"}
 **2D Density Plot**
 
 ![](images/2dDensity.png){fig-align="center" width="100"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Density Distributions
 -   Combine Contour and Color
 -   Complex Data Interpretation
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
 
 ## Scatterplots {.smaller}
 
@@ -967,35 +954,35 @@ plt.show()
 
 ## Two Ordered Numeric Variables
 
-::: columns
-::: {.column width="50%" style="text-align: center;"}
+::::::::: columns
+::::: {.column width="50%" style="text-align: center;"}
 **Line Plot**
 
 ![](images/Line.png){fig-align="center" width="100"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Trend Identification
 -   Simple and Clear
 -   Comparative Analysis
 :::
-:::
-:::
+::::
+:::::
 
-::: {.column width="50%" style="text-align: center;"}
+::::: {.column width="50%" style="text-align: center;"}
 **Area Plot**
 
 ![](images/Area.png){fig-align="center" width="100"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Cumulative Representation
 -   Emphasizes Volume
 -   Layered Comparisons
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
 
 ## Line Plot {.smaller}
 
@@ -1022,35 +1009,35 @@ plt.show()
 
 ## One Categorical
 
-::: columns
-::: {.column width="50%" style="text-align: center;"}
+::::::::: columns
+::::: {.column width="50%" style="text-align: center;"}
 **Barplot**
 
 ![](images/Bar.png){fig-align="center" width="100"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Categorical Comparison
 -   Clear Visualization
 -   Versatile Use
 :::
-:::
-:::
+::::
+:::::
 
-::: {.column width="50%" style="text-align: center;"}
+::::: {.column width="50%" style="text-align: center;"}
 **Pie Chart**
 
 ![](images/Pie.png){fig-align="center" width="100"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Proportional Representation
 -   Simple Interpretation
 -   Visual Appeal
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
 
 ## Barplot {.smaller}
 
@@ -1086,35 +1073,35 @@ plt.show()
 
 ## One Numerical + One Categorical
 
-::: columns
-::: {.column width="50%" style="text-align: center;"}
+::::::::: columns
+::::: {.column width="50%" style="text-align: center;"}
 **Boxplot**
 
 ![](images/box.png){fig-align="center" width="100"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Displays Quartiles
 -   Identifies Outliers
 -   Comparative Analysis
 :::
-:::
-:::
+::::
+:::::
 
-::: {.column width="50%" style="text-align: center;"}
+::::: {.column width="50%" style="text-align: center;"}
 **Violin chart**
 
 ![](images/Violin.png){fig-align="center" width="100"}
 
-::: fragment
+:::: fragment
 ::: {.incremental style="text-align: left;"}
 -   Density Representation
 -   Richer Data Insight
 -   Visualizes Data Spread
 :::
-:::
-:::
-:::
+::::
+:::::
+:::::::::
 
 ## Boxplots {.smaller}
 
@@ -1254,7 +1241,7 @@ plt.show()
 ## Diwali sales data: metadata {.smaller}
 
 | **variable**     | **class** | **description**                               |
-|------------------|-----------|-----------------------------------------------|
+|-----------------|-----------------|--------------------------------------|
 | User_ID          | double    | User identification number                    |
 | Cust_name        | character | Customer name                                 |
 | Product_ID       | character | Product identification number                 |

@@ -1,9 +1,6 @@
 ---
 title: Introduction to Data
-subtitle: Lecture 2
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -11,14 +8,6 @@ title-slide-attributes:
 format: revealjs
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   Project 1 teams have been created
-
--   HW 01 is due Wednesday, Jan 31, 11:59pm
 
 # Hello data
 
@@ -108,8 +97,8 @@ We need to test the relationship statistically:
 # Performing the Chi-Squared Test
 chi2, p, dof, expected = chi2_contingency(frequency_table)
 
-print(f"Chi-squared statistic: {round(chi2, 2)}")
-print(f"P-value: {round(p, 3)}")
+print(f"Chi-squared statistic: {chi2.round(2)}")
+print(f"P-value: {p.round(3)}")
 print(f"Degrees of freedom: {dof}")
 print(f"Expected frequencies:\n{expected.round(2)}")
 ```
@@ -149,15 +138,15 @@ Source: [Lending Club](https://www.lendingclub.com/info/statistics.action)
 
 ## Metadata {.smaller}
 
-| Variable        | Description                                                                                                             |
-|--------------|----------------------------------------------------------|
-| `loan_amount`   | Amount of the loan received, in US dollars.                                                                             |
-| `interest_rate` | Interest rate on the loan, in an annual percentage.                                                                     |
-| `term`          | The length of the loan, which is always set as a whole number of months.                                                |
-| `grade`         | Loan grade, which takes a values A through G and represents the quality of the loan and its likelihood of being repaid. |
-| `state`         | US state where the borrower resides.                                                                                    |
-| `total_income`  | Borrower's total income, including any second income, in US dollars.                                                    |
-| `homeownership` | Indicates whether the person owns, owns but has a mortgage, or rents.                                                   |
+| Variable | Description |
+|------------------|------------------------------------------------------|
+| `loan_amount` | Amount of the loan received, in US dollars. |
+| `interest_rate` | Interest rate on the loan, in an annual percentage. |
+| `term` | The length of the loan, which is always set as a whole number of months. |
+| `grade` | Loan grade, which takes a values A through G and represents the quality of the loan and its likelihood of being repaid. |
+| `state` | US state where the borrower resides. |
+| `total_income` | Borrower's total income, including any second income, in US dollars. |
+| `homeownership` | Indicates whether the person owns, owns but has a mortgage, or rents. |
 
 ## Types of variables
 
@@ -239,8 +228,8 @@ plt.show()
 
 ## Associations {.smaller}
 
-::: columns
-::: {.column width="50%"}
+::::::: columns
+:::: {.column width="50%"}
 ```{python}
 #| echo: false
 
@@ -288,9 +277,9 @@ plt.show()
 ::: fragment
 Associations can be **negative**...
 :::
-:::
+::::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 ```{python}
 #| echo: false
 
@@ -339,14 +328,14 @@ plt.show()
 ::: fragment
 ...or **positive**
 :::
-:::
-:::
+::::
+:::::::
 
 ::: fragment
 Two variables can also not be associated (**independent**)
 :::
 
-::: fragment
+:::: fragment
 ::: incremental
 -   *Median household income* is the explanatory variable
 
@@ -354,7 +343,7 @@ Two variables can also not be associated (**independent**)
 
 -   explanatory variable → *might affect* → response variable
 :::
-:::
+::::
 
 ## Conclusions
 
@@ -398,13 +387,13 @@ Two variables can also not be associated (**independent**)
 #### What does each question have?
 :::
 
-::: fragment
+:::: fragment
 ::: incremental
 1.  Each refers to a target **population**
 2.  Likely not feasible to collect a **census** of the population
 3.  We then collect a **sample**
 :::
-:::
+::::
 
 ## Parameters and statistics
 
@@ -423,7 +412,7 @@ Two variables can also not be associated (**independent**)
 ::: incremental
 1.  A man on the news got mercury poisoning from eating swordfish, so the average mercury concentration in swordfish must be dangerously high.
 
-2.  I met two students who took more than 7 years to graduate from {{< var university.short_name >}}, so it must take longer to graduate at {{< var university.short_name >}} than at many other colleges.
+2.  I met two students who took more than 7 years to graduate from UArizona, so it must take longer to graduate at UArizona than at many other colleges.
 
 3.  My friend's dad had a heart attack and died after they gave him a new heart disease drug, so the drug must not work.
 :::
@@ -477,6 +466,7 @@ But... a nutrition major might disproportionately pick health-related majors.
 ```{=html}
 <iframe width="1000" height="400" src="https://tylervigen.com/spurious-correlations" frameborder="1" style="background:white;"></iframe
 ```
+
 <br>
 
 ## Conclusions

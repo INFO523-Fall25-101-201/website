@@ -1,9 +1,6 @@
 ---
 title: Classification I
-subtitle: Lecture 5
-author: "{{< var slides.author >}}"
-institute: "{{< var slides.institute >}}"
-footer: "{{< var slides.footer >}}"
+subtitle: Data Mining and Discovery
 title-slide-attributes:
   data-background-image: ../minedata-bg.png
   data-background-size: 600px, cover
@@ -11,14 +8,6 @@ title-slide-attributes:
 format: revealjs
 auto-stretch: false
 ---
-
-# Warm up
-
-## Announcements
-
--   HW 02 is due today, 11:59pm
-
--   Spring Break is right around the corner!
 
 ## Setup {.smaller}
 
@@ -44,10 +33,11 @@ from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.ensemble import RandomForestClassifier
 import mord as m
 import xgboost as xgb
-import tensorflow as tf
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.utils.data import TensorDataset, DataLoader
 import logging
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
 import os
 
 # Increase font size of all Seaborn plot elements
@@ -55,9 +45,6 @@ sns.set(font_scale = 1.25)
 
 # Set Seaborn theme
 sns.set_theme(style = "white")
-
-# Suppress tensorflow messages and progress bars 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  
 ```
 
 # Classification
@@ -165,7 +152,7 @@ loans.info()
 ## Describe
 
 ```{python}
-loans.describe().round(3)
+loans.describe()
 ```
 
 ## Categories
@@ -190,7 +177,7 @@ for col in categorical_cols:
     category_analysis[col] = {
         'Unique Levels': unique_levels,
         'Counts': counts,
-        'Proportions': proportions.round(3)
+        'Proportions': proportions
     }
 
 for col, data in category_analysis.items():
@@ -249,7 +236,7 @@ for i_col in dataRedColsList:
 ```
 :::
 
-## Dealing with missing values
+## Dealing with missing values {.smaller}
 
 ::: panel-tabset
 ## Remove
@@ -281,6 +268,7 @@ loans['num_accounts_120d_past_due'] = loans['num_accounts_120d_past_due'].fillna
 **We will simplify grades to levels of risk**
 
 ```{python}
+#| code-fold: true
 # Pandas options to print everything
 pd.set_option('display.max_rows', 20)
 
@@ -364,6 +352,7 @@ plt.show()
 ## Correlations
 
 ```{python}
+#| code-fold: true
 numerical_cols = loans.select_dtypes(include = ['int64', 'float64'])
 corr_matrix = numerical_cols.corr()
 
@@ -430,7 +419,7 @@ X_test_pca = pca.transform(X_test)
 
 ![](images/confusion.jpeg){fig-align="center" width="1067"}
 
-## Aside: visualizing decision boundaries
+## Aside: visualizing decision boundaries {.smaller}
 
 ```{python}
 def decisionplot(model, X, y, resolution=216):
@@ -510,7 +499,7 @@ def decisionplot(model, X, y, resolution=216):
 log_reg = LogisticRegression(multi_class = 'multinomial', solver = 'lbfgs', max_iter = 1000, random_state = 42)
 log_reg.fit(X_train_pca, y_train)
 predictions = log_reg.predict(X_test_pca)
-print("Logistic Regression Accuracy:", round(accuracy_score(y_test, predictions), 3))
+print("Logistic Regression Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ## Confusion matrix
@@ -599,7 +588,7 @@ plt.show()
 lda = LinearDiscriminantAnalysis()
 lda.fit(X_train_pca, y_train)
 predictions = lda.predict(X_test_pca)
-print("LDA Accuracy:", round(accuracy_score(y_test, predictions), 3))
+print("LDA Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ## Confusion matrix
@@ -618,7 +607,7 @@ plt.show()
 
 ```{python}
 #| code-fold: true
-acc = round(accuracy_score(y_test, predictions), 3)
+acc = accuracy_score(y_test, predictions)
 # Create a meshgrid for plotting
 x_min, x_max = X_test_pca[:, 0].min() - 1, X_test_pca[:, 0].max() + 1
 y_min, y_max = X_test_pca[:, 1].min() - 1, X_test_pca[:, 1].max() + 1
@@ -688,7 +677,7 @@ plt.show()
 knn = KNeighborsClassifier(n_neighbors = 5)
 knn.fit(X_train_pca, y_train)
 predictions = knn.predict(X_test_pca)
-print("KNN Accuracy:", round(accuracy_score(y_test, predictions), 3))
+print("KNN Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ## Confusion matrix
@@ -712,7 +701,7 @@ plt.show()
 ```
 :::
 
-## Naive Bayes
+## Naive Bayes {.smaller}
 
 :::::::: panel-tabset
 ## Visual
@@ -772,7 +761,7 @@ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
 gnb = GaussianNB()
 gnb.fit(X_train_pca, y_train)
 predictions = gnb.predict(X_test_pca)
-print("Naive Bayes Accuracy:", round(accuracy_score(y_test, predictions), 3))
+print("Naive Bayes Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ## Confusion matrix
@@ -834,7 +823,7 @@ plt.show()
 dtree = DecisionTreeClassifier()
 dtree.fit(X_train_pca, y_train)
 predictions = dtree.predict(X_test_pca)
-print("Decision Tree Accuracy:", round(accuracy_score(y_test, predictions), 3))
+print("Decision Tree Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ## Confusion matrix
@@ -907,7 +896,7 @@ plt.show()
 rf_classifier = RandomForestClassifier()
 rf_classifier.fit(X_train_pca, y_train)
 predictions = rf_classifier.predict(X_test_pca)
-print("Random Forest Accuracy:", round(accuracy_score(y_test, predictions), 3))
+print("Random Forest Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ## Confusion matrix
@@ -982,7 +971,7 @@ plt.show()
 xgb_model = xgb.XGBClassifier()
 xgb_model.fit(X_train_pca, y_train)
 predictions = xgb_model.predict(X_test_pca)
-print("XGBoost Accuracy:", round(accuracy_score(y_test, predictions), 3))
+print("XGBoost Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ## Confusion matrix
@@ -1049,17 +1038,51 @@ plt.show()
 ## Accuracy
 
 ```{python}
-#| code-line-numbers: 1-10|1-5
-model = Sequential()
-model.add(Dense(10, input_dim = X_train_pca.shape[1], activation = 'relu'))
-model.add(Dense(1, activation = 'sigmoid'))
+#| code-line-numbers: 1-44|1-5|8-17|19-22|24-26|28-35|37-40|42-44
+# Convert NumPy arrays to PyTorch tensors
+X_train_tensor = torch.tensor(X_train_pca, dtype=torch.float32)
+y_train_bin = (y_train.to_numpy() > 0).astype(float)
+y_train_tensor = torch.tensor(y_train_bin.reshape(-1, 1), dtype=torch.float32)
+X_test_tensor = torch.tensor(X_test_pca, dtype=torch.float32)
 
-model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
-model.fit(X_train_pca, y_train, epochs = 100, batch_size = 10, verbose=0)
+# Define neural network
+class SimpleNN(nn.Module):
+    def __init__(self, input_dim):
+        super(SimpleNN, self).__init__()
+        self.fc1 = nn.Linear(input_dim, 10)
+        self.fc2 = nn.Linear(10, 1)
 
-nn_predictions = model.predict(X_test_pca)
-nn_predictions = np.round(nn_predictions).flatten()
-print("Neural Network Accuracy:", round(accuracy_score(y_test, nn_predictions), 3))
+    def forward(self, x):
+        x = F.relu(self.fc1(x))
+        x = torch.sigmoid(self.fc2(x))  # for binary classification
+        return x
+
+# Initialize model, loss function, optimizer
+model = SimpleNN(X_train_pca.shape[1])
+criterion = nn.BCELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+
+# Create DataLoader for batching
+train_dataset = TensorDataset(X_train_tensor, y_train_tensor)
+train_loader = DataLoader(train_dataset, batch_size=10, shuffle=True)
+
+# Train model
+for epoch in range(100):
+    for batch_X, batch_y in train_loader:
+        optimizer.zero_grad()
+        outputs = model(batch_X)
+        loss = criterion(outputs, batch_y)
+        loss.backward()
+        optimizer.step()
+
+# Predict on test data
+model.eval()
+with torch.no_grad():
+    predictions = model(X_test_tensor).numpy()
+
+# Post-process predictions
+nn_predictions = np.round(predictions).flatten()
+print("Neural Network Accuracy:", accuracy_score(y_test, nn_predictions))
 ```
 
 ## Confusion matrix
@@ -1146,7 +1169,7 @@ ord_log_reg = m.LogisticAT(alpha = 1)
 ord_log_reg.fit(X_train_pca, y_train)
 
 ordinal_predictions = ord_log_reg.predict(X_test_pca)
-print("Ordinal Logistic Regression Accuracy:", round(accuracy_score(y_test, ordinal_predictions), 3))
+print("Ordinal Logistic Regression Accuracy:", accuracy_score(y_test, ordinal_predictions))
 ```
 
 ## Confusion matrix
@@ -1179,7 +1202,7 @@ plt.show()
 knn = KNeighborsClassifier(n_neighbors = 5)
 knn.fit(X_train_pca, y_train)
 predictions = knn.predict(X_test_pca)
-print("KNN Accuracy:", round(accuracy_score(y_test, predictions), 3))
+print("KNN Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ## Confusion matrix
@@ -1212,7 +1235,7 @@ plt.show()
 dtree = DecisionTreeClassifier()
 dtree.fit(X_train_pca, y_train)
 predictions = dtree.predict(X_test_pca)
-print("Decision Tree Accuracy:", round(accuracy_score(y_test, predictions), 3))
+print("Decision Tree Accuracy:", accuracy_score(y_test, predictions))
 ```
 
 ## Confusion matrix
