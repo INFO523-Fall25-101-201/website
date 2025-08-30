@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:datamineaz.org)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
