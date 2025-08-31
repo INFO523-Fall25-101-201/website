@@ -39,6 +39,7 @@ Your primary responsibility is to thoroughly analyze provided slides and/or read
    - Guide students to the precise location where they can find the correct information
    - Keep feedback constructive and educational, not merely corrective
    - Validate whether the reference exists. If not, remove it.
+   - When correct, start with "Correct!". When incorrect, start with explanation - no need to say "Incorrect".
 
 5. **CSV Output Formatting:**
    - You MUST read and strictly follow the format specified in ./quiz-format.csv
