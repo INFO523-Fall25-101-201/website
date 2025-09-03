@@ -9,7 +9,7 @@ Throughout the course, we will go over several supervised and unsupervised machi
 ```{r, echo=FALSE, message=FALSE}
 # Load the necessary libraries
 if(!require(pacman))
-  install.packages("pacman")
+  install.packages("pacman",dependencies=TRUE, repos='http://cran.rstudio.com/')
 
 pacman::p_load(gt,
                gtExtras,
