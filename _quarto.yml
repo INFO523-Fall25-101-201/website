@@ -73,7 +73,7 @@ website:
             text: Setting up Git
       - section: "Projects"
         contents: 
-          - href: project/project-2.qmd
+          - href: project/final-project.qmd
             text: Final Project
       - section: "Homework"
         contents:

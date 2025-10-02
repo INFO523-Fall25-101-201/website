@@ -122,7 +122,7 @@ Your proposal should include:
 
 ### Peer review
 
-The peer reviews will be completed during the lab sessions as indicated above. On those days teams will have access to the project repos of the teams whose work they're reviewing. The first peer review will be of proposals and the second peer review will be of code and organization.
+The peer reviews will be completed during the peer-review week as indicated above. On those days teams will have access to the project repos of the teams whose work they're reviewing. The first peer review will be of proposals and the second peer review will be of code and organization.
 
 #### Reviewer tasks
 
@@ -205,7 +205,7 @@ Your evaluation will be based on your content, professionalism (including sticki
 
 ### Website
 
-Each of your projects will have a website. You can use the same workflow as for your first project or create something different. For example, if your project is building a dashboard, you might consider making your write-up a tab on that dashboard. Or if it's building a package, you might consider making your website using the [pkgdown](https://pkgdown.r-lib.org/) package. Feel free to Google your way around it or ask in lab sessions, on the discussion forum, or office hours!
+Each of your projects will have a website. You can use the same workflow as for your first project or create something different. For example, if your project is building a dashboard, you might consider making your write-up a tab on that dashboard. Or if it's building a package, you might consider making your website using the [pkgdown](https://pkgdown.r-lib.org/) package. Feel free to Google your way around it or ask on the Slack channel and/or office hours!
 
 ## Repo organization
 
