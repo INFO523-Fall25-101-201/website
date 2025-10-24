@@ -11,7 +11,7 @@ sentences. Make a commit at least after finishing each exercise, or
 better yet, more frequently. Push your work regularly to GitHub, and make sure 
 all checks pass.
 
-For this Homework, find the types of regressions, their pros and cons, and implementation [here](https://datamineaz.org/tables/model-cheatsheet.html). 
+For this Homework, find the types of regressions, their pros and cons, and implementation [here](https://{{< var website.url >}}/tables/model-cheatsheet.html). 
 
 # Regression Methods
 
